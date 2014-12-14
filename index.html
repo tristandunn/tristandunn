@@ -1,0 +1,32 @@
+---
+---
+
+<section role="main">
+  <h1>Latest Articles</h1>
+
+  <ul itemscope itemtype="http://schema.org/Blog">
+    {% for post in site.posts %}
+      {% if post.archived %}
+        {% continue %}
+      {% endif %}
+
+      <li class="post" itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting">
+        <a href="{{ post.url }}">
+          <h2 itemprop="name">{{ post.title | xml_escape }}{% if post.part %}: Part {{ post.part }}{% endif %}</h2>
+          <p itemprop="description">{{ post.description | xml_escape }}</p>
+          <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date_to_string }}</time>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+
+<aside role="complementary">
+  <h2>About Me</h2>
+
+  <p>I work at Dribbble, but have worked for Google and thoughtbot as well. I'm from Louisiana, but have lived in Boston and San Francisco. I strangely enjoy hockey.</p>
+
+  <h2>Contact Me</h2>
+
+  <p>E-mail me at <a href="mailto:hello@tristandunn.com">hello@tristandunn.com</a>, or you can <a href="https://twitter.com/tristandunn">follow me on Twitter</a>.
+</aside>

@@ -1,0 +1,84 @@
+//= require reset
+//= require_self
+//= require homepage
+//= require post
+
+@import "bourbon";
+
+body,
+input,
+button {
+  font-size: 16px;
+  font-family: "Proxima Nova", $helvetica;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: currentColor;
+  text-decoration: none;
+
+  &:hover {
+    color: #38C;
+    border-color: #38C;
+  }
+}
+
+.container {
+  @include clearfix;
+
+  width: 960px;
+  margin: 0 auto;
+}
+
+body > header {
+  @extend .container;
+
+  margin: 32px auto;
+  text-align: center;
+
+  div {
+    position: relative;
+    left: 50%;
+    float: left;
+
+    div {
+      left: -50%;
+      padding: 22px 0;
+    }
+  }
+
+  h1 {
+    font-size: 34px;
+    font-weight: 700;
+    letter-spacing: -1px;
+  }
+
+  a {
+    h1 {
+      color: #443;
+    }
+
+    &:hover {
+      h1 {
+        color: #38C;
+      }
+    }
+  }
+
+  p {
+    color: #554;
+    font-size: 12px;
+    text-indent: 6px;
+
+    a {
+      border-bottom: 2px solid #EAEAEA;
+      font-weight: 600;
+    }
+  }
+}
+
+aside,
+section {
+  padding: 32px 0;
+}

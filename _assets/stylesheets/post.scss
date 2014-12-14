@@ -1,0 +1,225 @@
+//= require highlight
+
+@import "bourbon";
+
+article {
+  header {
+    margin: 0 0 32px 0;
+    text-align: center;
+
+    h1 {
+      color: #221;
+      margin-bottom: 12px;
+      font-size: 64px;
+      font-weight: 800;
+      letter-spacing: -2px;
+    }
+
+    h2 {
+      color: #554;
+      margin: 12px 0;
+      font-size: 32px;
+      font-weight: 600;
+    }
+
+    p {
+      color: #887;
+      margin-top: 12px;
+    }
+  }
+
+  section {
+    :last-child {
+      margin-bottom: 0;
+    }
+
+    h2,
+    h3 {
+      font-weight: 700;
+    }
+
+    h2 {
+      color: #221;
+      margin: 32px 0 6px 0;
+      font-size: 32px;
+    }
+
+    h3 {
+      color: #443;
+      margin: 28px 0 3px 0;
+      font-size: 25px;
+    }
+
+    p,
+    ul {
+      margin: 0 0 32px 0;
+      font-size: 20px;
+      line-height: 1.6;
+      quotes: "\201C" "\201D" "\2018" "\2019";
+
+      a {
+        color: #38C;
+
+        &:hover {
+          border-bottom: 2px solid #38C;
+        }
+      }
+    }
+
+    p {
+      &:first-child {
+        font-size: 26px;
+
+        &.outdated {
+          text-align: center;
+        }
+
+        a {
+          color: inherit;
+          border-bottom: 2px solid #EAEAEA;
+
+          &:hover {
+            color: #38C;
+            border-color: #38C;
+          }
+        }
+      }
+    }
+
+    ul {
+      line-height: 1.6;
+      list-style-type: square;
+
+      strong {
+        font-weight: 600;
+      }
+    }
+
+    abbr {
+      border-bottom: 2px dotted #EAEAEA;
+      cursor: help;
+    }
+
+    pre,
+    code {
+      font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+      line-height: 1.5;
+    }
+
+    p code,
+    figcaption code {
+      background-color: #FAFAFB;
+      padding: 4px 6px;
+      border: 1px solid #DDD;
+      border-radius: 2px;
+      font-size: 14px;
+      white-space: nowrap;
+    }
+
+    figure {
+      margin: 0 0 32px 0;
+    }
+
+    figcaption {
+      color: #555;
+      margin: 8px 0 0 0;
+      line-height: 1.4;
+      text-align: center;
+
+      code {
+        border: 1px solid #EEE;
+        font-size: 13px;
+      }
+    }
+
+    .highlight {
+      background-color: #FAFAFB;
+      padding: 18px;
+      border: 2px solid #F0F0F0;
+      border-radius: 4px;
+      overflow: auto;
+    }
+
+    .pull-right {
+      margin: 0 32px 16px 32px;
+      float: right;
+    }
+  }
+}
+
+footer {
+  .container {
+    width: 560px;
+    margin: 48px auto 96px auto;
+  }
+
+  section {
+    background: #FAFFFB;
+    color: #444951;
+    padding: 48px;
+    border: 2px solid #E0EFE0;
+    border-radius: 4px;
+  }
+
+  h1 {
+    color: #020;
+    font-size: 28px;
+    font-weight: 700;
+  }
+
+  p {
+    color: #454;
+    margin: 8px 0 12px 0;
+    line-height: 1.4;
+
+    &.note {
+      @include user-select(none);
+
+      color: #787;
+      margin: 10px 0 0 12px;
+      font-size: 12px;
+      line-height: 1;
+      cursor: default;
+    }
+  }
+
+  form {
+    @include clearfix;
+  }
+
+  input,
+  button {
+    padding: 10px 12px;
+    border-radius: 4px;
+  }
+
+  input {
+    width: 60%;
+    border: 2px solid #E0EFE0;
+    float: left;
+
+    &:focus {
+      color: #000;
+      border-color: darken(#E0EFE0, 15%);
+    }
+  }
+
+  button {
+    background-color: #5FCF80;
+    color: #FFF;
+    width: 37.5%;
+    border: 2px solid darken(#5FCF80, 10%);
+    border-width: 1px 1px 2px 1px;
+    font-weight: 600;
+    float: right;
+    cursor: pointer;
+
+    &:hover {
+      background-color: darken(#5FCF80, 5%);
+    }
+
+    &:active {
+      border-width: 2px 1px 1px 1px;
+    }
+  }
+}

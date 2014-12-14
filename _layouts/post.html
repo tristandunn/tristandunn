@@ -1,0 +1,51 @@
+---
+---
+
+{% include header.html %}
+
+<header>
+  <div><div>
+    <a href="/">
+      <h1>Tristan Dunn</h1>
+
+      <p>Developer and tolerable designer.</p>
+    </a>
+  </div></div>
+</header>
+
+<section role="main" class="container">
+  <article role="article" itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+      <h1 itemprop="name">{{ page.title | xml_escape }}</h1>
+
+      {% if page.subtitle %}
+        <h2>{{ page.subtitle | xml_escape }}</h2>
+      {% endif %}
+
+      <p>Published on <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date_to_string }}</time>.</p>
+
+      <meta content="{{ page.description | xml_escape }}" itemprop="description">
+    </header>
+
+    <section itemprop="articleBody">
+      {{ content }}
+    </section>
+  </article>
+</section>
+
+<footer>
+  <section class="container">
+    <h1>Did you enjoy the article?</h1>
+
+    <p>Join for my best content on development, design, and more. Delivered each week for free.</p>
+
+    <form action="http://tristandunn.createsend.com/t/d/s/jkirjj/" method="post">
+      <input type="email" name="cm-jkirjj-jkirjj" required="required" placeholder="E-mail address">
+      <button type="submit">Join the Newsletter</button>
+    </form>
+
+    <p class="note">No spam, ever. Unsubscribe at any time.</p>
+  </section>
+</footer>
+
+{% include footer.html %}

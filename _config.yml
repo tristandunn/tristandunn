@@ -1,0 +1,27 @@
+assets:
+  cache: true
+  autosize: true
+  js_compressor: uglifier
+  css_compressor: sass
+
+defaults:
+  -
+    scope:
+      type: "pages"
+    values:
+      layout: "default"
+  -
+    scope:
+      type: "posts"
+    values:
+      layout: "post"
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - Procfile
+  - config
+
+markdown: kramdown
+
+permalink: "/:year/:month/:day/:title/"
