@@ -2,6 +2,7 @@
 //= require_self
 //= require homepage
 //= require post
+//= require adapt
 
 @import "bourbon";
 
@@ -41,6 +42,7 @@ body > header {
 
   margin: 32px auto;
   text-align: center;
+  overflow: hidden;
 
   div {
     position: relative;
