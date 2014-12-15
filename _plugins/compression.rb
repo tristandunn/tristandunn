@@ -11,7 +11,11 @@ module Jekyll
 
   class Page
     def output_with_compression
-      HTML_COMPRESSOR.compress(output_without_compression)
+      if ext == ".xml"
+        output_without_compression
+      else
+        HTML_COMPRESSOR.compress(output_without_compression)
+      end
     end
 
     alias_method :output_without_compression, :output
