@@ -17,6 +17,7 @@ defaults:
       layout: "post"
 
 exclude:
+  - Capfile
   - Gemfile
   - Gemfile.lock
   - Procfile
