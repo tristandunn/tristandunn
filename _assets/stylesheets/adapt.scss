@@ -1,7 +1,6 @@
 @media screen and (max-width: 960px) {
   .container,
-  body > header,
-  footer .container {
+  body > header {
     width: 100%;
   }
 
@@ -130,36 +129,6 @@
           white-space: normal;
         }
       }
-    }
-  }
-
-  footer {
-    padding: 0 32px;
-
-    section {
-      padding: 32px;
-      max-width: 480px;
-    }
-
-    h1 {
-      font-size: 16px;
-    }
-
-    p {
-      font-size: 12px;
-
-      &.note {
-        margin: 0;
-        text-align: center;
-      }
-    }
-
-    input,
-    button {
-      width: 100%;
-      margin: 0 0 8px 0;
-      font-size: 14px;
-      float: none;
     }
   }
 }
