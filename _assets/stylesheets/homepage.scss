@@ -74,6 +74,10 @@
     a {
       border-bottom: 2px solid #EAEAEA;
       font-weight: 600;
+
+      &:hover {
+        border-color: #38C;
+      }
     }
 
     p {
