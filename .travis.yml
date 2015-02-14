@@ -12,4 +12,4 @@ rvm:
 
 script:
   - bundle exec jekyll build
-  - bundle exec htmlproof ./_site --check-html true --href-ignore "/^https?://localhost/" --verbose
+  - bundle exec htmlproof ./_site --check-html true --href-ignore "/^https?://localhost/","/\?refcode\=/" --verbose
