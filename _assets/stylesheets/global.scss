@@ -11,7 +11,7 @@ body,
 input,
 button {
   font-size: 16px;
-  font-family: "proxima-nova", $helvetica;
+  font-family: $helvetica;
   text-rendering: optimizeLegibility;
   font-feature-settings: "kern";
   font-kerning: normal;
@@ -19,6 +19,14 @@ button {
   -webkit-font-feature-settings: "kern";
   -moz-font-feature-settings: "kern";
   -moz-font-feature-settings: "kern=1";
+}
+
+.wf-active {
+  body,
+  input,
+  button {
+    font-family: "proxima-nova", $helvetica;
+  }
 }
 
 a {
