@@ -22,6 +22,7 @@ exclude:
   - Gemfile.lock
   - Procfile
   - config
+  - vendor
 
 markdown: kramdown
 

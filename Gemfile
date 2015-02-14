@@ -13,3 +13,7 @@ group :development do
   gem "capistrano-bundler", "1.1.3"
   gem "capistrano-rbenv",   "2.0.2"
 end
+
+group :test do
+  gem "html-proofer", "2.1.0"
+end
