@@ -14,7 +14,8 @@
     <meta name="twitter:url" content="{{ page.url | prepend: site.url }}">
   {% endif %}
 
-  {% stylesheet global %}
+  <style type="text/css">{% asset global.css %}</style>
+
   <link rel="alternate" type="application/rss+xml" title="Tristan Dunn" href="{{ "/feed.xml" | prepend: site.url }}">
 </head>
 <body{% if include.id %} id="{{ include.id }}"{% endif %}>
