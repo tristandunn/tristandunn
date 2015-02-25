@@ -1,7 +1,7 @@
 source "https://rubygems.org"
 
 gem "activesupport",  "4.2.0", require: false
-gem "bourbon",        "4.2.0"
+gem "bourbon",        "4.2.1"
 gem "htmlcompressor", "0.1.2"
 gem "jekyll",         "2.5.3"
 gem "jekyll-assets",  "0.13.0"
