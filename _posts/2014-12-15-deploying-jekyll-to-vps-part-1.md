@@ -181,7 +181,7 @@ attributes.
   }
 }
 {% endhighlight %}
-  <figcaption>Creating <code>nodes/vagrant.json</code> with attribtues for compiling nginx from the source.</figcaption>
+  <figcaption>Creating <code>nodes/vagrant.json</code> with attributes for compiling nginx from the source.</figcaption>
 </figure>
 
 Note that I manually determined the <code>checksum</code> value by downloading
