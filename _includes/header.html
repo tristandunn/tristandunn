@@ -14,7 +14,15 @@
     <meta name="twitter:url" content="{{ page.url | prepend: site.url }}">
   {% endif %}
 
-  <style type="text/css">{% asset global.css %}</style>
+  {% capture css %}
+    {% asset global.css %}
+
+    {% if include.id %}
+      {{ include.id | append: ".css" | asset }}
+    {% endif %}
+  {% endcapture %}
+
+  <style type="text/css">{{ css | strip_newlines }}</style>
 
   <link rel="alternate" type="application/rss+xml" title="Tristan Dunn" href="{{ "/feed.xml" | prepend: site.url }}">
 </head>
