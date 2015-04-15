@@ -10,8 +10,7 @@
 body,
 input,
 button {
-  font-size: 16px;
-  font-family: $helvetica;
+  font: 16px/1 "Proxima Nova", $helvetica;
   text-rendering: optimizeLegibility;
   font-feature-settings: "kern";
   font-kerning: normal;

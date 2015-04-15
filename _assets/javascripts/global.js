@@ -1,7 +1,13 @@
+//= require vendor/detector
+
 //
 // Typekit
 //
 (function(d) {
+  if ((new Detector()).detect("Proxima Nova")) {
+    return;
+  }
+
   var config = {
     kitId: "twc7vou",
     scriptTimeout: 3000
