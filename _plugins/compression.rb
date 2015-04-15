@@ -1,10 +1,7 @@
 require "htmlcompressor"
-require "uglifier"
 
 module Jekyll
   HTML_COMPRESSOR = HtmlCompressor::Compressor.new({
-    compress_javascript: true,
-    javascript_compressor: Uglifier.new,
     remove_intertag_spaces: true,
     remove_surrounding_spaces: HtmlCompressor::Compressor::BLOCK_TAGS_MIN
   })
