@@ -1,106 +1,107 @@
-@import "bourbon";
+@import "shared";
+@import "newsletter";
 
-#homepage {
-  > header {
-    margin: 64px auto;
-    text-align: left;
-
-    h1 {
-      font-size: 36px;
-    }
-
-    p {
-      font-size: 16px;
-    }
-
-    img {
-      @include filter(grayscale(33%));
-      @include position(absolute, 0 null null 0);
-
-      background: #EEE;
-      border-radius: 50%;
-    }
-
-    div div {
-      padding-left: 112px;
-    }
+body > header {
+  h1,
+  li a {
+    line-height: 64px;
   }
 
-  section {
-    width: 560px;
-    padding-bottom: 96px;
+  img {
+    @include filter(grayscale(33%));
+
+    margin: 0 16px 0 0;
+    border-radius: 50%;
     float: left;
-
-    h2 {
-      color: #332;
-      border-bottom: 2px solid #EAEAEA;
-      font-size: 24px;
-      font-weight: 700;
-      float: left;
-    }
-
-    p {
-      padding: 8px 0 6px 0;
-      clear: both;
-    }
-
-    a {
-      display: block;
-
-      &:hover {
-        h2 {
-          color: #38C;
-          border-color: #38C;
-        }
-      }
-    }
-
-    time {
-      color: #665;
-      font-size: 14px;
-    }
-
-    .post + .post {
-      margin-top: 32px;
-      padding-top: 32px;
-      border-top: 1px solid #EEE;
-    }
   }
+}
 
-  aside {
-    width: 320px;
-    float: right;
+body > footer {
+  border-top: $section-border;
+}
 
-    a {
-      border-bottom: 2px solid #EAEAEA;
-      font-weight: 600;
+aside,
+.articles {
+  padding: 48px 0;
 
-      &:hover {
-        border-color: #38C;
-      }
-    }
-
-    p {
-      margin: 0 0 64px 0;
-    }
-  }
-
-  aside,
-  section {
-    p {
-      color: #443;
-      font-size: 18px;
-      line-height: 1.4;
-    }
-  }
-
-  aside h2,
-  section h1 {
-    color: #998;
-    margin: 0 0 16px 0;
+  h1 {
+    color: $text-dull;
+    margin: 0 0 8px 0;
     font-size: 16px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
+  }
+}
+
+.articles {
+  width: 600px;
+  float: left;
+
+  h2 {
+    border-bottom: $link-border;
+    font-size: 38px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    word-break: break-word;
+    display: inline-block;
+  }
+
+  a {
+    color: $text-header;
+    display: block;
+
+    &:hover h2 {
+      color: $link-hover-color;
+      border-color: $link-hover-border-color;
+    }
+  }
+
+  p {
+    margin: 8px 0 0 0;
+    font-size: 18px;
+    line-height: 1.6;
+
+    &.published {
+      color: $text-dull;
+      margin: 4px 0 0 0;
+      font-size: 14px;
+      font-style: italic;
+      line-height: 1;
+    }
+  }
+
+  li {
+    & + li {
+      margin-top: 32px;
+      padding-top: 32px;
+      border-top: 1px solid $section-border-color;
+    }
+  }
+}
+
+aside {
+  width: 280px;
+  float: right;
+
+  p {
+    color: $text-subtle;
+    margin: 8px 0 0 0;
+    font-size: 16px;
+    line-height: 1.4;
+  }
+
+  a {
+    border-bottom: $link-border;
+  }
+}
+
+body.subscribed {
+  > header {
+    border-bottom: $section-border;
+  }
+
+  .newsletter {
+    display: none;
   }
 }

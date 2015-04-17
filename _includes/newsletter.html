@@ -1,0 +1,39 @@
+{% assign newsletter = include.newsletter %}
+
+<section role="banner" class="newsletter">
+  <div class="container">
+    <header>
+      <h1>
+        {% if newsletter.title %}
+          {{ newsletter.title }}
+        {% else %}
+          Subscribe for my best content.
+        {% endif %}
+      </h1>
+
+      <p>
+        {% if newsletter.description %}
+          {{ newsletter.description }}
+        {% else %}
+          My best content on design, development, and more. Also stay up-to-date with my latest articles. Delivered for free each week. Unsubscribe at any time. No spam, ever.
+        {% endif %}
+      </p>
+    </header>
+
+    <section>
+      {% assign form = newsletter.form %}
+
+      <form method="post" action="{% if form.action %}{{ form.action }}{% else %}http://tristandunn.createsend.com/t/d/s/jkirjj/{% endif %}">
+        <input type="text" name="{% if form.name %}{{ form.name }}{% else %}cm-name{% endif %}" placeholder="First Name">
+        <input type="email" name="{% if form.address %}{{ form.address }}{% else %}cm-jkirjj-jkirjj{% endif %}" required="required" placeholder="E-mail Address">
+        <button type="submit">
+          {% if form.button %}
+            {{ form.button }}
+          {% else %}
+            Join the Newsletter
+          {% endif %}
+        </button>
+      </form>
+    </section>
+  </div>
+</section>

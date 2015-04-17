@@ -1,29 +1,36 @@
 //= require highlight
 
-@import "bourbon";
+@import "shared";
+@import "newsletter";
+
+body > header {
+  border-bottom: $section-border;
+}
 
 article {
+  margin: 48px 0;
+
   header {
-    margin: 0 0 32px 0;
+    margin: 0 0 48px 0;
     text-align: center;
 
     h1 {
-      color: #221;
+      color: $text-header;
       margin-bottom: 12px;
-      font-size: 64px;
-      font-weight: 700;
+      font-size: 68px;
+      font-weight: 400;
       letter-spacing: -2px;
     }
 
     h2 {
-      color: #554;
+      color: $text-subtle;
       margin: 12px 0;
-      font-size: 30px;
-      font-weight: 600;
+      font-size: 28px;
+      font-weight: 300;
     }
 
     p {
-      color: #887;
+      color: $text-dull;
       margin-top: 12px;
     }
   }
@@ -39,13 +46,13 @@ article {
     }
 
     h2 {
-      color: #221;
+      color: $text-header;
       margin: 32px 0 6px 0;
       font-size: 32px;
     }
 
     h3 {
-      color: #443;
+      color: $text-subtle;
       margin: 28px 0 3px 0;
       font-size: 25px;
     }
@@ -58,10 +65,10 @@ article {
       quotes: "\201C" "\201D" "\2018" "\2019";
 
       a {
-        color: #38C;
+        color: $link-hover-color;
 
         &:hover {
-          border-bottom: 2px solid #38C;
+          border-bottom: 2px solid $link-hover-border-color;
         }
       }
     }
@@ -76,11 +83,11 @@ article {
 
         a {
           color: inherit;
-          border-bottom: 2px solid #EAEAEA;
+          border-bottom: $link-border;
 
           &:hover {
-            color: #38C;
-            border-color: #38C;
+            color: $link-hover-color;
+            border-color: $link-hover-border-color;
           }
         }
       }
@@ -96,7 +103,7 @@ article {
     }
 
     abbr {
-      border-bottom: 2px dotted #EAEAEA;
+      border-bottom: 2px dotted $link-border-color;
       cursor: help;
     }
 
@@ -106,15 +113,17 @@ article {
       line-height: 1.5;
     }
 
-    p code,
-    li code,
-    figcaption code {
-      background-color: #FAFAFB;
-      padding: 4px 6px;
-      border: 1px solid #DDD;
-      border-radius: 2px;
-      font-size: 14px;
-      white-space: nowrap;
+    p,
+    li,
+    figcaption {
+      code {
+        background-color: #FAFAFB;
+        padding: 4px 6px;
+        border: 1px solid #DDD;
+        border-radius: 2px;
+        font-size: 14px;
+        white-space: nowrap;
+      }
     }
 
     figure {
@@ -122,7 +131,7 @@ article {
     }
 
     figcaption {
-      color: #555;
+      color: $text-dull;
       margin: 8px 0 0 0;
       line-height: 1.4;
       text-align: center;
@@ -145,5 +154,15 @@ article {
       margin: 0 32px 16px 32px;
       float: right;
     }
+  }
+}
+
+body.subscribed {
+  > footer {
+    border-top: $section-border;
+  }
+
+  .newsletter {
+    display: none;
   }
 }

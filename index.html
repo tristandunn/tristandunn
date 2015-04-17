@@ -1,32 +1,35 @@
 ---
 ---
 
-<section role="main">
-  <h1>Latest Articles</h1>
+{% include newsletter.html %}
 
-  <ul itemscope itemtype="http://schema.org/Blog">
-    {% for post in site.posts %}
-      {% if post.archived %}
-        {% continue %}
-      {% endif %}
+<div class="container">
+  <section role="main" class="articles">
+    <h1>Latest Articles</h1>
 
-      <li class="post" itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting">
-        <a href="{{ post.url }}">
-          <h2 itemprop="name">{{ post.title | xml_escape }}{% if post.part %}: Part {{ post.part }}{% endif %}</h2>
-          <p itemprop="description">{{ post.description | xml_escape }}</p>
-          <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date_to_string }}</time>
-        </a>
-      </li>
-    {% endfor %}
-  </ul>
-</section>
+    <ul itemscope itemtype="http://schema.org/Blog">
+      {% for post in site.posts %}
+        {% if post.archived %}
+          {% continue %}
+        {% endif %}
 
-<aside role="complementary">
-  <h2>About Me</h2>
+        <li class="post" itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting">
+          <a href="{{ post.url }}">
+            <h2 itemprop="name">{{ post.title | xml_escape }}{% if post.part %}: Part {{ post.part }}{% endif %}</h2>
+            <p itemprop="description">{{ post.description | xml_escape }}</p>
+            <p class="published"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date_to_string }}</time></p>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </section>
 
-  <p>I've worked at Dribbble, Google, meebo, and thoughtbot. I'm from Louisiana, but have lived in Boston and San Francisco. I strangely enjoy hockey.</p>
+  <aside role="complementary">
+    <h2>About Me</h2>
 
-  <h2>Contact Me</h2>
+    <p>I'm a developer at <a href="https://blend.io">Blend</a>. Formerly at Dribbble, Google, meebo, &#38; thoughtbot.</p>
+    <p>I was born and raised in Louisiana, but briefly lived in Boston &#38; San Francisco.</p>
 
-  <p><a href="mailto:hello@tristandunn.com">E-mail me</a>, or <a href="https://twitter.com/tristandunn">message me on Twitter</a>.</p>
-</aside>
+    <p>I love hockey.</p>
+  </aside>
+</div>

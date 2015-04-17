@@ -1,35 +1,22 @@
 //= require reset
 
-@import "bourbon";
+@import "shared";
 
 body,
 input,
 button {
+  @include font-feature-settings("kern");
+
   font: 16px/1 "Proxima Nova", $helvetica;
   text-rendering: optimizeLegibility;
-  font-feature-settings: "kern";
-  font-kerning: normal;
   -webkit-font-smoothing: antialiased;
-  -webkit-font-feature-settings: "kern";
-  -moz-font-feature-settings: "kern";
-  -moz-font-feature-settings: "kern=1";
 }
 
-.wf-active {
-  body,
+body.wf-active {
+  &,
   input,
   button {
     font-family: "proxima-nova", $helvetica;
-  }
-}
-
-a {
-  color: currentColor;
-  text-decoration: none;
-
-  &:hover {
-    color: #38C;
-    border-color: #38C;
   }
 }
 
@@ -40,55 +27,60 @@ a {
   margin: 0 auto;
 }
 
-body > header {
-  @extend .container;
+a {
+  color: currentColor;
+  text-decoration: none;
 
-  margin: 32px auto;
-  text-align: center;
-  overflow: hidden;
-
-  div {
-    position: relative;
-    left: 50%;
-    float: left;
-
-    div {
-      left: -50%;
-      padding: 22px 0;
-    }
+  &:hover {
+    color: $link-hover-color;
+    border-color: $link-hover-border-color;
   }
+}
 
-  h1 {
-    font-size: 34px;
-    font-weight: 700;
-    letter-spacing: -1px;
-  }
+body > header,
+body > footer {
+  padding: 48px 0;
 
-  a {
-    h1 {
-      color: #443;
-    }
+  ul {
+    float: right;
 
-    &:hover {
-      h1 {
-        color: #38C;
+    li {
+      margin: 0 0 0 24px;
+      display: inline-block;
+      float: left;
+
+      a {
+        color: $text-dull;
+        border-bottom: $link-border;
+        font-size: 16px;
+        font-weight: 600;
+
+        &:hover {
+          color: $link-hover-color;
+          border-color: $link-hover-border-color;
+        }
       }
-    }
-  }
-
-  p {
-    color: #554;
-    font-size: 12px;
-    text-indent: 6px;
-
-    a {
-      border-bottom: 2px solid #EAEAEA;
-      font-weight: 600;
     }
   }
 }
 
-aside,
-section {
-  padding: 32px 0;
+body > header {
+  h1 {
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    float: left;
+  }
+}
+
+body > footer {
+  margin: 48px 0;
+
+  ul.external {
+    float: left;
+
+    li {
+      margin: 0 24px 0 0;
+    }
+  }
 }

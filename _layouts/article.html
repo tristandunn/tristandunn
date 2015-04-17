@@ -3,14 +3,8 @@
 
 {% include header.html id="article" %}
 
-<header>
-  <div><div>
-    <a href="/">
-      <h1>Tristan Dunn</h1>
-
-      <p>Developer and tolerable designer.</p>
-    </a>
-  </div></div>
+<header class="container">
+  <h1><a href="/">Tristan Dunn</a></h1>
 </header>
 
 <section role="main" class="container">
@@ -33,4 +27,5 @@
   </article>
 </section>
 
+{% include newsletter.html newsletter=page.newsletter %}
 {% include footer.html %}

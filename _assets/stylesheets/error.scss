@@ -1,25 +1,33 @@
-#error {
-  section {
-    background: #FFF6F6;
-    padding: 32px;
-    border-radius: 4px;
-    max-width: 480px;
+@import "shared";
 
-    h1 {
-      margin: 0 0 6px 0;
-      font-size: 24px;
-      font-weight: 600;
-    }
+body > header {
+  border-bottom: $section-border;
+}
 
-    p {
-      line-height: 1.4;
+body > footer {
+  border-top: $section-border;
+}
 
-      a {
-        color: #38C;
+section.container {
+  width: 560px;
+  padding: 48px 0;
 
-        &:hover {
-          border-bottom: 1px solid #38C;
-        }
+  h1 {
+    font-size: 38px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+  }
+
+  p {
+    margin: 8px 0 0 0;
+    font-size: 20px;
+    line-height: 1.6;
+
+    a {
+      color: $link-color;
+
+      &:hover {
+        border-bottom: $link-border;
       }
     }
   }
