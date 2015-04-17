@@ -1,0 +1,39 @@
+---
+layout:
+---
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {% assign site_url = site.url | append: site.baseurl }}{% endcapture %}
+
+  {% for page in site.html_pages %}
+    {% if page.sitemap == false %}
+      {% continue %}
+    {% endif %}
+
+    <url>
+      <loc>{{ page.url | replace: "/index.html","/" | prepend: site_url }}</loc>
+      {% if page.url == "/index.html" %}
+        <priority>1.0</priority>
+        <changefreq>daily</changefreq>
+      {% elsif page.modified_at %}
+        <lastmod>{{ page.modified_at | date_to_xmlschema }}</lastmod>
+      {% endif %}
+    </url>
+  {% endfor %}
+
+  {% for post in site.posts %}
+    {% if post.sitemap == false %}
+      {% continue %}
+    {% endif %}
+
+    <url>
+      <loc>{{ post.url | prepend: site_url }}</loc>
+      {% if post.modified_at %}
+        <lastmod>{{ post.modified_at | date_to_xmlschema }}</lastmod>
+      {% else %}
+        <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+      {% endif %}
+      <priority>0.8</priority>
+    </url>
+  {% endfor %}
+</urlset>
