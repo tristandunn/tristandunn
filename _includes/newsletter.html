@@ -31,7 +31,7 @@
     <section>
       {% assign form = newsletter.form %}
 
-      <form method="post" action="{% if form.action %}{{ form.action }}{% else %}http://tristandunn.createsend.com/t/d/s/jkirjj/{% endif %}">
+      <form method="post" action="{% if form.action %}{{ form.action }}{% else %}https://tristandunn.createsend.com/t/d/s/jkirjj/{% endif %}">
         <input type="text" name="{% if form.name %}{{ form.name }}{% else %}cm-name{% endif %}" placeholder="First Name">
         <input type="email" name="{% if form.address %}{{ form.address }}{% else %}cm-jkirjj-jkirjj{% endif %}" required="required" placeholder="E-mail Address">
         <button type="submit">
