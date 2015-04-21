@@ -1,5 +1,6 @@
 ---
 title: "Integration Testing Pusher in Ruby"
+category: ruby
 description: "Using the pusher-fake library to integration test Pusher in Ruby without an account or Internet connection."
 archived: true
 ---

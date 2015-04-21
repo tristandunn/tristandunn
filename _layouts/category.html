@@ -1,18 +1,21 @@
 ---
+newsletter:
+  title: "Subscribe to Newsletter"
+  description: "My best content and the latest articles. Delivered for free weekly. Unsubscribe at any time. No spam, ever."
 ---
 
-{% include newsletter.html %}
+{% include header.html id="categories" %}
+
+<header class="container">
+  <h1><a href="/">Tristan Dunn</a></h1>
+</header>
 
 <div class="container">
   <section role="main" class="articles">
-    <h1>Latest Articles</h1>
+    <h1>Articles on {{ page.category.name }}</h1>
 
     <ul itemscope itemtype="http://schema.org/Blog">
-      {% for post in site.posts %}
-        {% if post.archived %}
-          {% continue %}
-        {% endif %}
-
+      {% for post in page.category.posts %}
         <li class="post" itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting">
           <a href="{{ post.url }}">
             <h2 itemprop="name">{{ post.title | xml_escape }}{% if post.part %}: Part {{ post.part }}{% endif %}</h2>
@@ -25,20 +28,19 @@
   </section>
 
   <aside role="complementary">
-    <h2>About Me</h2>
+    {% include newsletter.html newsletter=page.newsletter %}
 
-    <p>I'm a developer at <a href="https://blend.io">Blend</a>. Formerly at Dribbble, Google, meebo, &#38; thoughtbot.</p>
-    <p>I was born and raised in Louisiana, but briefly lived in Boston &#38; San Francisco.</p>
-
-    <p>I love hockey.</p>
-
-    <h2>Categories</h2>
+    <h2>Other Categories</h2>
 
     {% assign categories = site.posts | group_by:"category" | sort:"name" %}
 
     <ol>
       {% for category in categories %}
         {% if category.name == "" %}
+          {% continue %}
+        {% endif %}
+
+        {% if category.name == page.category.name %}
           {% continue %}
         {% endif %}
 
@@ -49,3 +51,5 @@
     </ol>
   </aside>
 </div>
+
+{% include footer.html %}

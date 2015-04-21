@@ -1,6 +1,7 @@
 ---
 part: 1
 title: "Deploying Jekyll to a VPS"
+category: chef
 subtitle: "Part 1: Setting Up a Local Vagrant Server with Chef"
 description: "A step-by-step guide to setting up a local Vagrant server, with custom and existing Chef recipes, for testing configuration and deployment."
 ---

@@ -28,11 +28,6 @@ article {
       font-size: 28px;
       font-weight: 300;
     }
-
-    p {
-      color: $text-dull;
-      margin-top: 12px;
-    }
   }
 
   section {
@@ -153,6 +148,19 @@ article {
     .pull-right {
       margin: 0 32px 16px 32px;
       float: right;
+    }
+  }
+
+  footer {
+    p {
+      color: $text-dull;
+      margin-top: 32px;
+      font-style: italic;
+
+      a {
+        color: $text-subtle;
+        border-bottom: $link-border;
+      }
     }
   }
 }

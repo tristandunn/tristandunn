@@ -1,0 +1,45 @@
+//= require homepage
+
+@import "shared";
+
+body > header {
+  border-bottom: $section-border;
+}
+
+.newsletter {
+  background: transparent;
+  border: 0;
+
+  header,
+  section {
+    width: 280px;
+    padding: 0;
+    float: none;
+  }
+
+  header {
+    h1 {
+      color: $text-dull;
+      font-size: 16px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    p {
+      color: $text-subtle;
+      margin: 8px 0 16px 0;
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 1.4;
+    }
+  }
+
+  & + h2 {
+    margin: 48px 0 0 0;
+  }
+
+  body.subscribed & + h2 {
+    margin: 0;
+  }
+}

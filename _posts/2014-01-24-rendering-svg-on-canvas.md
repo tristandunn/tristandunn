@@ -1,5 +1,6 @@
 ---
 title: "Rendering SVG on Canvas"
+category: javascript
 description: "Simple example for rendering SVG on a <canvas> element with JavaScript, including simple support for retina screens."
 archived: true
 ---

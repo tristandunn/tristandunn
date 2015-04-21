@@ -23,6 +23,11 @@ body > footer {
 aside,
 .articles {
   padding: 48px 0;
+}
+
+.articles {
+  width: 600px;
+  float: left;
 
   h1 {
     color: $text-dull;
@@ -32,11 +37,6 @@ aside,
     text-transform: uppercase;
     letter-spacing: 1px;
   }
-}
-
-.articles {
-  width: 600px;
-  float: left;
 
   h2 {
     border-bottom: $link-border;
@@ -84,15 +84,44 @@ aside {
   width: 280px;
   float: right;
 
+  h2 {
+    color: $text-dull;
+    margin: 0 0 8px 0;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
   p {
     color: $text-subtle;
     margin: 8px 0 0 0;
     font-size: 16px;
     line-height: 1.4;
+
+    & + h2 {
+      margin: 48px 0 0 0;
+    }
   }
 
   a {
     border-bottom: $link-border;
+  }
+
+  ol {
+    margin: 8px 0 0 20px;
+    list-style: disc;
+
+    li {
+      color: $text-dull;
+      font-size: 24px;
+
+      a {
+        color: $text-subtle;
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
   }
 }
 

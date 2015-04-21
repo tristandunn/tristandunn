@@ -16,14 +16,16 @@
         <h2>{{ page.subtitle | xml_escape }}</h2>
       {% endif %}
 
-      <p>Published on <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date_to_string }}</time>.</p>
-
       <meta content="{{ page.description | xml_escape }}" itemprop="description">
     </header>
 
     <section itemprop="articleBody">
       {{ content }}
     </section>
+
+    <footer>
+      <p>Published on <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date_to_string }}</time> in the <a href="/categories/{{ page.category }}/">{{ page.category | titleize }}</a> category.{% if page.modified_at %} Updated on {{ page.modified_at | date_to_string }}.{% endif %}</p>
+    </footer>
   </article>
 </section>
 

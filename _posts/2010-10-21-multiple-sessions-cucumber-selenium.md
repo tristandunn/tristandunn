@@ -1,5 +1,6 @@
 ---
 title: "Multiple Sessions in Cucumber"
+category: ruby
 description: "Capybara additions for session manipulation to allow for testing interaction between multiple sessions in Cucumber."
 archived: true
 ---

@@ -1,3 +1,4 @@
+require "active_support/core_ext/string/inflections"
 require "active_support/core_ext/integer/inflections"
 
 module Jekyll
@@ -7,6 +8,10 @@ module Jekyll
       format = format.sub("%o", date.day.ordinalize)
 
       date.strftime(format)
+    end
+
+    def titleize(string)
+      string.titleize
     end
   end
 end
