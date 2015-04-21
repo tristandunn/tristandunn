@@ -1,5 +1,13 @@
 {% assign newsletter = include.newsletter %}
 
+<script>
+(function() {
+  if (document.cookie.match("subscribed=true")) {
+    document.querySelector("body").classList.add("subscribed");
+  }
+})();
+</script>
+
 <section role="banner" class="newsletter">
   <div class="container">
     <header>

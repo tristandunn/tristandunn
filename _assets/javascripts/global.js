@@ -71,8 +71,6 @@ var cookie = function(key, value, options) {
 //
 (function() {
   if (cookie("subscribed")) {
-    document.querySelector("body").classList.add("subscribed");
-
     return;
   }
 
