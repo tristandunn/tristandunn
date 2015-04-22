@@ -360,15 +360,15 @@ directory "/var/www" do
   owner node[:user]
 end
 
-template "tristandunn" do
-  path   "#{node[:nginx][:dir]}/sites-available/tristandunn"
+template "example" do
+  path   "#{node[:nginx][:dir]}/sites-available/example"
   owner  node[:user]
-  source "tristandunn.nginx"
+  source "example.nginx"
 
   notifies :reload, "service[nginx]"
 end
 
-nginx_site "tristandunn" do
+nginx_site "example" do
   enable true
 end
 {% endhighlight %}
@@ -383,10 +383,10 @@ compilation directory, `_site`.
 <figure>
 {% highlight nginx %}
 server {
-  root /var/www/tristandunn.com/current/_site;
+  root /var/www/example.com/current/_site;
 }
 {% endhighlight %}
-  <figcaption>Creating a simple template at <code>site-cookbooks/server/templates/default/tristandunn.nginx</code> for the site.</figcaption>
+  <figcaption>Creating a simple template at <code>site-cookbooks/server/templates/default/example.nginx</code> for the site.</figcaption>
 </figure>
 
 Now we add the recipe to run list for the node and while we're here we'll also
