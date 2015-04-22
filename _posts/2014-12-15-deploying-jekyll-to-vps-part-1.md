@@ -531,10 +531,13 @@ ruby 2.1.5p273 (2014-11-13 revision 48405) [x86_64-linux]
 ## Summary
 
 We now how the minimal components needed to deploy a Jekyll website to a Vagrant
-box. There's still plenty to be done though. In the next part we'll set up
-Capistrano, including deployment of local changes. And in the following part
-we'll prepare and deploy a production version. [E-mail
-me](mailto:hello@tristandunn.com) if you have any tips, comments, or questions.
+box. See the [jekyll-vps-server][24] contains the complete source, with the
+[part-1 branch][25] being specific to this article.
+
+There's still plenty to be done. In the next part we'll set up Capistrano,
+including deployment of local changes. And in the following part we'll prepare
+and deploy a production version. [E-mail me](mailto:hello@tristandunn.com) if
+you have any tips, comments, or questions.
 
 
 
@@ -562,3 +565,5 @@ me](mailto:hello@tristandunn.com) if you have any tips, comments, or questions.
 [21]: https://supermarket.getchef.com/cookbooks/nginx
 [22]: https://supermarket.getchef.com
 [23]: http://capistranorb.com
+[24]: https://github.com/tristandunn/jekyll-vps-server
+[25]: https://github.com/tristandunn/jekyll-vps-server/compare/part-0...part-1
