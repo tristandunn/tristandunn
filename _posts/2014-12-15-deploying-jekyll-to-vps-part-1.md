@@ -188,15 +188,23 @@ Note that I manually determined the <code>checksum</code> value by downloading
 the compressed file from the official website and using <code>shasum -a 256
 [file]</code> locally on OS X.
 
-And we'll add an SSH host to match the default Vagrant configuration:
+And we'll add an SSH host for the Vagrant configuration. Vagrant provides the
+necessary configuration output by running `vagrant ssh-config --host vagrant`.
+Note that the host option can be whatever you would like, but be sure to replace
+it in future instructions.
 
 <figure>
 {% highlight text %}
 Host vagrant
+  HostName 127.0.0.1
   User vagrant
   Port 2222
-  Hostname 127.0.0.1
-  IdentityFile ~/.vagrant.d/insecure_private_key
+  UserKnownHostsFile /dev/null
+  StrictHostKeyChecking no
+  PasswordAuthentication no
+  IdentityFile /Users/Tristan/Sites/jekyll-vps-server/.vagrant/machines/default/virtualbox/private_key
+  IdentitiesOnly yes
+  LogLevel FATAL
 {% endhighlight %}
   <figcaption>Adding a host to <code>~/.ssh/config</code> for the Vagrant server.</figcaption>
 </figure>
