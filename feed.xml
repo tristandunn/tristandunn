@@ -11,15 +11,15 @@ layout:
     <title xml:lang="en">Tristan Dunn</title>
     <atom:link type="application/atom+xml" href="{{ site.url }}/feed.xml" rel="self"/>
     <link>{{ site.url }}</link>
-    <pubDate>{{ site.time | date_to_rfc822 }}</pubDate>
-    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
+    <pubDate>{{ site.posts | last_updated | date_to_rfc822 }}</pubDate>
+    <lastBuildDate>{{ site.posts | last_updated | date_to_rfc822 }}</lastBuildDate>
     <language>en-US</language>
     <description>Developer and tolerable designer.</description>
     {% for post in site.posts %}
     <item>
       <title>{{ post.title | xml_escape}}</title>
       <link>{{ post.url | prepend: site.url }}</link>
-      <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+      <pubDate>{{ post | last_updated | date_to_rfc822 }}</pubDate>
       <dc:creator>Tristan Dunn</dc:creator>
       <guid isPermaLink="true">{{ post.url | prepend: site.url }}</guid>
       <description><![CDATA[{{ post.content }}]]></description>
