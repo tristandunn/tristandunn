@@ -10,11 +10,15 @@
 <section role="main" class="container">
   <article role="article" itemscope itemtype="http://schema.org/BlogPosting">
     <header>
-      <h1 itemprop="name">{{ page.title | xml_escape }}</h1>
+      <div itemprop="name">
+        <h1>{{ page.title | xml_escape }}</h1>
 
-      {% if page.subtitle %}
-        <h2>{{ page.subtitle | xml_escape }}</h2>
-      {% endif %}
+        <span> - </span>
+
+        {% if page.subtitle %}
+          <h2>{{ page.subtitle | xml_escape }}</h2>
+        {% endif %}
+      </div>
 
       <meta content="{{ page.description | xml_escape }}" itemprop="description">
     </header>
