@@ -17,6 +17,9 @@ layout:
         <changefreq>daily</changefreq>
       {% elsif page.modified_at %}
         <lastmod>{{ page.modified_at | date_to_xmlschema }}</lastmod>
+      {% else %}
+        <priority>0.2</priority>
+        <changefreq>weekly</changefreq>
       {% endif %}
     </url>
   {% endfor %}
