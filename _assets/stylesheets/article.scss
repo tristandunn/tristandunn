@@ -173,6 +173,77 @@ article {
   }
 }
 
+section.series {
+  margin: 48px 0;
+  padding: 48px 0 0 0;
+  border-top: $section-border;
+
+  h1 {
+    color: $text-subtle;
+    margin: 0 0 12px 0;
+    font-size: 25px;
+    font-weight: 600;
+  }
+
+  ol {
+    margin: 0 0 0 32px;
+    font-size: 20px;
+    line-height: 1.6;
+
+    li {
+      position: relative;
+      padding: 12px 16px;
+      border-left: 2px solid $text-subtle;
+      counter-increment: li-counter;
+
+      &:before {
+        position: absolute;
+        top: 50%;
+        left: -8px;
+        width: 0;
+        height: 0;
+        margin: -4px 0 0 0;
+        border-style: solid;
+        border-width: 4px 6px 4px 0;
+        border-color: transparent $text-subtle transparent transparent;
+        content: "";
+      }
+
+      &:after {
+        position: absolute;
+        left: -28px;
+        color: $text-subtle;
+        font-weight: 600;
+        content: counter(li-counter);
+      }
+
+      &.current {
+        border-color: $link-color;
+
+        &:before {
+          border-color: transparent $link-color transparent transparent;
+        }
+
+        a,
+        &:after {
+          color: $link-color;
+          border: 0;
+        }
+      }
+
+      a {
+        color: $text-subtle;
+        border-bottom: $link-border;
+
+        &:hover {
+          color: $link-hover-color;
+          border-color: $link-hover-border-color;
+        }
+      }
+    }
+  }
+}
+
 body.subscribed {
   > footer {
     border-top: $section-border;

@@ -1,6 +1,7 @@
 ---
 part: 2
 title: "Deploying Jekyll to a VPS"
+footer: "series/deploying-jekyll-to-vps.html"
 category: chef
 subtitle: "Part 2: Security, Monitoring, and Local Deployment"
 description: "Increase server security, add service monitoring, and configure Capistrano for deploying to the local server. "
