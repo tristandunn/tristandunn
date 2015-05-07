@@ -19,7 +19,7 @@ layout:
     <item>
       <title>{{ post.title | xml_escape }}{% if post.subtitle %} - {{ post.subtitle | xml_escape }}{% endif %}</title>
       <link>{{ post.url | prepend: site.url }}</link>
-      <pubDate>{{ post | last_updated | date_to_rfc822 }}</pubDate>
+      <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
       <dc:creator>Tristan Dunn</dc:creator>
       <guid isPermaLink="true">{{ post.url | prepend: site.url }}</guid>
       <description><![CDATA[{{ post.content }}]]></description>
