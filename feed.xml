@@ -17,7 +17,6 @@ layout:
     <description>Developer and tolerable designer.</description>
     {% for post in site.posts %}
     <item>
-      <title>{{ post.title | xml_escape}}</title>
       <title>{{ post.title | xml_escape }}{% if post.subtitle %} - {{ post.subtitle | xml_escape }}{% endif %}</title>
       <link>{{ post.url | prepend: site.url }}</link>
       <pubDate>{{ post | last_updated | date_to_rfc822 }}</pubDate>
