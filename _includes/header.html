@@ -2,16 +2,20 @@
 <html lang="en-US">
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="{% if page.description %}{{ page.description | xml_escape }}{% else %}Developer and tolerable designer.{% endif %}">
 
   <title>{% if page.title %}{{ page.title | xml_escape }}{% if page.subtitle %} - {{ page.subtitle | xml_escape }}{% endif %}{% else %}Tristan Dunn{% endif %}</title>
 
   {% if page.description %}
+    <meta name="description" content="{{ page.description | xml_escape }}">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@tristandunn">
     <meta name="twitter:title" content="{{ page.title | xml_escape }}{% if page.part %}: Part {{ page.part }}{% endif %}">
     <meta name="twitter:description" content="{{ page.description | xml_escape }}">
     <meta name="twitter:url" content="{{ page.url | prepend: site.url }}">
+  {% elsif include.category %}
+    <meta name="description" content="{{ include.category | titleize | prepend: "Articles on " | append: "." | xml_escape }}">
+  {% else %}
+    <meta name="description" content="Developer and tolerable designer.">
   {% endif %}
 
   {% capture css %}
