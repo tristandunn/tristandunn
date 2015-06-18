@@ -264,3 +264,8 @@ body.subscribed {
     display: none;
   }
 }
+
+.container.error,
+.container.subscribed {
+  border-bottom: $section-border;
+}

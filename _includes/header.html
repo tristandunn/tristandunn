@@ -17,7 +17,7 @@
     {% endif %}
   {% elsif include.category %}
     <meta name="description" content="{{ include.category | titleize | prepend: "Articles on " | append: "." | xml_escape }}">
-  {% else %}
+  {% elsif page.description != false %}
     <meta name="description" content="Developer and tolerable designer.">
   {% endif %}
 
