@@ -266,6 +266,7 @@ body.subscribed {
 }
 
 .container.error,
-.container.subscribed {
+.container.subscribed,
+.container.unsubscribed {
   border-bottom: $section-border;
 }
