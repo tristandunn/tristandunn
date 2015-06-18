@@ -13,9 +13,9 @@
       <div itemprop="name">
         <h1>{{ page.title | xml_escape }}</h1>
 
-        <span> - </span>
-
         {% if page.subtitle %}
+          <span> - </span>
+
           <h2>{{ page.subtitle | xml_escape }}</h2>
         {% endif %}
       </div>
