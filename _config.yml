@@ -20,7 +20,6 @@ exclude:
   - Capfile
   - Gemfile
   - Gemfile.lock
-  - Procfile
   - config
   - vendor
 
