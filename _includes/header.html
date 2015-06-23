@@ -16,9 +16,9 @@
       <meta name="twitter:image" content="{{ page.image | asset_path }}">
     {% endif %}
   {% elsif include.category %}
-    <meta name="description" content="{{ include.category | titleize | prepend: "Articles on " | append: "." | xml_escape }}">
+    <meta name="description" content="{{ include.category | titleize | prepend: "All of the articles I have written on " | append: "." | xml_escape }}">
   {% elsif page.description != false %}
-    <meta name="description" content="Developer and tolerable designer.">
+    <meta name="description" content="A Ruby and Javascript developer, tolerable designer, and author.">
   {% endif %}
 
   {% capture css %}
