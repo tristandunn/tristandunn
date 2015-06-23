@@ -135,3 +135,34 @@ body.subscribed {
     display: none;
   }
 }
+
+@media screen and (max-width: 1012px) {
+  aside,
+  .articles {
+    width: auto;
+    float: none;
+  }
+
+  .articles {
+    h1 {
+      margin: 0 0 6px 0;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0;
+    }
+
+    h2 {
+      border-width: 1px;
+      font-size: 28px;
+      font-weight: 500;
+    }
+
+    p {
+      font-size: 15px;
+
+      &.published {
+        font-size: 12px;
+      }
+    }
+  }
+}

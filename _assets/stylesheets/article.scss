@@ -271,3 +271,106 @@ body.subscribed {
 .container.unsubscribed {
   border-bottom: $section-border;
 }
+
+@media screen and (max-width: 1012px) {
+  article {
+    header {
+      h1 {
+        font-size: 36px;
+        letter-spacing: 0;
+      }
+
+      h2 {
+        font-size: 20px;
+      }
+    }
+
+    section {
+      h2,
+      h3,
+      h4 {
+        font-weight: 600;
+      }
+
+      h2 {
+        font-size: 26px;
+      }
+
+      h3 {
+        font-size: 22px;
+      }
+
+      h4 {
+        font-size: 18px;
+      }
+
+      p,
+      ul {
+        margin: 0 0 24px 0;
+        font-size: 16px;
+        line-height: 1.5;
+      }
+
+      p {
+        &:first-child {
+          font-size: 18px;
+        }
+      }
+
+      p,
+      li,
+      figcaption {
+        code {
+          padding: 2px 4px;
+          font-size: 12px;
+        }
+      }
+
+      code,
+      figcaption code {
+        font-size: 12px;
+      }
+
+      pre,
+      code {
+        line-height: 1.2;
+      }
+
+      figcaption {
+        font-size: 14px;
+        line-height: 1.2;
+      }
+
+      .highlight {
+        padding: 12px;
+        border-width: 1px;
+        border-radius: 2px;
+      }
+    }
+
+    footer {
+      p {
+        font-size: 14px;
+      }
+    }
+  }
+
+  section.series {
+    margin: 32px 0;
+    padding: 32px 0 0 0;
+    border-top: $section-border;
+
+    h1 {
+      color: $grey-800;
+      margin: 0 0 8px 0;
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    ol {
+      margin: 0 0 0 32px;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+  }
+}

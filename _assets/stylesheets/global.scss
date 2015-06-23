@@ -82,3 +82,59 @@ body > footer {
     }
   }
 }
+
+@media screen and (max-width: 1012px) {
+  .container {
+    width: auto;
+    padding: 32px;
+  }
+
+  body > header,
+  body > footer {
+    ul {
+      li {
+        a {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+
+  body > header {
+    h1 {
+      font-size: 26px;
+      font-weight: 400;
+    }
+  }
+}
+
+@media screen and (max-width: 540px) {
+  body > footer {
+    ul,
+    ul.external {
+      width: 100%;
+      display: block;
+      float: none;
+
+      li {
+        text-align: center;
+      }
+    }
+
+    ul {
+      li {
+        width: 100%;
+      }
+    }
+
+    ul.external {
+      margin: 0 0 16px 0;
+
+      li {
+        width: 25%;
+        margin: 0;
+        float: none;
+      }
+    }
+  }
+}

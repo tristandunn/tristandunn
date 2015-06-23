@@ -11,25 +11,25 @@
   header {
     width: $section-width;
     float: left;
-
-    h1 {
-      color: $grey-800;
-      font-size: 36px;
-      font-weight: 400;
-      line-height: 1.25;
-    }
-
-    p {
-      color: $grey-700;
-      margin: 8px 0 0 0;
-      font-size: 18px;
-      line-height: 1.6;
-    }
   }
 
   section {
     width: $aside-width;
     float: right;
+  }
+
+  h1 {
+    color: $grey-800;
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 1.25;
+  }
+
+  p {
+    color: $grey-700;
+    margin: 8px 0 0 0;
+    font-size: 18px;
+    line-height: 1.6;
   }
 
   input,
@@ -64,6 +64,32 @@
 
     &:active {
       background: darken($light-green-600, 10%);
+    }
+  }
+}
+
+@media screen and (max-width: 1012px) {
+  .newsletter {
+    header,
+    section {
+      width: auto;
+      margin: 0 auto;
+      padding: 0;
+      float: none;
+      max-width: $aside-width * 2;
+    }
+
+    section {
+      padding: 32px 0 0 0;
+    }
+
+    h1 {
+      font-size: 24px;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 1.5;
     }
   }
 }
