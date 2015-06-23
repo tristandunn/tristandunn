@@ -35,7 +35,7 @@ you're planning to run any other services or background tasks then you may want
 to consider a larger size. Note that you can adjust the size in the future, but
 you may experience a bit of downtime depending on how you perform it.
 
-#### Selection Region
+#### Select Region
 
 For the region you should pick whichever is closest to your target audience,
 unless you plan on using a CDN such as [Fastly][4].
