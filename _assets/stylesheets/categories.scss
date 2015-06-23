@@ -8,6 +8,7 @@ body > header {
 
 .newsletter {
   background: transparent;
+  margin: 0 0 48px 0;
   border: 0;
 
   header,
@@ -33,13 +34,5 @@ body > header {
       font-weight: 400;
       line-height: 1.4;
     }
-  }
-
-  & + h2 {
-    margin: 48px 0 0 0;
-  }
-
-  body.subscribed & + h2 {
-    margin: 0;
   }
 }
