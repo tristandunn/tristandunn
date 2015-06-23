@@ -1,4 +1,4 @@
-# tristandunn [![Build Status](http://img.shields.io/travis/tristandunn/tristandunn.svg)](https://travis-ci.org/tristandunn/tristandunn)
+# tristandunn [![Build Status](https://travis-ci.org/tristandunn/tristandunn.svg?branch=master)](https://travis-ci.org/tristandunn/tristandunn)
 
 My personal website.
 
