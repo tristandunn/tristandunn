@@ -32,8 +32,8 @@ a {
   text-decoration: none;
 
   &:hover {
-    color: $link-hover-color;
-    border-color: $link-hover-border-color;
+    color: $light-blue-600;
+    border-color: $light-blue-600;
   }
 }
 
@@ -50,14 +50,13 @@ body > footer {
       float: left;
 
       a {
-        color: $text-dull;
+        color: $grey-600;
         border-bottom: $link-border;
         font-size: 16px;
-        font-weight: 600;
+        font-weight: 500;
 
         &:hover {
-          color: $link-hover-color;
-          border-color: $link-hover-border-color;
+          border-bottom-color: $light-blue-600;
         }
       }
     }
@@ -66,9 +65,8 @@ body > footer {
 
 body > header {
   h1 {
-    font-size: 28px;
-    font-weight: 600;
-    letter-spacing: -0.5px;
+    font-size: 32px;
+    font-weight: 500;
     float: left;
   }
 }

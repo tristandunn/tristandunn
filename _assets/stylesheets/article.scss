@@ -15,7 +15,7 @@ article {
     text-align: center;
 
     h1 {
-      color: $text-header;
+      color: $grey-900;
       margin-bottom: 12px;
       font-size: 68px;
       font-weight: 400;
@@ -23,9 +23,9 @@ article {
     }
 
     h2 {
-      color: $text-subtle;
+      color: $grey-800;
       margin: 12px 0;
-      font-size: 28px;
+      font-size: 32px;
       font-weight: 300;
     }
 
@@ -42,25 +42,25 @@ article {
     h2,
     h3,
     h4 {
-      font-weight: 700;
+      font-weight: 500;
     }
 
     h2 {
-      color: $text-header;
-      margin: 32px 0 6px 0;
-      font-size: 32px;
+      color: $grey-900;
+      margin: 36px 0 6px 0;
+      font-size: 36px;
     }
 
     h3 {
-      color: $text-subtle;
+      color: $grey-800;
       margin: 28px 0 3px 0;
-      font-size: 25px;
+      font-size: 28px;
     }
 
     h4 {
-      color: $text-subtle;
-      margin: 0 0 3px 0;
-      font-size: 20px;
+      color: $grey-800;
+      margin: 4px 0;
+      font-size: 24px;
     }
 
     p,
@@ -71,10 +71,11 @@ article {
       quotes: "\201C" "\201D" "\2018" "\2019";
 
       a {
-        color: $link-hover-color;
+        color: $light-blue-700;
 
         &:hover {
-          border-bottom: 2px solid $link-hover-border-color;
+          color: $light-blue-600;
+          border-bottom: 2px solid $light-blue-600;
         }
       }
     }
@@ -92,8 +93,8 @@ article {
           border-bottom: $link-border;
 
           &:hover {
-            color: $link-hover-color;
-            border-color: $link-hover-border-color;
+            color: $light-blue-600;
+            border-color: $light-blue-600;
           }
         }
       }
@@ -109,7 +110,7 @@ article {
     }
 
     abbr {
-      border-bottom: 2px dotted $link-border-color;
+      border-bottom: 2px dotted $grey-300;
       cursor: help;
     }
 
@@ -131,10 +132,10 @@ article {
     li,
     figcaption {
       code {
-        background-color: #FAFAFB;
+        background-color: $grey-50;
         padding: 4px 6px;
-        border: 1px solid #DDD;
-        border-radius: 2px;
+        border: 1px solid $grey-300;
+        border-radius: 3px;
         font-size: 14px;
         white-space: nowrap;
       }
@@ -145,22 +146,22 @@ article {
     }
 
     figcaption {
-      color: $text-dull;
+      color: $grey-600;
       margin: 8px 0 0 0;
       line-height: 1.4;
       text-align: center;
 
       code {
-        border: 1px solid #EEE;
+        border: 1px solid $grey-300;
         font-size: 13px;
       }
     }
 
     .highlight {
-      background-color: #FAFAFB;
+      background-color: $grey-50;
       padding: 18px;
-      border: 2px solid #F0F0F0;
-      border-radius: 4px;
+      border: 2px solid $grey-200;
+      border-radius: 3px;
       overflow: auto;
     }
 
@@ -172,12 +173,12 @@ article {
 
   footer {
     p {
-      color: $text-dull;
+      color: $grey-600;
       margin-top: 32px;
       font-style: italic;
 
       a {
-        color: $text-subtle;
+        color: $grey-800;
         border-bottom: $link-border;
       }
     }
@@ -190,7 +191,7 @@ section.series {
   border-top: $section-border;
 
   h1 {
-    color: $text-subtle;
+    color: $grey-800;
     margin: 0 0 12px 0;
     font-size: 25px;
     font-weight: 600;
@@ -204,7 +205,7 @@ section.series {
     li {
       position: relative;
       padding: 12px 16px;
-      border-left: 2px solid $text-subtle;
+      border-left: 2px solid $grey-800;
       counter-increment: li-counter;
 
       &:before {
@@ -216,39 +217,39 @@ section.series {
         margin: -4px 0 0 0;
         border-style: solid;
         border-width: 4px 6px 4px 0;
-        border-color: transparent $text-subtle transparent transparent;
+        border-color: transparent $grey-800 transparent transparent;
         content: "";
       }
 
       &:after {
         position: absolute;
         left: -28px;
-        color: $text-subtle;
+        color: $grey-800;
         font-weight: 600;
         content: counter(li-counter);
       }
 
       &.current {
-        border-color: $link-color;
+        border-color: $light-blue-700;
 
         &:before {
-          border-color: transparent $link-color transparent transparent;
+          border-color: transparent $light-blue-700 transparent transparent;
         }
 
         a,
         &:after {
-          color: $link-color;
+          color: $light-blue-700;
           border: 0;
         }
       }
 
       a {
-        color: $text-subtle;
+        color: $grey-800;
         border-bottom: $link-border;
 
         &:hover {
-          color: $link-hover-color;
-          border-color: $link-hover-border-color;
+          color: $light-blue-600;
+          border-color: $light-blue-600;
         }
       }
     }

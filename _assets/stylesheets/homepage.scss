@@ -26,11 +26,11 @@ aside,
 }
 
 .articles {
-  width: 600px;
+  width: $section-width;
   float: left;
 
   h1 {
-    color: $text-dull;
+    color: $grey-600;
     margin: 0 0 8px 0;
     font-size: 16px;
     font-weight: 600;
@@ -40,31 +40,32 @@ aside,
 
   h2 {
     border-bottom: $link-border;
-    font-size: 38px;
-    font-weight: 700;
-    letter-spacing: -0.5px;
+    border-width: 2px;
+    font-size: 36px;
+    font-weight: 600;
     word-break: break-word;
     display: inline-block;
   }
 
   a {
-    color: $text-header;
+    color: $grey-900;
     display: block;
 
     &:hover h2 {
-      color: $link-hover-color;
-      border-color: $link-hover-border-color;
+      color: $light-blue-600;
+      border-color: $light-blue-600;
     }
   }
 
   p {
+    color: $grey-600;
     margin: 8px 0 0 0;
     font-size: 18px;
     line-height: 1.6;
 
     &.published {
-      color: $text-dull;
-      margin: 4px 0 0 0;
+      color: $grey-600;
+      margin: 6px 0 0 0;
       font-size: 14px;
       font-style: italic;
       line-height: 1;
@@ -75,17 +76,17 @@ aside,
     & + li {
       margin-top: 32px;
       padding-top: 32px;
-      border-top: 1px solid $section-border-color;
+      border-top: 1px solid $grey-200;
     }
   }
 }
 
 aside {
-  width: 280px;
+  width: $aside-width;
   float: right;
 
   h2 {
-    color: $text-dull;
+    color: $grey-600;
     margin: 0 0 8px 0;
     font-size: 16px;
     font-weight: 600;
@@ -94,7 +95,7 @@ aside {
   }
 
   p {
-    color: $text-subtle;
+    color: $grey-800;
     margin: 8px 0 0 0;
     font-size: 16px;
     line-height: 1.4;
@@ -113,11 +114,11 @@ aside {
     list-style: disc;
 
     li {
-      color: $text-dull;
+      color: $grey-600;
       font-size: 24px;
 
       a {
-        color: $text-subtle;
+        color: $grey-800;
         font-size: 16px;
         line-height: 24px;
       }

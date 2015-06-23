@@ -1,6 +1,5 @@
-//= require homepage
-
 @import "shared";
+@import "homepage";
 
 body > header {
   border-bottom: $section-border;
@@ -13,14 +12,14 @@ body > header {
 
   header,
   section {
-    width: 280px;
+    width: $aside-width;
     padding: 0;
     float: none;
   }
 
   header {
     h1 {
-      color: $text-dull;
+      color: $grey-600;
       font-size: 16px;
       font-weight: 600;
       text-transform: uppercase;
@@ -28,7 +27,7 @@ body > header {
     }
 
     p {
-      color: $text-subtle;
+      color: $grey-800;
       margin: 8px 0 16px 0;
       font-size: 16px;
       font-weight: 400;
