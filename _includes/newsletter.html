@@ -6,18 +6,24 @@
       <h1>
         {% if newsletter.title %}
           {{ newsletter.title }}
+        {% elsif page.layout == "article" %}
+          Did you enjoy the article?
         {% else %}
           Subscribe for my best content.
         {% endif %}
       </h1>
 
-      <p>
-        {% if newsletter.description %}
-          {{ newsletter.description }}
+      {% if newsletter.description %}
+        <p>{{ newsletter.description }}</p>
+      {% else %}
+        {% if page.layout == "article" %}
+          <p>Subscribe for my best content on design, development, and more. Easily stay up-to-date with my latest articles. Delivered for free each week.</p>
         {% else %}
-          My best content on design, development, and more. Also stay up-to-date with my latest articles. Delivered for free each week. Unsubscribe at any time. No spam, ever.
+          <p>My best content on design, development, and more. Stay up-to-date with my latest articles and product announcements. Delivered for free weekly.</p>
         {% endif %}
-      </p>
+
+        <p>Unsubscribe at any time. No spam, ever.</p>
+      {% endif %}
     </header>
 
     <section>
