@@ -204,7 +204,7 @@ exclude:
   - Gemfile.lock
   - config
 {% endhighlight %}
-  <figcaption>Adding exclusions to the <code>config.yml</code> for Jekyll.</figcaption>
+  <figcaption>Adding exclusions to the <code>_config.yml</code> for Jekyll.</figcaption>
 </figure>
 
 Now we can customize the `config/deploy.rb` file with our custom settings and
