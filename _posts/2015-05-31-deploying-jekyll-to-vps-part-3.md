@@ -182,9 +182,9 @@ this article. The website source code is available in the
 [jekyll-vps-website][13] repository, with the [part-3 branch][14] being
 relevant.
 
-In the next part we'll add an asset pipeline, improve configuration for serving
-the assets, and add and force SSL. [E-mail me](mailto:hello@tristandunn.com) if
-you have any tips, comments, or questions.
+In the [next part][15] we'll add an asset pipeline and improve configuration for
+serving the assets. [E-mail me](mailto:hello@tristandunn.com) if you have any
+tips, comments, or questions.
 
 
 
@@ -203,3 +203,4 @@ you have any tips, comments, or questions.
 [12]: https://github.com/tristandunn/jekyll-vps-server/compare/part-2...part-3
 [13]: https://github.com/tristandunn/jekyll-vps-website
 [14]: https://github.com/tristandunn/jekyll-vps-website/compare/part-2...part-3
+[15]: /2015/10/14/deploying-jekyll-to-vps-part-4/
