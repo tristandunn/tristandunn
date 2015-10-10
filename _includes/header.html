@@ -31,7 +31,7 @@
 
   <style type="text/css">{{ css | strip_newlines }}</style>
 
-  <link rel="icon" href="{{ "favicon.ico" | asset_path }}">
+  <link rel="icon" href="{% asset_path favicon.ico %}">
   <link rel="alternate" type="application/rss+xml" title="Tristan Dunn" href="{{ "/feed.xml" | prepend: site.url }}">
 </head>
 <body{% if include.id %} id="{{ include.id }}"{% endif %}>
