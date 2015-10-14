@@ -1,6 +1,7 @@
 ---
 part: 2
 title: "Deploying Jekyll to a VPS"
+image: "posts/2015-05-05/image@2x.png"
 footer: "series/deploying-jekyll-to-vps.html"
 category: chef
 subtitle: "Part 2: Security, Monitoring, and Local Deployment"

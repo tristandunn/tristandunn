@@ -7,7 +7,7 @@
 
   {% if page.description %}
     <meta name="description" content="{{ page.description | xml_escape }}">
-    <meta name="twitter:card" content="{% if page.image %}summary_large_image{% else %}summary{% endif %}">
+    <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@tristandunn">
     <meta name="twitter:title" content="{{ page.title | xml_escape }}{% if page.part %}: Part {{ page.part }}{% endif %}">
     <meta name="twitter:description" content="{{ page.description | xml_escape }}">

@@ -1,6 +1,7 @@
 ---
 part: 4
 title: "Deploying Jekyll to a VPS"
+image: "posts/2015-10-14/image@2x.png"
 footer: "series/deploying-jekyll-to-vps.html"
 category: chef
 subtitle: "Part 4: Adding an Asset Pipeline"

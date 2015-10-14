@@ -1,6 +1,7 @@
 ---
 part: 1
 title: "Deploying Jekyll to a VPS"
+image: "posts/2014-12-15/image@2x.png"
 footer: "series/deploying-jekyll-to-vps.html"
 category: chef
 subtitle: "Part 1: Setting Up a Local Vagrant Server with Chef"
