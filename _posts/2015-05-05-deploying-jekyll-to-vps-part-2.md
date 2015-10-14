@@ -366,9 +366,9 @@ code, with the [part-2 branch][8] being specific to this article. The website
 source code is available in the [jekyll-vps-website][9] repository, with the
 [part-2 branch][10] being relevant.
 
-In the next part we'll create and deploy to a [DigitalOcean][4] server to have a
-production version available. [E-mail me](mailto:hello@tristandunn.com) if you
-have any tips, comments, or questions.
+In the [next part][11] we'll create and deploy to a [DigitalOcean][4] server to
+have a production version available. [E-mail me](mailto:hello@tristandunn.com)
+if you have any tips, comments, or questions.
 
 
 
@@ -383,3 +383,4 @@ have any tips, comments, or questions.
 [8]:  https://github.com/tristandunn/jekyll-vps-server/compare/part-1...part-2
 [9]:  https://github.com/tristandunn/jekyll-vps-website
 [10]: https://github.com/tristandunn/jekyll-vps-website/compare/part-1...part-2
+[11]: /2015/05/31/deploying-jekyll-to-vps-part-3/

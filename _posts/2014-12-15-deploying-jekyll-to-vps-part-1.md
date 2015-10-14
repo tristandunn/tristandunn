@@ -546,7 +546,7 @@ We now how the minimal components needed to deploy a Jekyll website to a Vagrant
 box. See the [jekyll-vps-server][24] contains the complete source, with the
 [part-1 branch][25] being specific to this article.
 
-There's still plenty to be done. In the next part we'll set up Capistrano,
+There's still plenty to be done. In the [next part][26] we'll set up Capistrano,
 including deployment of local changes. And in the following part we'll prepare
 and deploy a production version. [E-mail me](mailto:hello@tristandunn.com) if
 you have any tips, comments, or questions.
@@ -579,3 +579,4 @@ you have any tips, comments, or questions.
 [23]: http://capistranorb.com
 [24]: https://github.com/tristandunn/jekyll-vps-server
 [25]: https://github.com/tristandunn/jekyll-vps-server/compare/part-0...part-1
+[26]: /2015/05/05/deploying-jekyll-to-vps-part-2/
