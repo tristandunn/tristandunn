@@ -10,7 +10,7 @@ set :bundle_roles, :web
 
 # Location and settings for rbenv environment.
 set :rbenv_type,        :system
-set :rbenv_ruby,        "2.1.5"
+set :rbenv_ruby,        "2.2.3"
 set :rbenv_roles,       :all
 set :rbenv_map_bins,    %w(bundle gem rake ruby)
 set :rbenv_custom_path, "/opt/rbenv"
