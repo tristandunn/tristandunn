@@ -1,30 +1,16 @@
 require "htmlcompressor"
 
-module Jekyll
-  HTML_COMPRESSOR = HtmlCompressor::Compressor.new({
-    remove_intertag_spaces: true,
-    remove_surrounding_spaces: HtmlCompressor::Compressor::BLOCK_TAGS_MIN
-  })
+HTML_COMPRESSOR = HtmlCompressor::Compressor.new({
+  remove_intertag_spaces: true,
+  remove_surrounding_spaces: HtmlCompressor::Compressor::BLOCK_TAGS_MIN
+})
 
-  class Page
-    def output_with_compression
-      if ext == ".xml"
-        output_without_compression
-      else
-        HTML_COMPRESSOR.compress(output_without_compression)
-      end
-    end
+Jekyll::Hooks.register(:documents, :post_render) do |page|
+  page.output = HTML_COMPRESSOR.compress(page.output)
+end
 
-    alias_method :output_without_compression, :output
-    alias_method :output, :output_with_compression
-  end
+Jekyll::Hooks.register(:pages, :post_render) do |page|
+  next if page.ext == ".xml"
 
-  class Post
-    def output_with_compression
-      HTML_COMPRESSOR.compress(output_without_compression)
-    end
-
-    alias_method :output_without_compression, :output
-    alias_method :output, :output_with_compression
-  end
+  page.output = HTML_COMPRESSOR.compress(page.output)
 end
