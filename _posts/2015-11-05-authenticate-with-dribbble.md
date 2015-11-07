@@ -291,8 +291,10 @@ every user request. Error handling would also be a welcomed addition. And a
 reminder that if you want more than read-only access you'll need to request
 [other scopes][7].
 
-On to the hard part, the idea. [E-mail me](mailto:hello@tristandunn.com) if you
-make an application, or if you have any comments or questions.
+See the [dribbble-example][9] repository for the complete source code to the
+application. Now on to the hard part, the idea. [E-mail
+me](mailto:hello@tristandunn.com) if you make an application, or if you have any
+comments or questions.
 
 
 
@@ -306,3 +308,4 @@ make an application, or if you have any comments or questions.
 [6]: https://dribbble.com/account/applications
 [7]: http://developer.dribbble.com/v1/oauth/#scopes
 [8]: http://developer.dribbble.com/v1/
+[9]: https://github.com/tristandunn/dribbble-example
