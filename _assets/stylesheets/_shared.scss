@@ -6,3 +6,12 @@ $section-width: 600px;
 
 $link-border:    1px solid $grey-200;
 $section-border: 1px solid $grey-200;
+
+%h2 {
+  color: $grey-600;
+  margin: 0 0 10px 0;
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}

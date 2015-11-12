@@ -8,7 +8,7 @@ newsletter:
   description: "<a href=http://getfadeaway.com>Fadeaway</a> helps you upload to Dribbble. Drag and drop, export from Sketch, or use the command line to upload to Dribbble. Coming soon!"
   form:
     action: "http://tristandunn.createsend.com/t/d/s/drlys/"
-    button: "Send me a launch notification."
+    button: "Notify me at launch."
     address: "cm-drlys-drlys"
 ---
 

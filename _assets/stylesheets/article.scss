@@ -17,7 +17,7 @@ article {
     h1 {
       color: $grey-900;
       margin-bottom: 12px;
-      font-size: 68px;
+      font-size: 64px;
       font-weight: 400;
       letter-spacing: -2px;
     }
@@ -25,8 +25,8 @@ article {
     h2 {
       color: $grey-800;
       margin: 12px 0;
-      font-size: 32px;
-      font-weight: 300;
+      font-size: 28px;
+      font-weight: 400;
     }
 
     span {
@@ -82,7 +82,7 @@ article {
 
     p {
       &:first-child {
-        font-size: 26px;
+        font-size: 24px;
 
         &.outdated {
           text-align: center;

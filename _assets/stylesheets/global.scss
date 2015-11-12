@@ -7,17 +7,9 @@ input,
 button {
   @include font-feature-settings("kern");
 
-  font: 16px/1 "Proxima Nova", $helvetica;
+  font: 16px/1 "Avenir Next", Avenir, $helvetica;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
-}
-
-body.wf-active {
-  &,
-  input,
-  button {
-    font-family: "proxima-nova", $helvetica;
-  }
 }
 
 .container {
@@ -52,7 +44,7 @@ body > footer {
       a {
         color: $grey-600;
         border-bottom: $link-border;
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 500;
 
         &:hover {
@@ -66,7 +58,7 @@ body > footer {
 body > header {
   h1 {
     font-size: 32px;
-    font-weight: 500;
+    font-weight: 600;
     float: left;
   }
 }

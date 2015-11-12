@@ -30,12 +30,7 @@ aside,
   float: left;
 
   h1 {
-    color: $grey-600;
-    margin: 0 0 8px 0;
-    font-size: 16px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    @extend %h2;
   }
 
   h2 {
@@ -43,6 +38,7 @@ aside,
     border-width: 2px;
     font-size: 36px;
     font-weight: 600;
+    letter-spacing: -1px;
     word-break: break-word;
     display: inline-block;
   }
@@ -58,15 +54,15 @@ aside,
   }
 
   p {
-    color: $grey-600;
+    color: $grey-700;
     margin: 8px 0 0 0;
     font-size: 18px;
-    line-height: 1.6;
+    line-height: 1.5;
 
     &.published {
       color: $grey-600;
-      margin: 6px 0 0 0;
-      font-size: 14px;
+      margin: 8px 0 0 0;
+      font-size: 13px;
       font-style: italic;
       line-height: 1;
     }
@@ -86,12 +82,7 @@ aside {
   float: right;
 
   h2 {
-    color: $grey-600;
-    margin: 0 0 8px 0;
-    font-size: 16px;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    @extend %h2;
   }
 
   p {
@@ -110,17 +101,17 @@ aside {
   }
 
   ol {
-    margin: 8px 0 0 20px;
+    margin: 8px 0 0 22px;
     list-style: disc;
 
     li {
       color: $grey-600;
-      font-size: 24px;
+      font-size: 20px;
+      line-height: 28px;
 
       a {
         color: $grey-800;
         font-size: 16px;
-        line-height: 24px;
       }
     }
   }
