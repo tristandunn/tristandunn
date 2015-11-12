@@ -1,7 +1,7 @@
 ruby   "2.2.3"
 source "https://rubygems.org"
 
-gem "activesupport",  "4.2.4", require: false
+gem "activesupport",  "4.2.5", require: false
 gem "bourbon",        "4.2.6"
 gem "htmlcompressor", "0.3.0"
 gem "jekyll",         "3.0.0"
@@ -16,5 +16,5 @@ group :development do
 end
 
 group :test do
-  gem "html-proofer", "2.5.1"
+  gem "html-proofer", "2.5.2"
 end

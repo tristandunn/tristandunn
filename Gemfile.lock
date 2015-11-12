@@ -1,7 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
-    activesupport (4.2.4)
+    activesupport (4.2.5)
       i18n (~> 0.7)
       json (~> 1.7, >= 1.7.7)
       minitest (~> 5.1)
@@ -31,7 +31,7 @@ GEM
       addressable (~> 2.3, >= 2.3.5)
     ffi (1.9.10)
     hike (1.2.3)
-    html-proofer (2.5.1)
+    html-proofer (2.5.2)
       addressable (~> 2.3)
       colored (~> 1.2)
       mercenary (~> 0.3.2)
@@ -122,12 +122,12 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activesupport (= 4.2.4)
+  activesupport (= 4.2.5)
   bourbon (= 4.2.6)
   capistrano (= 3.4.0)
   capistrano-bundler (= 1.1.4)
   capistrano-rbenv (= 2.0.3)
-  html-proofer (= 2.5.1)
+  html-proofer (= 2.5.2)
   htmlcompressor (= 0.3.0)
   jekyll (= 3.0.0)
   jekyll-assets (= 1.0.0)
