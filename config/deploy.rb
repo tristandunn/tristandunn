@@ -18,16 +18,15 @@ set :rbenv_custom_path, "/opt/rbenv"
 # Don't keep any previous releases.
 set :keep_releases, 1
 
-# Avoid UTF-8 issues when building Jekyll.
-set :default_env, { "LC_ALL" => "en_US.UTF-8" }
-
 namespace :deploy do
   desc "Build the website with Jekyll"
   task :build do
     on roles(:web) do
       within release_path do
-        execute :bundle, "exec", "jekyll", "build", "--config",
-          fetch(:configuration, "_config.yml")
+        with "LC_ALL" => "en_US.UTF-8" do
+          execute :bundle, "exec", "jekyll", "build", "--config",
+            fetch(:configuration, "_config.yml")
+        end
       end
     end
   end
