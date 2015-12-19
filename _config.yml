@@ -1,8 +1,10 @@
 assets:
-  cache: true
-  autosize: true
-  js_compressor: uglifier
-  css_compressor: sass
+  cache: .jekyll-assets-cache
+  compress:
+    js: true
+    css: true
+  features:
+    automatic_img_alt: false
 
 defaults:
   -

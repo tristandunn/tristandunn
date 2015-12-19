@@ -1,4 +1,4 @@
 assets:
-  baseurl: "https://tristandunn.local/assets/"
+  cdn: "https://tristandunn.local/"
 
 url: "https://tristandunn.local"

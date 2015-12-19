@@ -25,7 +25,7 @@
     {% asset global.css %}
 
     {% if include.id %}
-      {{ include.id | append: ".css" | asset }}
+      {% asset '{{ include.id | append: ".css" }}' %}
     {% endif %}
   {% endcapture %}
 

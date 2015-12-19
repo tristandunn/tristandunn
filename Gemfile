@@ -4,8 +4,8 @@ source "https://rubygems.org"
 gem "activesupport",  "4.2.5", require: false
 gem "bourbon",        "4.2.6"
 gem "htmlcompressor", "0.3.0"
-gem "jekyll",         "3.0.0"
-gem "jekyll-assets",  "1.0.0"
+gem "jekyll",         "3.0.1"
+gem "jekyll-assets",  "2.1.2"
 gem "therubyracer",   "0.12.2"
 gem "uglifier",       "2.7.2"
 
@@ -16,5 +16,5 @@ group :development do
 end
 
 group :test do
-  gem "html-proofer", "2.5.2"
+  gem "html-proofer", "2.6.1"
 end

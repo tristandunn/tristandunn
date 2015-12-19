@@ -23,7 +23,7 @@ namespace :deploy do
   task :build do
     on roles(:web) do
       within release_path do
-        with "LC_ALL" => "en_US.UTF-8" do
+        with "LC_ALL" => "en_US.UTF-8", "JEKYLL_ENV" => "production" do
           execute :bundle, "exec", "jekyll", "build", "--config",
             fetch(:configuration, "_config.yml")
         end
