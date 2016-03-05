@@ -69,5 +69,5 @@ SVG it stays incredibly clear.
 
 [1]: https://code.google.com/p/canvg/
 [2]: http://css-tricks.com/using-svg/
-[3]: http://petercollingridge.appspot.com/svg_optimiser
+[3]: http://petercollingridge.appspot.com/svg-optimiser
 [4]: http://caniuse.com/#search=svg
