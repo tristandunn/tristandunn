@@ -1,10 +1,10 @@
 ruby   "2.2.3"
 source "https://rubygems.org"
 
-gem "activesupport",  "4.2.5.1", require: false
+gem "activesupport",  "4.2.5.2", require: false
 gem "bourbon",        "4.2.6"
 gem "htmlcompressor", "0.3.0"
-gem "jekyll",         "3.1.1"
+gem "jekyll",         "3.1.2"
 gem "jekyll-assets",  "2.1.2"
 gem "therubyracer",   "0.12.2"
 gem "uglifier",       "2.7.2"
