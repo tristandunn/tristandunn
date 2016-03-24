@@ -1,13 +1,13 @@
 ruby   "2.2.3"
 source "https://rubygems.org"
 
-gem "activesupport",  "4.2.5.2", require: false
+gem "activesupport",  "4.2.6", require: false
 gem "bourbon",        "4.2.6"
 gem "htmlcompressor", "0.3.0"
 gem "jekyll",         "3.1.2"
 gem "jekyll-assets",  "2.1.2"
 gem "therubyracer",   "0.12.2"
-gem "uglifier",       "2.7.2"
+gem "uglifier",       "3.0.0"
 
 group :development do
   gem "capistrano",         "3.4.0"
@@ -16,5 +16,5 @@ group :development do
 end
 
 group :test do
-  gem "html-proofer", "2.6.4"
+  gem "html-proofer", "3.0.4"
 end

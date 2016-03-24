@@ -11,4 +11,4 @@ rvm:
 
 script:
   - bundle exec jekyll build
-  - bundle exec htmlproof ./_site --check-html true --href-ignore "/^https?://localhost/","/cloud\.digitalocean\.com/","/\?refcode\=/","/r\/3edceb992aa254/","/https://dribbble\.com/account/applications/" --verbose
+  - bundle exec htmlproofer ./_site --check-html true --url-ignore "/^https?://localhost/","/cloud\.digitalocean\.com/","/\?refcode\=/","/r\/3edceb992aa254/","/https://dribbble\.com/account/applications/" --log-level debug
