@@ -7,7 +7,7 @@ newsletter:
   title: "Dribbble uploading from the desktop."
   description: "<a href=http://getfadeaway.com>Fadeaway</a> helps you upload to Dribbble. Drag and drop, export from Sketch, or use the command line to upload to Dribbble. Coming soon!"
   form:
-    action: "http://tristandunn.createsend.com/t/d/s/drlys/"
+    action: "https://tristandunn.createsend.com/t/d/s/drlys/"
     button: "Notify me at launch."
     address: "cm-drlys-drlys"
 ---
