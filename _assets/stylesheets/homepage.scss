@@ -1,159 +1,84 @@
 @import "shared";
-@import "newsletter";
 
-body > header {
-  h1,
-  li a {
-    line-height: 64px;
-  }
-
-  img {
-    @include filter(grayscale(33%));
-
-    margin: 0 16px 0 0;
-    border-radius: 50%;
-    float: left;
-  }
-}
-
-body > footer {
-  border-top: $section-border;
+main {
+  padding: 5vw 8vw;
 }
 
 aside,
-.articles {
-  padding: 48px 0;
-}
-
-.articles {
-  width: $section-width;
-  float: left;
+section {
+  max-width: 35rem;
 
   h1 {
-    @extend %h2;
+    color: $gray;
+    margin: 0 0 2.5vw;
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
   }
+}
 
-  h2 {
-    border-bottom: $link-border;
-    border-width: 2px;
-    font-size: 36px;
-    font-weight: 600;
-    letter-spacing: -1px;
-    word-break: break-word;
-    display: inline-block;
-  }
-
+section {
   a {
-    color: $grey-900;
-    display: block;
-
-    &:hover h2 {
-      color: $light-blue-600;
-      border-color: $light-blue-600;
-    }
+    font-size: 1.5rem;
   }
 
-  p {
-    color: $grey-700;
-    margin: 8px 0 0 0;
-    font-size: 18px;
-    line-height: 1.5;
-
-    &.published {
-      color: $grey-600;
-      margin: 8px 0 0 0;
-      font-size: 13px;
-      font-style: italic;
-      line-height: 1;
-    }
+  p,
+  dd {
+    color: $gray;
+    padding: 0.2rem 0 0;
+    font-size: 0.8rem;
   }
 
+  ul {
+    list-style: none;
+  }
+
+  dd,
   li {
-    & + li {
-      margin-top: 32px;
-      padding-top: 32px;
-      border-top: 1px solid $grey-200;
+    margin: 0 0 1.25rem;
+
+    &:last-child {
+      margin: 0;
     }
   }
+}
+
+aside,
+section + section {
+  margin: 8vw 0 0;
 }
 
 aside {
-  width: $aside-width;
-  float: right;
+  p,
+  li {
+    font-size: 1rem;
+  }
 
-  h2 {
-    @extend %h2;
+  ol {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
   }
 
   p {
-    color: $grey-800;
-    margin: 8px 0 0 0;
-    font-size: 16px;
+    margin: 0 0 1.25rem;
     line-height: 1.4;
 
-    & + h2 {
-      margin: 48px 0 0 0;
+    &:last-child {
+      margin: 0;
     }
   }
 
   a {
-    border-bottom: $link-border;
+    font-weight: 500;
   }
 
-  ol {
-    margin: 8px 0 0 22px;
-    list-style: disc;
+  .elsewhere {
+    a {
+      @include smart-underline($black);
 
-    li {
-      color: $grey-600;
-      font-size: 20px;
-      line-height: 28px;
-
-      a {
-        color: $grey-800;
-        font-size: 16px;
-      }
-    }
-  }
-}
-
-body.subscribed {
-  > header {
-    border-bottom: $section-border;
-  }
-
-  .newsletter {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 1012px) {
-  aside,
-  .articles {
-    width: auto;
-    float: none;
-  }
-
-  .articles {
-    h1 {
-      margin: 0 0 6px 0;
-      font-size: 14px;
-      font-weight: 600;
-      letter-spacing: 0;
-    }
-
-    h2 {
-      border-width: 1px;
-      font-size: 28px;
-      font-weight: 500;
-    }
-
-    p {
-      font-size: 15px;
-
-      &.published {
-        font-size: 12px;
-      }
+      font-weight: 400;
     }
   }
 }

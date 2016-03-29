@@ -1,11 +1,9 @@
 ---
 ---
 
-{% include newsletter.html %}
-
-<div class="container">
-  <section role="main" class="articles">
-    <h1>Latest Articles</h1>
+<main>
+  <section>
+    <h1>Articles</h1>
 
     <ul itemscope itemtype="http://schema.org/Blog">
       {% for post in site.posts %}
@@ -14,39 +12,29 @@
         {% endif %}
 
         <li class="post" itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting">
-          <a href="{{ post.url }}">
-            <h2 itemprop="name">{{ post.title | xml_escape }}{% if post.part %}: Part {{ post.part }}{% endif %}</h2>
-            <p itemprop="description">{{ post.description | xml_escape }}</p>
-            <p class="published"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date_to_string }}</time></p>
-          </a>
+          <a href="{{ post.url }}" itemprop="name">{{ post.title | xml_escape }}{% if post.part %}: Part {{ post.part }}{% endif %}</a>
+          <p><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date_to_string }}</time></p>
         </li>
       {% endfor %}
     </ul>
   </section>
 
+  <section>
+    <h1>Projects</h1>
+
+    <dl>
+      <dt><a href="https://getfadeaway.com">Fadeaway</a></dt>
+      <dd>A desktop client for Dribbble.</dd>
+    </dl>
+  </section>
+
   <aside role="complementary">
-    <h2>About Me</h2>
+    <h1>About</h1>
 
-    <p>I'm an engineer at <a href="https://envoy.com">Envoy</a> and I created <a href="https://getfadeaway.com">Fadeaway</a>, a Dribbble desktop client. Formerly at ROLI, Blend, Dribbble, Google, meebo, and thoughtbot.</p>
+    <p>I'm an engineer at <a href="https://envoy.com">Envoy</a>, the new standard for visitor registration. Formerly at ROLI, Blend, Dribbble, Google, meebo, and thoughtbot.</p>
 
-    <p>I was born and raised in Louisiana, but briefly lived in Boston &#38; San Francisco.</p>
+    <p>I live and work in Lousiana, which is also where I was born and raised, but have briefly lived in Boston and San&#160;Francisco.</p>
 
-    <p>I love hockey.</p>
-
-    <h2>Categories</h2>
-
-    {% assign categories = site.posts | group_by:"category" | sort:"name" %}
-
-    <ol>
-      {% for category in categories %}
-        {% if category.name == "" %}
-          {% continue %}
-        {% endif %}
-
-        <li>
-          <a href="/categories/{{ category.name }}/">{{ category.name | titleize }}</a>
-        </li>
-      {% endfor %}
-    </ol>
+    <p class="elsewhere">You can find me on <a href="https://dribbble.com/tristandunn">Dribbble</a>, <a href="https://github.com/tristandunn">GitHub</a>, and <a href="https://twitter.com/tristandunn">Twitter</a>. Or peruse <a href="/resume">my&#160;r&#233;sum&#233;</a>.</p>
   </aside>
-</div>
+</main>

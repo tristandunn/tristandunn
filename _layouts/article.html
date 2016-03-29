@@ -3,12 +3,10 @@
 
 {% include header.html id="article" %}
 
-<header class="container">
-  <h1><a href="/">Tristan Dunn</a></h1>
-</header>
+<main>
+  <h1 class="homepage"><a href="/">Tristan Dunn</a></h1>
 
-<section role="main" class="container">
-  <article role="article" itemscope itemtype="http://schema.org/BlogPosting">
+  <article itemscope itemtype="http://schema.org/BlogPosting">
     <header>
       <div itemprop="name">
         <h1>{{ page.title | xml_escape }}</h1>
@@ -28,14 +26,9 @@
     </section>
 
     <footer>
-      <p>Published on <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date_to_string }}</time> in the <a href="/categories/{{ page.category }}/">{{ page.category | titleize }}</a> category.{% if page.modified_at %} Updated on {{ page.modified_at | date_to_string }}.{% endif %}</p>
+      <p>Published on <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date_to_string }}</time> in <a href="/categories/{{ page.category }}/">{{ page.category | titleize }}</a>.{% if page.modified_at %} Updated on {{ page.modified_at | date_to_string }}.{% endif %}</p>
     </footer>
   </article>
+</main>
 
-  {% if page.footer %}
-    {% include {{ page.footer }} %}
-  {% endif %}
-</section>
-
-{% include newsletter.html newsletter=page.newsletter %}
 {% include footer.html %}

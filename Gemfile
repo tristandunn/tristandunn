@@ -13,6 +13,7 @@ group :development do
   gem "capistrano",         "3.5.0"
   gem "capistrano-bundler", "1.1.4"
   gem "capistrano-rbenv",   "2.0.4"
+  gem "scss_lint",          "0.48.0", require: false
 end
 
 group :test do

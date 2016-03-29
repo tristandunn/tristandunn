@@ -18,7 +18,7 @@
   {% elsif include.category %}
     <meta name="description" content="{{ include.category | titleize | prepend: "All of the articles I have written on " | append: "." | xml_escape }}">
   {% elsif page.description != false %}
-    <meta name="description" content="A Ruby and Javascript developer, tolerable designer, and author.">
+    <meta name="description" content="A Ruby and JavaScript developer, tolerable designer, creator of Fadeaway, and an enthusiastic hockey fan.">
   {% endif %}
 
   {% capture css %}
@@ -29,7 +29,7 @@
     {% endif %}
   {% endcapture %}
 
-  <style type="text/css">{{ css | strip_newlines }}</style>
+  <style type="text/css">{{ css | strip_newlines | strip }}</style>
 
   <link rel="icon" href="{% asset_path favicon.ico %}">
   <link rel="alternate" type="application/rss+xml" title="Tristan Dunn" href="{{ "/feed.xml" | prepend: site.url }}">

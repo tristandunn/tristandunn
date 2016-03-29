@@ -1,40 +1,11 @@
-@import "bourbon";
-@import "colors";
-
-html, body, div, span,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, code, em, img, dl, dt, dd, ol, ul, li, strong,
-fieldset, figure, figcaption, form, label, legend,
-article, aside, footer, header, nav, section, time {
+body,
+h1,
+html,
+p,
+dl,
+dt,
+dd,
+ul {
   margin: 0;
   padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-
-article, aside, figure, figcaption, footer, header, nav, section {
-  display: block;
-}
-
-body {
-  line-height: 1;
-}
-
-ol, ul {
-  list-style: none;
-}
-
-input,
-button {
-  outline: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-
-@include selection {
-  background: $yellow-100;
 }

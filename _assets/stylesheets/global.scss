@@ -2,131 +2,39 @@
 
 @import "shared";
 
-body,
-input,
-button {
+html,
+body {
+  height: 100%;
+}
+
+html {
+  font-size: 90%;
+
+  // Scales by 1px for every 100px from 600px onwards
+  @media (min-width: 600px) {
+    font-size: calc(112.5% + 4 * (100vw - 600px) / 400);
+  }
+
+  // Sets font-size to 22px after a viewport of 1000px
+  @media (min-width: 1000px) {
+    font-size: 137.5%;
+  }
+}
+
+body {
   @include font-feature-settings("kern");
 
-  font: 16px/1 "Avenir Next", Avenir, $helvetica;
+  background: $white;
+  color: $black;
+  font-family: -apple-system, "BlinkMacSystemFont", "Avenir Next", Avenir, $helvetica;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
 }
 
-.container {
-  @include clearfix;
-
-  width: 960px;
-  margin: 0 auto;
-}
-
 a {
-  color: currentColor;
-  text-decoration: none;
-
-  &:hover {
-    color: $light-blue-600;
-    border-color: $light-blue-600;
-  }
+  @include smart-underline;
 }
 
-body > header,
-body > footer {
-  padding: 48px 0;
-
-  ul {
-    float: right;
-
-    li {
-      margin: 0 0 0 24px;
-      display: inline-block;
-      float: left;
-
-      a {
-        color: $grey-600;
-        border-bottom: $link-border;
-        font-size: 14px;
-        font-weight: 500;
-
-        &:hover {
-          border-bottom-color: $light-blue-600;
-        }
-      }
-    }
-  }
-}
-
-body > header {
-  h1 {
-    font-size: 32px;
-    font-weight: 600;
-    float: left;
-  }
-}
-
-body > footer {
-  margin: 48px 0;
-
-  ul.external {
-    float: left;
-
-    li {
-      margin: 0 24px 0 0;
-    }
-  }
-}
-
-@media screen and (max-width: 1012px) {
-  .container {
-    width: auto;
-    padding: 32px;
-  }
-
-  body > header,
-  body > footer {
-    ul {
-      li {
-        a {
-          font-size: 14px;
-        }
-      }
-    }
-  }
-
-  body > header {
-    h1 {
-      font-size: 26px;
-      font-weight: 400;
-    }
-  }
-}
-
-@media screen and (max-width: 540px) {
-  body > footer {
-    ul,
-    ul.external {
-      width: 100%;
-      display: block;
-      float: none;
-
-      li {
-        text-align: center;
-      }
-    }
-
-    ul {
-      li {
-        width: 100%;
-      }
-    }
-
-    ul.external {
-      margin: 0 0 16px 0;
-
-      li {
-        width: 25%;
-        margin: 0;
-        float: none;
-      }
-    }
-  }
+main {
+  padding: 5vw;
 }
