@@ -1,4 +1,6 @@
 {% assign newsletter = include.newsletter %}
+{% assign form       = newsletter.form %}
+{% assign button     = newsletter.button %}
 
 <section role="banner" class="newsletter">
   <div class="container">
@@ -23,23 +25,27 @@
         {% endif %}
       {% endif %}
 
-      <p>Unsubscribe at any time. No spam, ever.</p>
+      {% if button == nil %}
+        <p>Unsubscribe at any time. No spam, ever.</p>
+      {% endif %}
     </header>
 
     <section>
-      {% assign form = newsletter.form %}
-
-      <form method="post" action="{% if form.action %}{{ form.action }}{% else %}https://tristandunn.createsend.com/t/d/s/ijkijl/{% endif %}">
-        <input type="text" name="{% if form.name %}{{ form.name }}{% else %}cm-name{% endif %}" placeholder="First Name">
-        <input type="email" name="{% if form.address %}{{ form.address }}{% else %}cm-ijkijl-ijkijl{% endif %}" required="required" placeholder="E-mail Address">
-        <button type="submit">
-          {% if form.button %}
-            {{ form.button }}
-          {% else %}
-            Join the Newsletter
-          {% endif %}
-        </button>
-      </form>
+      {% if button %}
+        <a href="{{ button.url }}" class="button">{{ button.text }}</a>
+      {% else %}
+        <form method="post" action="{% if form.action %}{{ form.action }}{% else %}https://tristandunn.createsend.com/t/d/s/ijkijl/{% endif %}">
+          <input type="text" name="{% if form.name %}{{ form.name }}{% else %}cm-name{% endif %}" placeholder="First Name">
+          <input type="email" name="{% if form.address %}{{ form.address }}{% else %}cm-ijkijl-ijkijl{% endif %}" required="required" placeholder="E-mail Address">
+          <button type="submit">
+            {% if form.button %}
+              {{ form.button }}
+            {% else %}
+              Join the Newsletter
+            {% endif %}
+          </button>
+        </form>
+      {% endif %}
     </section>
   </div>
 </section>

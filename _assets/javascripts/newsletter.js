@@ -1,11 +1,13 @@
 (function() {
-  if (document.cookie.match("subscribed=true")) {
+  var form = document.querySelector(".newsletter form");
+
+  if (document.cookie.match("subscribed=true") && form) {
     document.querySelector("body").classList.add("subscribed");
 
     return;
   }
 
-  document.querySelector(".newsletter form").addEventListener("submit", function() {
+  form.addEventListener("submit", function() {
     var time = new Date();
 
     time.setMilliseconds(time.getMilliseconds() + 365 * 86400000);

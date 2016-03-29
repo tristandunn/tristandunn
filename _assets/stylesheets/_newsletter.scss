@@ -3,6 +3,10 @@
 .newsletter {
   background: $grey-100;
 
+  .container {
+    position: relative;
+  }
+
   header,
   section {
     padding: 48px 0;
@@ -39,6 +43,11 @@
   input,
   button {
     width: 100%;
+  }
+
+  input,
+  button,
+  .button {
     border-radius: 3px;
     display: block;
   }
@@ -50,7 +59,8 @@
     font-size: 16px;
   }
 
-  button {
+  button,
+  .button {
     @include user-select(none);
 
     background: $light-green-600;
@@ -70,6 +80,14 @@
       background: darken($light-green-600, 10%);
     }
   }
+
+  .button {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    width: 248px;
+    transform: translateY(-50%);
+  }
 }
 
 @media screen and (max-width: 1012px) {
@@ -79,6 +97,7 @@
       width: auto;
       margin: 0 auto;
       padding: 0;
+      text-align: center;
       float: none;
       max-width: $aside-width * 2;
     }
@@ -94,6 +113,12 @@
     p {
       font-size: 16px;
       line-height: 1.5;
+    }
+
+    .button {
+      position: static;
+      margin: 0 auto;
+      transform: none;
     }
   }
 }

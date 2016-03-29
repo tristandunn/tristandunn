@@ -4,12 +4,11 @@ image: "posts/2015-11-05/image@2x.png"
 category: ruby
 description: "A complete example for authenticating a user with the Dribbble API using Ruby on Rails."
 newsletter:
-  title: "Dribbble uploading from the desktop."
-  description: "<a href=http://getfadeaway.com>Fadeaway</a> helps you upload to Dribbble. Drag and drop, export from Sketch, or use the command line to upload to Dribbble. Coming soon!"
-  form:
-    action: "https://tristandunn.createsend.com/t/d/s/drlys/"
-    button: "Notify me at launch."
-    address: "cm-drlys-drlys"
+  title: "Dribbble from the desktop."
+  description: "<a href=https://getfadeaway.com>Fadeaway</a> is a desktop client for Dribbble. Drag and drop, export from Sketch, or use the command line to upload to Dribbble. Available now!"
+  button:
+    url: "https://getfadeaway.com"
+    text: "Visit Fadeaway"
 ---
 
 The [Dribbble API][1] supports user authentication with [OAuth 2.0][2], allowing
