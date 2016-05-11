@@ -1,4 +1,4 @@
-lock "3.4.1"
+lock "3.5.0"
 
 # Application name and deployment location.
 set :repo_url,    "git@github.com:tristandunn/tristandunn.com.git"
