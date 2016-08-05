@@ -25,7 +25,7 @@ namespace :deploy do
       within release_path do
         with "LC_ALL" => "en_US.UTF-8", "JEKYLL_ENV" => "production" do
           execute :bundle, "exec", "jekyll", "build", "--config",
-            fetch(:configuration, "_config.yml")
+                  fetch(:configuration, "_config.yml")
         end
       end
     end

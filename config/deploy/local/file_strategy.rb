@@ -1,4 +1,9 @@
 module FileStrategy
+  EXCLUDES = %w(.jekyll-assets-cache .git _site tmp)
+             .map { |file| "--exclude #{file}" }
+             .join(" ")
+             .freeze
+
   def check
     context.execute :mkdir, "-p", deploy_path.join("repo")
   end
@@ -13,7 +18,7 @@ module FileStrategy
 
   def update
     `mkdir -p #{File.dirname(path)}`
-    `tar -zcf #{path} --exclude .jekyll-assets-cache --exclude .git --exclude _site --exclude tmp .`
+    `tar -zcf #{path} #{EXCLUDES} .`
 
     context.upload! path, "/#{path}"
 

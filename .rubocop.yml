@@ -1,0 +1,9 @@
+Documentation:
+  Enabled: false
+
+Style/AlignHash:
+  EnforcedColonStyle: table
+  EnforcedHashRocketStyle: table
+
+Style/StringLiterals:
+  EnforcedStyle: double_quotes

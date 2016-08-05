@@ -9,7 +9,7 @@ module Jekyll
       process(@name)
       read_yaml(File.join(base, "_layouts"), "category.html")
 
-      data["title"]    = "Category: #{payload["name"].titleize}"
+      data["title"]    = ["Category:", payload["name"].titleize].join(" ")
       data["category"] = payload
     end
   end
@@ -20,8 +20,10 @@ module Jekyll
 
     def generate(site)
       site.categories.each do |name, posts|
-        data  = { "name" => name, "posts" => posts }
-        index = CategoryIndex.new(site, site.source, File.join("categories", name), data)
+        data      = { "name" => name, "posts" => posts }
+        directory = File.join("categories", name)
+
+        index = CategoryIndex.new(site, site.source, directory, data)
         index.render(site.layouts, site.site_payload)
         index.write(site.dest)
 

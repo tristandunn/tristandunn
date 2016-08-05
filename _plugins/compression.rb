@@ -1,9 +1,9 @@
 require "htmlcompressor"
 
-HTML_COMPRESSOR = HtmlCompressor::Compressor.new({
-  remove_intertag_spaces: true,
+HTML_COMPRESSOR = HtmlCompressor::Compressor.new(
+  remove_intertag_spaces:    true,
   remove_surrounding_spaces: HtmlCompressor::Compressor::BLOCK_TAGS_MIN
-})
+)
 
 Jekyll::Hooks.register(:documents, :post_render) do |page|
   page.output = HTML_COMPRESSOR.compress(page.output)
