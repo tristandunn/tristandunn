@@ -13,7 +13,7 @@ newsletter:
     <ul itemscope itemtype="http://schema.org/Blog">
       {% for post in page.category.posts  %}
         <li class="post" itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting">
-          <a href="{{ post.url }}" itemprop="name">{{ post.title | xml_escape }}{% if post.part %}: Part {{ post.part }}{% endif %}</a>
+          <a href="{{ post.url }}" itemprop="name">{{ post.title | xml_escape | widow }}{% if post.part %}: Part {{ post.part }}{% endif %}</a>
           <p class="published"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date_to_string }}</time></p>
         </li>
       {% endfor %}

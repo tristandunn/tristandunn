@@ -9,12 +9,12 @@
   <article itemscope itemtype="http://schema.org/BlogPosting">
     <header>
       <div itemprop="name">
-        <h1>{{ page.title | xml_escape }}</h1>
+        <h1>{{ page.title | xml_escape | widow }}</h1>
 
         {% if page.subtitle %}
           <span> - </span>
 
-          <h2>{{ page.subtitle | xml_escape }}</h2>
+          <h2>{{ page.subtitle | xml_escape | widow }}</h2>
         {% endif %}
       </div>
 
