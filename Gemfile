@@ -1,7 +1,6 @@
 ruby   "2.2.3"
 source "https://rubygems.org"
 
-gem "activesupport",  "4.2.6", require: false
 gem "bourbon",        "4.2.7"
 gem "htmlcompressor", "0.3.0"
 gem "jekyll",         "3.2.1"
