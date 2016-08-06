@@ -1,15 +1,16 @@
 module Jekyll
   module Filters
-    def last_updated(posts)
-      posts = [posts].flatten
-      dates = posts.map do |post|
-        created_at  = post.is_a?(Hash) ? post["date"] : post.date
-        modified_at = post["modified_at"]
+    module Feed
+      def last_updated(posts)
+        Array(posts).map do |post|
+          created_at  = post.is_a?(Hash) ? post["date"] : post.date
+          modified_at = post["modified_at"]
 
-        time(modified_at || created_at)
+          time(modified_at || created_at)
+        end.max
       end
-
-      dates.max
     end
   end
 end
+
+Liquid::Template.register_filter(Jekyll::Filters::Feed)
