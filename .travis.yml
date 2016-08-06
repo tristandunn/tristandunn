@@ -2,10 +2,6 @@ sudo: false
 cache: bundler
 language: ruby
 
-env:
-  global:
-  - NOKOGIRI_USE_SYSTEM_LIBRARIES=true
-
 rvm:
   - 2.3.1
 
