@@ -6,7 +6,7 @@ gem "htmlcompressor", "0.3.0"
 gem "jekyll",         "3.2.1"
 gem "jekyll-assets",  "2.2.8"
 gem "therubyracer",   "0.12.2"
-gem "uglifier",       "3.0.1"
+gem "uglifier",       "3.0.2"
 
 group :development do
   gem "capistrano",         "3.6.0"
