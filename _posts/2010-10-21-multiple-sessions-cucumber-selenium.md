@@ -92,5 +92,5 @@ between a group of users.
 I have created a basic example, [cucumber-websocket-example][2], which
 demonstrates the above code.
 
-[1]:http://imanel.org/blog/2010/03/cucumber-testing-for-multiple-users-continuation/
-[2]:https://github.com/tristandunn/cucumber-websocket-example/
+[1]: https://blog.imanel.org/cucumber-testing-for-multiple-users-continuation
+[2]: https://github.com/tristandunn/cucumber-websocket-example/
