@@ -5,5 +5,8 @@ Style/AlignHash:
   EnforcedColonStyle: table
   EnforcedHashRocketStyle: table
 
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
 Style/StringLiterals:
   EnforcedStyle: double_quotes
