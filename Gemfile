@@ -3,7 +3,7 @@ source "https://rubygems.org"
 
 gem "bourbon",        "4.2.7"
 gem "htmlcompressor", "0.3.1"
-gem "jekyll",         "3.3.0"
+gem "jekyll",         "3.3.1"
 gem "jekyll-assets",  "2.2.8"
 gem "therubyracer",   "0.12.2"
 gem "uglifier",       "3.0.3"
