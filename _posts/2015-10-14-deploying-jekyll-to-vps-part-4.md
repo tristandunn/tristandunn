@@ -215,7 +215,7 @@ is sure to make our website insanely fast to load. See the
 available in the [jekyll-vps-website][10] repository, with the [part-4
 branch][11] being relevant.
 
-In the next part we'll switch to be HTTPS only. [E-mail
+In the [next part][12] we'll switch to be HTTPS only. [E-mail
 me](mailto:hello@tristandunn.com) if you have any tips, comments, or questions.
 
 
@@ -232,3 +232,4 @@ me](mailto:hello@tristandunn.com) if you have any tips, comments, or questions.
 [9]: https://github.com/tristandunn/jekyll-vps-server/compare/part-3...part-4
 [10]: https://github.com/tristandunn/jekyll-vps-website
 [11]: https://github.com/tristandunn/jekyll-vps-website/compare/part-3...part-4
+[12]: /2016/04/30/deploying-jekyll-to-vps-part-5/
