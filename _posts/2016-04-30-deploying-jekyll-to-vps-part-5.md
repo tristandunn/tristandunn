@@ -296,7 +296,7 @@ page.
 
 The `www_example_com.pem` file is our certificate, which we'll store at
 `/etc/ssl/example.com.crt`. And the `www_example_com.key` file is our
-certificate key, which we'll store at `/etc/ssl/exampe.com.key`. Now if
+certificate key, which we'll store at `/etc/ssl/example.com.key`. Now if
 everything is correct when we run `bundle exec knife solo cook example` it will
 use the new SSL configuration.
 
