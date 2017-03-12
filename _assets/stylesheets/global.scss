@@ -22,12 +22,11 @@ html {
 }
 
 body {
-  @include font-feature-settings("kern");
-
   background: $white;
   color: $black;
   font-family: -apple-system, "BlinkMacSystemFont", "Avenir Next", Avenir, $helvetica;
   text-rendering: optimizeLegibility;
+  font-feature-settings: "kern";
   -webkit-font-smoothing: antialiased;
 }
 
