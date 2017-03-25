@@ -3,10 +3,10 @@ source "https://rubygems.org"
 
 gem "bourbon",        "4.3.3"
 gem "htmlcompressor", "0.3.1"
-gem "jekyll",         "3.4.2"
+gem "jekyll",         "3.4.3"
 gem "jekyll-assets",  "2.2.8"
 gem "therubyracer",   "0.12.3"
-gem "uglifier",       "3.1.7"
+gem "uglifier",       "3.1.9"
 
 group :development do
   gem "capistrano",         "3.8.0"
@@ -17,5 +17,5 @@ group :development do
 end
 
 group :test do
-  gem "html-proofer", "3.5.0"
+  gem "html-proofer", "3.6.0"
 end
