@@ -8,5 +8,9 @@ Style/AlignHash:
 Style/FrozenStringLiteralComment:
   Enabled: false
 
+Style/PercentLiteralDelimiters:
+  PreferredDelimiters:
+    "%w": "()"
+
 Style/StringLiterals:
   EnforcedStyle: double_quotes
