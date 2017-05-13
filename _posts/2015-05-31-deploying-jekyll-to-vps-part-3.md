@@ -197,7 +197,7 @@ tips, comments, or questions.
 [5]:  https://git-scm.com/book/en/v2/Git-on-the-Server-Generating-Your-SSH-Public-Key
 [6]:  https://dnsimple.com/r/3edceb992aa254
 [7]:  https://cloud.digitalocean.com/domains
-[8]:  https://dnsimple.com/domains/new
+[8]:  https://dnsimple.com/tlds
 [9]:  https://support.dnsimple.com/articles/dnsimple-nameservers/
 [10]: https://developers.google.com/speed/public-dns/docs/using
 [11]: https://github.com/tristandunn/jekyll-vps-server
