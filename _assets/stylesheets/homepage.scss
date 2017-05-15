@@ -23,7 +23,8 @@ section {
     font-size: 1.5rem;
   }
 
-  p {
+  p,
+  dd {
     color: $gray;
     padding: 0.2rem 0 0;
     font-size: 0.8rem;
@@ -33,6 +34,7 @@ section {
     list-style: none;
   }
 
+  dd,
   li {
     margin: 0 0 1.25rem;
 
