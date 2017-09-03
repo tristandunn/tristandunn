@@ -15,8 +15,8 @@ another user there would be no record of the previous events.
 
 ## The Solution
 
-While searching for a solution I found [Cucumber Testing for Multiple Users][1]
-by Bernard Potocki. He shows how to achieve multiple sessions with Cucumber and
+While searching for a solution I found "Cucumber Testing for Multiple Users"
+by [Bernard Potocki][1]. He shows how to achieve multiple sessions with Cucumber and
 Selenium, but I wanted to make it easier.
 
 Drop the following into `cucumber/support/sessions.rb`.
@@ -92,5 +92,5 @@ between a group of users.
 I have created a basic example, [cucumber-websocket-example][2], which
 demonstrates the above code.
 
-[1]: https://blog.imanel.org/cucumber-testing-for-multiple-users-continuation
+[1]: https://twitter.com/_imanel
 [2]: https://github.com/tristandunn/cucumber-websocket-example/
