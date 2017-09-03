@@ -13,6 +13,10 @@ you would simply sign in as another user. However, this is not the case when you
 use WebSockets to deliver information in real-time. If you were to sign in as
 another user there would be no record of the previous events.
 
+<div>
+  {% include services.html id="digitalocean" %}
+</div>
+
 ## The Solution
 
 While searching for a solution I found "Cucumber Testing for Multiple Users"

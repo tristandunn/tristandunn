@@ -61,6 +61,10 @@ An added benefit with the scaling is that you can apply a multiplier for
 user-specified scaling, via zoom or mousewheel events. And since it's using
 SVG it stays incredibly clear.
 
+<div>
+  {% include services.html id="digitalocean" %}
+</div>
+
 ## Resources
 
 * [Using SVG][2], for an overview of more general SVG usage.

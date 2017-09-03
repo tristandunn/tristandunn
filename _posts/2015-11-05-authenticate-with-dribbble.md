@@ -73,6 +73,10 @@ There's no harm in exposing the client ID, but the secret should not be public.
 It's recommended to ignore the `.env` file in the `.gitignore` file, otherwise
 it's no better than hard coding the values.
 
+<div>
+  {% include services.html id="digitalocean" %}
+</div>
+
 ## Authenticating
 
 Our application is going to be simple. A homepage with a "Connect with Dribbble"
