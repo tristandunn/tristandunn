@@ -3,7 +3,7 @@ layout:
 ---
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  {% assign site_url = site.url | append: site.baseurl }}{% endcapture %}
+  {% assign site_url = site.url | append: site.baseurl %}
 
   {% for page in site.html_pages %}
     {% if page.sitemap == false %}
