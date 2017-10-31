@@ -9,11 +9,8 @@ gem "therubyracer",   "0.12.3"
 gem "uglifier",       "3.2.0"
 
 group :development do
-  gem "capistrano",         "3.9.0"
-  gem "capistrano-bundler", "1.2.0"
-  gem "capistrano-rbenv",   "2.1.1"
-  gem "rubocop",            "0.49.1", require: false
-  gem "scss_lint",          "0.54.0", require: false
+  gem "rubocop",   "0.49.1", require: false
+  gem "scss_lint", "0.54.0", require: false
 end
 
 group :test do

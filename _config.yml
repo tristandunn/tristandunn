@@ -19,7 +19,6 @@ defaults:
       layout: "article"
 
 exclude:
-  - Capfile
   - Gemfile
   - Gemfile.lock
   - config
