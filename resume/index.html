@@ -10,9 +10,9 @@ updated_at: "March 12th, 2017"
 
   <title>Tristan Dunn &#8211; R&#233;sum&#233;</title>
 
-  <style type="text/css">{% asset resume.css %}</style>
+  {% asset resume.css @inline %}
 
-  <link rel="icon" href="{% asset_path favicon.ico %}">
+  <link rel="icon" href="{% asset favicon.ico @path %}">
 </head>
 <body>
 
@@ -149,7 +149,7 @@ updated_at: "March 12th, 2017"
   </article>
 </main>
 
-<script>{% asset global.js %}</script>
+{% asset global.js %}
 
 </body>
 </html>

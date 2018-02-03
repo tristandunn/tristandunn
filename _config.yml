@@ -1,10 +1,12 @@
 assets:
-  cache: .jekyll-assets-cache
-  compress:
-    js: true
-    css: true
-  features:
-    automatic_img_alt: false
+  caching:
+    path: ".jekyll-assets-cache"
+    type: file
+    enabled: true
+  compression: true
+  sources:
+    - "_assets/javascripts"
+    - "_assets/stylesheets"
 
 defaults:
   -

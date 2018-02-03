@@ -12,7 +12,7 @@
     <meta property="og:title" content="{{ page.title | xml_escape }}{% if page.part %}: Part {{ page.part }}{% endif %}">
     <meta property="og:description" content="{{ page.description | xml_escape }}">
     {% if page.image %}
-      <meta property="og:image" content="{{ page.image | asset_path }}">
+      <meta property="og:image" content="{% asset '{{ page.image }}' @path %}">
     {% endif %}
 
     <meta name="twitter:card" content="summary">
@@ -21,7 +21,7 @@
     <meta name="twitter:description" content="{{ page.description | xml_escape }}">
     <meta name="twitter:url" content="{{ page.url | prepend: site.url }}">
     {% if page.image %}
-      <meta name="twitter:image" content="{{ page.image | asset_path }}">
+      <meta name="twitter:image" content="{% asset '{{ page.image }}' @path %}">
     {% endif %}
   {% elsif include.category %}
     <meta name="description" content="{{ include.category | titleize | prepend: "All of the articles I have written on " | append: "." | xml_escape }}">
@@ -30,16 +30,16 @@
   {% endif %}
 
   {% capture css %}
-    {% asset global.css %}
+    {% asset global.css @inline %}
 
     {% if include.id %}
-      {% asset '{{ include.id | append: ".css" }}' %}
+      {% asset '{{ include.id | append: ".css" }}' @inline %}
     {% endif %}
   {% endcapture %}
 
-  <style type="text/css">{{ css | strip_newlines | strip }}</style>
+  {{ css | strip_newlines | strip }}
 
-  <link rel="icon" href="{% asset_path favicon.ico %}">
+  <link rel="icon" href="{% asset favicon.ico @path %}">
   <link rel="alternate" type="application/rss+xml" title="Tristan Dunn" href="{{ "/feed.xml" | prepend: site.url }}">
 </head>
 <body{% if include.id %} id="{{ include.id }}"{% endif %}>

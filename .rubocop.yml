@@ -1,7 +1,7 @@
 Documentation:
   Enabled: false
 
-Style/AlignHash:
+Layout/AlignHash:
   EnforcedColonStyle: table
   EnforcedHashRocketStyle: table
 

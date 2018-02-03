@@ -24,7 +24,7 @@ html {
 body {
   background: $white;
   color: $black;
-  font-family: -apple-system, "BlinkMacSystemFont", "Avenir Next", Avenir, $helvetica;
+  font-family: $font-stack-system;
   text-rendering: optimizeLegibility;
   font-feature-settings: "kern";
   -webkit-font-smoothing: antialiased;
