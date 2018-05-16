@@ -221,10 +221,10 @@ me](mailto:hello@tristandunn.com) if you have any tips, comments, or questions.
 
 
 
-[1]: https://github.com/jekyll/jekyll-assets
+[1]: https://github.com/envygeeks/jekyll-assets
 [2]: https://github.com/sstephenson/sprockets
 [3]: http://bourbon.io
-[4]: https://github.com/jekyll/jekyll-assets/tree/1.0-legacy#jekyllassets
+[4]: https://github.com/envygeeks/jekyll-assets/tree/v1.0-legacy#jekyllassets
 [5]: /2015/05/05/deploying-jekyll-to-vps-part-2/
 [6]: https://en.wikipedia.org/wiki/Gzip
 [7]: https://developers.google.com/speed/pagespeed/
