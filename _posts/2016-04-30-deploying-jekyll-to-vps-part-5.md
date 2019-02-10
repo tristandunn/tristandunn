@@ -318,7 +318,7 @@ questions.
 
 [1]: https://webmasters.googleblog.com/2014/08/https-as-ranking-signal.html
 [2]: https://letsencrypt.org
-[3]: http://nginx.org/en/docs/http/ngx_http_ssl_module.html
+[3]: https://nginx.org/en/docs/http/ngx_http_ssl_module.html
 [4]: https://mozilla.github.io/server-side-tls/ssl-config-generator/
 [5]: https://dnsimple.com/r/3edceb992aa254
 [6]: https://support.dnsimple.com/articles/ssl-certificate-hostname/#securing-the-root-domain

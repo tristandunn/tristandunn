@@ -297,12 +297,12 @@ comments or questions.
 
 
 
-[1]: http://developer.dribbble.com
-[2]: http://oauth.net/2/
+[1]: https://developer.dribbble.com
+[2]: https://oauth.net/2/
 [3]: https://dribbble.com/account/applications/new
 [4]: https://github.com/intridea/oauth2
 [5]: https://github.com/bkeepers/dotenv
 [6]: https://dribbble.com/account/applications
-[7]: http://developer.dribbble.com/v1/oauth/#scopes
-[8]: http://developer.dribbble.com/v1/
+[7]: https://developer.dribbble.com/v1/oauth/#scopes
+[8]: https://developer.dribbble.com/v1/
 [9]: https://github.com/tristandunn/dribbble-example

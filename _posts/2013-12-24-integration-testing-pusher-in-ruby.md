@@ -75,7 +75,7 @@ If you want to see and run a very simple test suite using it, check out this
 [basic Cucumber example][10]. It uses the [capybara-webkit][11] driver, but it
 should work with any driver that supports JavaScript execution.
 
-[1]:  http://pusher.com
+[1]:  https://pusher.com
 [2]:  https://travis-ci.org
 [3]:  https://www.uservoice.com
 [4]:  https://github.com/leggetter/pusher-test-stub

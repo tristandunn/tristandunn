@@ -375,8 +375,8 @@ if you have any tips, comments, or questions.
 
 
 [1]:  /2014/12/15/deploying-jekyll-to-vps-part-1/
-[2]:  http://mmonit.com/monit/
-[3]:  http://capistranorb.com
+[2]:  https://mmonit.com/monit/
+[3]:  https://capistranorb.com
 [4]:  https://www.digitalocean.com/?refcode=a7c8d9fbaf7f
 [5]:  https://supermarket.chef.io/cookbooks/sshd
 [6]:  https://supermarket.chef.io/cookbooks/monit-ng

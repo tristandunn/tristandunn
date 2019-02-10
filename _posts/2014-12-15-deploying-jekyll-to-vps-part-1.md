@@ -555,7 +555,7 @@ you have any tips, comments, or questions.
 
 
 
-[1]:  http://jekyllrb.com
+[1]:  https://jekyllrb.com
 [2]:  https://pages.github.com
 [3]:  https://www.digitalocean.com/?refcode=a7c8d9fbaf7f
 [4]:  https://www.getchef.com
@@ -564,20 +564,20 @@ you have any tips, comments, or questions.
 [7]:  https://www.virtualbox.org/wiki/Downloads
 [8]:  https://docs.vagrantup.com/v2/providers/index.html
 [9]:  https://docs.vagrantup.com/v2/vagrantfile/index.html
-[10]: http://www.vagrantbox.es
+[10]: https://www.vagrantbox.es
 [11]: https://www.getchef.com/chef/#how-chef-works
 [12]: https://docs.getchef.com/chef_solo.html
-[13]: http://matschaffer.github.io/knife-solo/
+[13]: https://matschaffer.github.io/knife-solo/
 [14]: https://github.com/applicationsonline/librarian-chef
 [15]: https://docs.getchef.com/essentials_data_bags.html
 [16]: https://docs.getchef.com/essentials_environments.html
 [17]: https://docs.getchef.com/chef_overview_nodes.html
 [18]: https://docs.getchef.com/essentials_roles.html
 [19]: https://docs.getchef.com/essentials_cookbooks.html
-[20]: http://nginx.org
+[20]: https://nginx.org
 [21]: https://supermarket.getchef.com/cookbooks/nginx
 [22]: https://supermarket.getchef.com
-[23]: http://capistranorb.com
+[23]: https://capistranorb.com
 [24]: https://github.com/tristandunn/jekyll-vps-server
 [25]: https://github.com/tristandunn/jekyll-vps-server/compare/part-0...part-1
 [26]: /2015/05/05/deploying-jekyll-to-vps-part-2/
