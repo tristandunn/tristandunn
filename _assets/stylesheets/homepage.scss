@@ -1,84 +1,102 @@
 @import "shared";
 
-main {
-  padding: 5vw 8vw;
-}
+header {
+  position: relative;
+  margin: 0 auto;
+  display: flex;
+  max-width: 40rem;
+  align-items: center;
 
-aside,
-section {
-  max-width: 35rem;
+  @media (max-width: 1000px) {
+    display: block;
+  }
 
   h1 {
-    color: $gray;
-    margin: 0 0 2.5vw;
-    font-size: 1rem;
-    font-weight: 300;
-    letter-spacing: 0.1rem;
-    text-transform: uppercase;
-  }
-}
+    order: 2;
 
-section {
-  a {
-    font-size: 1.5rem;
-  }
-
-  p,
-  dd {
-    color: $gray;
-    padding: 0.2rem 0 0;
-    font-size: 0.8rem;
-  }
-
-  ul {
-    list-style: none;
-  }
-
-  dd,
-  li {
-    margin: 0 0 1.25rem;
-
-    &:last-child {
-      margin: 0;
+    span {
+      position: absolute;
+      top: 0;
+      text-indent: -9999px;
     }
-  }
-}
 
-aside,
-section + section {
-  margin: 8vw 0 0;
-}
+    img {
+      margin: 0 auto;
+      border-radius: 50%;
+      display: block;
+    }
 
-aside {
-  p,
-  li {
-    font-size: 1rem;
-  }
+    @media (max-width: 1000px) {
+      margin: 0 0 5vw;
+      font-size: 1.5rem;
 
-  ol {
-    margin: 0;
-    padding: 0;
-    line-height: 1.6;
+      span {
+        position: static;
+        top: auto;
+        font-weight: 700;
+        text-indent: 0;
+      }
+
+      img {
+        display: none;
+      }
+    }
   }
 
   p {
-    margin: 0 0 1.25rem;
-    line-height: 1.4;
+    line-height: 1.5;
 
-    &:last-child {
-      margin: 0;
+    + p {
+      margin-top: 1rem;
     }
   }
 
   a {
-    font-weight: 500;
+    color: $black;
+
+    &:hover {
+      color: $blue;
+    }
+  }
+}
+
+h2 {
+  margin: 4rem auto 2rem;
+  font-size: 1.5rem;
+  font-weight: 300;
+  max-width: 40rem;
+}
+
+ul {
+  margin: 0 auto;
+  list-style: none;
+  max-width: 40rem;
+
+  li {
+    margin: 2rem 0;
   }
 
-  .elsewhere {
-    a {
-      @include smart-underline($black);
+  a {
+    text-decoration: none;
+    display: block;
 
-      font-weight: 400;
+    &:hover {
+      span {
+        color: $blue;
+      }
     }
+  }
+
+  time {
+    color: $gray;
+    font-size: 0.75rem;
+    display: block;
+  }
+
+  span {
+    color: $black;
+    font-size: 2rem;
+    font-weight: 600;
+    text-decoration: underline;
   }
 }

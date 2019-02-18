@@ -2,56 +2,41 @@
 ---
 
 <main>
-  <section>
-    <h1>Projects</h1>
+  <header>
+    <h1>
+      <img src="{% asset avatar.jpg @path %}" width="160" height="160" alt="Picture of Tristan.">
 
-    <dl>
-      <dt><a href="https://has.work">has.work</a></dt>
-      <dd>A simple and easy way to run a job board.</dd>
-      <dt><a href="https://mademinimal.com">made minimal</a></dt>
-      <dd>Minimal applications, and how to build them.</dd>
-      <dt><a href="https://afeedbackpage.com">A Feedback Page</a></dt>
-      <dd>A page for anonymous feedback on design.</dd>
-      <dt><a href="https://remoteworkers.community">Remote Workers Community</a></dt>
-      <dd>A community of people and companies working remotely.</dd>
-    </dl>
-  </section>
+      <span>Tristan Dunn</span>
+    </h1>
 
-  <section>
-    <h1>Open Source</h1>
+    <div>
+      <p>I'm making <a href="https://has.work">has.work</a> for hosted job boards, <a href="https://mademinimal.com">made minimal</a> for step-by-step guides, and <a href="https://remoteworkers.community">Remote Workers Community</a> for remote workers.</p>
 
-    <dl>
-      <dt><a href="https://github.com/tristandunn/pusher-fake">pusher-fake</a></dt>
-      <dd>A fake Pusher server for development and testing.</dd>
-      <dt><a href="https://github.com/tristandunn?tab=repositories&q=fadeaway">Fadeaway</a></dt>
-      <dd>A desktop client for Dribbble.</dd>
-      <dt><a href="https://tristandunn.github.io/hockey/">Hockey</a></dt>
-      <dd>A fast and minimal list of upcoming NHL games.</dd>
-    </dl>
-  </section>
+      <p>I also have smaller side projects, such as <a href="https://afeedbackpage.com">A Feedback Page</a> to collect anonymous feedback.</p>
 
-  <section>
-    <h1>Articles</h1>
+      <p>I contribute to open-source and maintain a <a href="https://github.com/tristandunn/pusher-fake">fake Pusher server</a> and a <a href="https://tristandunn.github.io/hockey/">fast NHL schedule</a>. I also built a <a href="https://github.com/tristandunn?tab=repositories&q=fadeaway">desktop client for Dribbble</a>.</p>
 
-    <ul itemscope itemtype="http://schema.org/Blog">
-      {% for post in site.posts %}
-        {% if post.archived %}
-          {% continue %}
-        {% endif %}
+      <p>I work remotely at <a href="https://clearbit.com">Clearbit</a> and you can follow me on <a href="https://angel.co/tristan-dunn">AngelList</a>, <a href="https://github.com/tristandunn">GitHub</a>, <a href="https://www.producthunt.com/@tristandunn">Product Hunt</a>, and <a href="https://twitter.com/tristandunn">Twitter</a>. Or view <a href="/resume">my&#160;r&#233;sum&#233;</a>.</p>
+    </div>
+  </header>
 
-        <li class="post" itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting">
-          <a href="{{ post.url }}" itemprop="name">{{ post.title | xml_escape | widow }}{% if post.part %}: Part&#160;{{ post.part }}{% endif %}</a>
-          <p><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date_to_string }}</time></p>
-        </li>
-      {% endfor %}
-    </ul>
-  </section>
+  <h2>Articles</h2>
 
-  <aside role="complementary">
-    <h1>About</h1>
+  <ul itemscope itemtype="http://schema.org/Blog">
+    {% for post in site.posts %}
+      {% if post.archived %}
+        {% continue %}
+      {% endif %}
 
-    <p>I'm a remote developer at <a href="https://clearbit.com">Clearbit</a>, helping you build your business with better data. Formerly at Envoy, ROLI, Blend, Dribbble, Google, meebo, and thoughtbot.</p>
+      <li class="post" itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting">
+        <a href="{{ post.url }}">
+          <time datetime="{{ post.date | date: "%FT%T%:z" }}" itemprop="datePublished">
+            {{ post.date | date_to_string }}
+          </time>
 
-    <p class="elsewhere">Find me on <a href="https://angel.co/tristan-dunn">AngelList</a>, <a href="https://github.com/tristandunn">GitHub</a>, <a href="https://www.producthunt.com/@tristandunn">Product Hunt</a>, &#38; <a href="https://twitter.com/tristandunn">Twitter</a>. Or view <a href="/resume">my&#160;r&#233;sum&#233;</a>.</p>
-  </aside>
+          <span itemprop="name">{{ post.title | xml_escape | widow }}{% if post.part %}: Part&#160;{{ post.part }}{% endif %}</span>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
 </main>

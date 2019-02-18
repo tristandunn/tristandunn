@@ -14,6 +14,7 @@ main {
     a {
       background: transparent;
       color: $gray;
+      text-decoration: none;
       text-shadow: none;
 
       &:hover {
@@ -65,8 +66,12 @@ article {
     }
 
     a {
-      @include smart-underline($gray);
+      color: $gray;
     }
+  }
+
+  a {
+    color: $blue;
   }
 
   h2,
