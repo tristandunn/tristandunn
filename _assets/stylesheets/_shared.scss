@@ -1,24 +1,2 @@
 @import "bourbon";
 @import "colors";
-
-@mixin smart-underline($color: $blue) {
-  color: $color;
-  background-image: linear-gradient($white, $white), linear-gradient($white, $white), linear-gradient($color, $color);
-  background-size: 0.05em 0.075em, 0.05em 0.075em, 0.1em 0.075em;
-  background-repeat: no-repeat, no-repeat, repeat-x;
-  background-position: 0% 92.5%, 100% 92.5%, 0% 92.5%;
-  text-decoration: none;
-  text-shadow: 0.03em 0 $white, -0.03em 0 $white, 0 0.03em $white, 0 -0.03em $white, 0.06em 0 $white, -0.06em 0 $white, 0.09em 0 $white, -0.09em 0 $white, 0.12em 0 $white, -0.12em 0 $white, 0.15em 0 $white, -0.15em 0 $white;
-
-  &::before,
-  &::after,
-  *,
-  *::before,
-  *::after {
-    text-shadow: none;
-  }
-
-  &:visited {
-    color: $color;
-  }
-}

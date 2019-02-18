@@ -2,11 +2,6 @@
 
 @import "shared";
 
-html,
-body {
-  height: 100%;
-}
-
 html {
   font-size: 90%;
 
@@ -28,10 +23,6 @@ body {
   text-rendering: optimizeLegibility;
   font-feature-settings: "kern";
   -webkit-font-smoothing: antialiased;
-}
-
-a {
-  @include smart-underline;
 }
 
 main {

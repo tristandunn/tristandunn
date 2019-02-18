@@ -32,7 +32,7 @@ section + header {
   list-style: none;
 
   a {
-    @include smart-underline($gray);
+    color: $blue;
   }
 
   li {
