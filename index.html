@@ -19,24 +19,4 @@
       <p>I work remotely at <a href="https://clearbit.com">Clearbit</a> and you can follow me on <a href="https://angel.co/tristan-dunn">AngelList</a>, <a href="https://github.com/tristandunn">GitHub</a>, <a href="https://www.producthunt.com/@tristandunn">Product Hunt</a>, and <a href="https://twitter.com/tristandunn">Twitter</a>. Or view <a href="/resume">my&#160;r&#233;sum&#233;</a>.</p>
     </div>
   </header>
-
-  <h2>Articles</h2>
-
-  <ul itemscope itemtype="http://schema.org/Blog">
-    {% for post in site.posts %}
-      {% if post.archived %}
-        {% continue %}
-      {% endif %}
-
-      <li class="post" itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting">
-        <a href="{{ post.url }}">
-          <time datetime="{{ post.date | date: "%FT%T%:z" }}" itemprop="datePublished">
-            {{ post.date | date_to_string }}
-          </time>
-
-          <span itemprop="name">{{ post.title | xml_escape | widow }}{% if post.part %}: Part&#160;{{ post.part }}{% endif %}</span>
-        </a>
-      </li>
-    {% endfor %}
-  </ul>
 </main>
