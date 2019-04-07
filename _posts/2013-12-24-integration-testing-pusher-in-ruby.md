@@ -81,7 +81,7 @@ should work with any driver that supports JavaScript execution.
 [4]:  https://github.com/leggetter/pusher-test-stub
 [5]:  https://github.com/vcr/vcr
 [6]:  https://github.com/tristandunn/pusher-fake
-[7]:  https://semaphoreapp.com/blog/2013/06/28/testing-rails-apps-that-use-pusher.html
+[7]:  https://semaphoreci.com/blog/2013/06/28/testing-rails-apps-that-use-pusher.html
 [8]:  https://github.com/tristandunn/pusher-fake/blob/7eab542bb82b08df8348ee675c36048440e8bf2e/lib/pusher-fake.rb#L38-L46
 [9]:  https://github.com/tristandunn/pusher-fake/blob/master/lib/pusher-fake/cucumber.rb
 [10]: https://github.com/tristandunn/pusher-fake-example
