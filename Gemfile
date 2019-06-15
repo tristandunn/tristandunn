@@ -6,9 +6,9 @@ gem "jekyll",         "3.8.5"
 gem "jekyll-assets",  "3.0.12"
 
 group :development do
-  gem "rubocop",             "0.67.2", require: false
-  gem "rubocop-performance", "1.0.0",  require: false
-  gem "scss_lint",           "0.57.1", require: false
+  gem "rubocop",             "0.71.0", require: false
+  gem "rubocop-performance", "1.3.0",  require: false
+  gem "scss_lint",           "0.58.0", require: false
 end
 
 group :test do
