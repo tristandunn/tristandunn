@@ -1,16 +1,16 @@
-.c     { color: #998; font-style: italic; }
+.c     { color: #667; font-style: italic; }
 .err   { color: #A61717; background-color: #E3D2D2; }
 .k     { font-weight: 600; }
 .o     { font-weight: 600; }
-.cm    { color: #998; font-style: italic; }
-.cp    { color: #999; font-weight: 600; }
-.c1    { color: #998; font-style: italic; }
-.cs    { color: #999; font-weight: 600; font-style: italic; }
+.cm    { color: #667; font-style: italic; }
+.cp    { color: #666; font-weight: 600; }
+.c1    { color: #667; font-style: italic; }
+.cs    { color: #666; font-weight: 600; font-style: italic; }
 .gd    { color: #000; background-color: #FDD; }
 .gd .x { color: #000; background-color: #FAA; }
 .ge    { font-style: italic; }
 .gr    { color: #A00; }
-.gh    { color: #999; }
+.gh    { color: #666; }
 .gi    { color: #000; background-color: #DFD; }
 .gi .x { color: #000; background-color: #AFA; }
 .go    { color: #888; }
@@ -24,11 +24,11 @@
 .kp    { font-weight: 600; }
 .kr    { font-weight: 600; }
 .kt    { color: #458; font-weight: 600; }
-.m     { color: #099; }
+.m     { color: #066; }
 .s     { color: #D14; }
 .n     { color: #333; }
 .na    { color: teal; }
-.nb    { color: #0086B3; }
+.nb    { color: #006491; }
 .nc    { color: #458; font-weight: 600; }
 .no    { color: teal; }
 .ni    { color: purple; }
@@ -39,10 +39,10 @@
 .nv    { color: teal; }
 .ow    { font-weight: 600; }
 .w     { color: #BBB; }
-.mf    { color: #099; }
-.mh    { color: #099; }
-.mi    { color: #099; }
-.mo    { color: #099; }
+.mf    { color: #066; }
+.mh    { color: #066; }
+.mi    { color: #066; }
+.mo    { color: #066; }
 .sb    { color: #D14; }
 .sc    { color: #D14; }
 .sd    { color: #D14; }
@@ -54,9 +54,9 @@
 .sr    { color: #009926; }
 .s1    { color: #D14; }
 .ss    { color: #990073; }
-.bp    { color: #999; }
+.bp    { color: #666; }
 .vc    { color: teal; }
 .vg    { color: teal; }
 .vi    { color: teal; }
-.il    { color: #099; }
-.gc    { color: #999; background-color: #EAF2F5; }
+.il    { color: #066; }
+.gc    { color: #666; background-color: #EAF2F5; }
