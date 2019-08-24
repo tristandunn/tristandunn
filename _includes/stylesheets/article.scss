@@ -1,0 +1,164 @@
+@import "shared";
+@import "highlight";
+
+main {
+  .homepage {
+    margin: 0 0 2.5vw;
+    padding: 0 3vw;
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+
+    a {
+      background: transparent;
+      color: $gray;
+      text-decoration: none;
+      text-shadow: none;
+
+      &:hover {
+        color: $black;
+      }
+    }
+  }
+}
+
+article {
+  max-width: 40rem;
+
+  footer,
+  section {
+    p,
+    h2,
+    h3,
+    h4,
+    ol,
+    ul {
+      padding: 0 3vw;
+    }
+  }
+
+  header {
+    margin: 0 0 5vw;
+    padding: 0 3vw;
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 500;
+    }
+
+    h2 {
+      color: $gray;
+      font-size: 1.25rem;
+    }
+
+    span {
+      display: none;
+    }
+  }
+
+  footer {
+    a,
+    p {
+      color: $gray;
+      font-size: 1rem;
+    }
+
+    a {
+      color: $gray;
+    }
+  }
+
+  a {
+    color: $blue;
+  }
+
+  h2,
+  h3,
+  h4 {
+    margin: 0 0 0.5rem;
+    font-weight: 500;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  p,
+  ol,
+  ul {
+    color: lighten($black, 10%);
+    margin: 0 0 1.25rem;
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  figure {
+    background: lighten($silver, 11%);
+    margin: 0 0 1.25rem;
+    border: 0.1rem solid lighten($silver, 7%);
+    border-radius: 0.2rem;
+    overflow: scroll;
+
+    pre,
+    figure {
+      margin: 0;
+      padding: 0;
+      border: 0;
+    }
+
+    figure {
+      padding: 1rem;
+    }
+
+    figcaption {
+      display: none;
+    }
+  }
+
+  .pull-right {
+    width: 20vw;
+    height: auto;
+    margin: 0 0 1rem 1rem;
+    float: right;
+  }
+}
+
+.service {
+  color: $black;
+  margin: 2.5rem auto;
+  padding: 1rem;
+  font-size: 0.8rem;
+  text-align: center;
+  display: block;
+
+  &.digitalocean {
+    background: lighten($silver, 12%);
+    border: 0.1rem solid lighten($silver, 7%);
+    border-width: 0.1rem 0;
+
+    &:hover {
+      .st0,
+      .st1 {
+        fill: $do-blue;
+      }
+    }
+
+    svg {
+      width: 192px;
+      height: 192px;
+      margin: 0 auto 0.5rem;
+      display: block;
+    }
+
+    .st0,
+    .st1 {
+      fill: $black;
+    }
+
+    .st1 {
+      fill-rule: evenodd;
+      clip-rule: evenodd;
+    }
+  }
+}

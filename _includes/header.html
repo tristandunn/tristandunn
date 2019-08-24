@@ -12,7 +12,7 @@
     <meta property="og:title" content="{{ page.title | xml_escape }}{% if page.part %}: Part {{ page.part }}{% endif %}">
     <meta property="og:description" content="{{ page.description | xml_escape }}">
     {% if page.image %}
-      <meta property="og:image" content="{% asset '{{ page.image }}' @path %}">
+      <meta property="og:image" content="/images/{{ page.image }}">
     {% endif %}
 
     <meta name="twitter:card" content="summary">
@@ -21,7 +21,7 @@
     <meta name="twitter:description" content="{{ page.description | xml_escape }}">
     <meta name="twitter:url" content="{{ page.url | prepend: site.url }}">
     {% if page.image %}
-      <meta name="twitter:image" content="{% asset '{{ page.image }}' @path %}">
+      <meta name="twitter:image" content="/images/{{ page.image }}">
     {% endif %}
   {% elsif include.category %}
     <meta name="description" content="{{ include.category | titleize | prepend: "All of the articles I have written on " | append: "." | xml_escape }}">
@@ -29,17 +29,19 @@
     <meta name="description" content="A Ruby and JavaScript developer, tolerable designer, and an enthusiastic hockey fan.">
   {% endif %}
 
-  {% capture css %}
-    {% asset global.css @inline %}
+  {% capture scss %}
+    {% include stylesheets/global.scss %}
 
     {% if include.id %}
-      {% asset '{{ include.id | append: ".css" }}' @inline %}
+      {% assign filename = include.id | prepend:"stylesheets/" | append:".scss" %}
+
+      {% include {{ filename }} %}
     {% endif %}
   {% endcapture %}
 
-  {{ css | strip_newlines | strip }}
+  <style>{{ scss | scssify | strip_newlines | strip }}</style>
 
-  <link rel="icon" href="{% asset favicon.ico @path %}">
+  <link rel="icon" href="/favicon.ico">
   <link rel="alternate" type="application/rss+xml" title="Tristan Dunn" href="{{ "/feed.xml" | prepend: site.url }}">
 </head>
 <body{% if include.id %} id="{{ include.id }}"{% endif %}>

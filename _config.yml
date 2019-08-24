@@ -1,13 +1,3 @@
-assets:
-  caching:
-    path: ".jekyll-assets-cache"
-    type: file
-    enabled: true
-  compression: true
-  sources:
-    - "_assets/javascripts"
-    - "_assets/stylesheets"
-
 defaults:
   -
     scope:
@@ -26,8 +16,10 @@ exclude:
   - config
   - vendor
 
-markdown: kramdown
-
 permalink: "/:year/:month/:day/:title/"
+
+sass:
+    sass_dir: _includes/stylesheets
+    style: compressed
 
 url: "http://localhost:4000"

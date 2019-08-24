@@ -10,9 +10,15 @@ updated_at: "May 24th, 2018"
 
   <title>Tristan Dunn &#8211; R&#233;sum&#233;</title>
 
-  {% asset resume.css @inline %}
+  {% capture scss %}
+    {% include stylesheets/global.scss %}
+    {% include stylesheets/article.scss %}
+    {% include stylesheets/resume.scss %}
+  {% endcapture %}
 
-  <link rel="icon" href="{% asset favicon.ico @path %}">
+  <style>{{ scss | scssify | strip_newlines | strip }}</style>
+
+  <link rel="icon" href="/favicon.ico">
 </head>
 <body>
 

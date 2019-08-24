@@ -1,4 +1,3 @@
 !.ruby-version
-.jekyll-assets-cache/
-.jekyll-metadata
+.jekyll-cache/
 _site/
