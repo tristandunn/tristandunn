@@ -1,41 +1,46 @@
 ---
 ---
 
-{% include header.html id="homepage" category=page.category.name  %}
+{% include header.html id="article" category=page.category.name  %}
 
 <main>
-  <section role="main" class="articles">
-    <h1>{{ page.category.name }}</h1>
+  <article>
+    <header>
+      <h1>{{ page.category.name | titleize }}</h1>
+      <h2>All the articles related to {{ page.category.name | titleize }}.</h2>
+    </header>
 
-    <ul itemscope itemtype="http://schema.org/Blog">
-      {% for post in page.category.posts  %}
-        <li class="post" itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting">
-          <a href="{{ post.url }}" itemprop="name">{{ post.title | xml_escape | widow }}{% if post.part %}: Part {{ post.part }}{% endif %}</a>
-          <p class="published"><time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date_to_string }}</time></p>
-        </li>
-      {% endfor %}
-    </ul>
-  </section>
-
-  <aside role="complementary">
-    <h1>Categories</h1>
-
-    {% assign categories = site.posts | group_by:"category" | sort:"name" %}
-
-    <p>
-      {% capture names %}
-        {% for category in categories %}
-          {% if category.name == "" or category.name == page.category.name %}
-            {% continue %}
-          {% endif %}
-
-          <a href="/categories/{{ category.name }}/">{{ category.name | titleize }}</a>|
+    <section>
+      <ul itemscope itemtype="http://schema.org/Blog">
+        {% for post in page.category.posts  %}
+          <li class="post" itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting">
+            <a href="{{ post.url }}" itemprop="name">{{ post.title | xml_escape | widow }}{% if post.part %}: Part {{ post.part }}{% endif %}</a><br>
+            <time datetime="{{ post.date | date_to_xmlschema }}" itemprop="datePublished">{{ post.date | date_to_string }}</time>
+          </li>
         {% endfor %}
-      {% endcapture %}
+      </ul>
 
-      {{ names | strip | split:"|" | join:", " }}
-    </p>
-  </aside>
+      <aside>
+        <h3>Other Categories</h3>
+
+        {% assign categories = site.posts | group_by:"category" | sort:"name" %}
+
+        <p>
+          {% capture names %}
+            {% for category in categories %}
+              {% if category.name == "" or category.name == page.category.name %}
+                {% continue %}
+              {% endif %}
+
+              <a href="/categories/{{ category.name }}/">{{ category.name | titleize }}</a>|
+            {% endfor %}
+          {% endcapture %}
+
+          {{ names | strip | split:"|" | join:", " }}
+        </p>
+      </aside>
+    </section>
+  </article>
 </main>
 
 {% include footer.html %}
