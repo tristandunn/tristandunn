@@ -1,4 +1,4 @@
-# tristandunn [![Build Status](https://travis-ci.org/tristandunn/tristandunn.svg?branch=master)](https://travis-ci.org/tristandunn/tristandunn) [![Dependency Status](https://gemnasium.com/tristandunn/tristandunn.svg)](https://gemnasium.com/tristandunn/tristandunn)
+# tristandunn
 
 My personal website.
 
