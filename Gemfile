@@ -5,11 +5,11 @@ gem "jekyll",         "4.0.0"
 
 group :development do
   gem "bourbon",             "6.0.0"
-  gem "rubocop",             "0.74.0", require: false
-  gem "rubocop-performance", "1.4.1",  require: false
-  gem "scss_lint",           "0.58.0", require: false
+  gem "rubocop",             "0.76.0", require: false
+  gem "rubocop-performance", "1.5.1",  require: false
+  gem "scss_lint",           "0.59.0", require: false
 end
 
 group :test do
-  gem "html-proofer", "3.12.2"
+  gem "html-proofer", "3.14.1"
 end
