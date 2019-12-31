@@ -303,6 +303,6 @@ comments or questions.
 [4]: https://github.com/intridea/oauth2
 [5]: https://github.com/bkeepers/dotenv
 [6]: https://dribbble.com/account/applications
-[7]: https://developer.dribbble.com/v1/oauth/#scopes
-[8]: https://developer.dribbble.com/v1/
+[7]: https://developer.dribbble.com/v2/oauth/#scopes
+[8]: https://developer.dribbble.com/v2/
 [9]: https://github.com/tristandunn/dribbble-example
