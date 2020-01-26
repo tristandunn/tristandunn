@@ -12,6 +12,7 @@ header {
   }
 
   h1 {
+    margin: 0 0 0 1rem;
     order: 2;
 
     span {
@@ -61,8 +62,42 @@ header {
 }
 
 h2 {
-  margin: 4rem auto 2rem;
+  margin: 5rem auto 1.5rem;
   font-size: 1.5rem;
   font-weight: 300;
   max-width: 40rem;
+}
+
+ul {
+  margin: 0 auto;
+  list-style: none;
+  max-width: 40rem;
+
+  li {
+    margin: 1.5rem 0 2rem;
+  }
+
+  a {
+    text-decoration: none;
+    display: block;
+
+    &:hover {
+      span {
+        color: $blue;
+      }
+    }
+  }
+
+  time {
+    color: $gray;
+    font-size: 0.75rem;
+    display: block;
+  }
+
+  span {
+    color: $black;
+    font-size: 1.66rem;
+    font-weight: 600;
+    text-decoration: underline;
+  }
 }
