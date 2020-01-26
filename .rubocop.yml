@@ -3,7 +3,7 @@ require: rubocop-performance
 Documentation:
   Enabled: false
 
-Layout/AlignHash:
+Layout/HashAlignment:
   EnforcedColonStyle: table
   EnforcedHashRocketStyle: table
 
