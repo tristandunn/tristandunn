@@ -569,11 +569,11 @@ you have any tips, comments, or questions.
 [12]: https://docs.getchef.com/chef_solo.html
 [13]: https://matschaffer.github.io/knife-solo/
 [14]: https://github.com/applicationsonline/librarian-chef
-[15]: https://docs.getchef.com/essentials_data_bags.html
-[16]: https://docs.getchef.com/essentials_environments.html
-[17]: https://docs.getchef.com/chef_overview_nodes.html
-[18]: https://docs.getchef.com/essentials_roles.html
-[19]: https://docs.getchef.com/essentials_cookbooks.html
+[15]: https://docs.chef.io/data_bags/
+[16]: https://docs.chef.io/environments/
+[17]: https://docs.chef.io/nodes/
+[18]: https://docs.chef.io/roles/
+[19]: https://docs.chef.io/cookbooks/
 [20]: https://nginx.org
 [21]: https://supermarket.getchef.com/cookbooks/nginx
 [22]: https://supermarket.getchef.com

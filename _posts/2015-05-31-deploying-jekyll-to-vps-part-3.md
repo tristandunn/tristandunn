@@ -192,7 +192,7 @@ tips, comments, or questions.
 
 [1]:  /2015/05/05/deploying-jekyll-to-vps-part-2/
 [2]:  https://www.digitalocean.com/?refcode=a7c8d9fbaf7f
-[3]:  https://www.digitalocean.com/community/tutorials/how-to-create-your-first-digitalocean-droplet-virtual-server
+[3]:  https://www.digitalocean.com/docs/droplets/how-to/create/
 [4]:  https://www.fastly.com
 [5]:  https://git-scm.com/book/en/v2/Git-on-the-Server-Generating-Your-SSH-Public-Key
 [6]:  https://dnsimple.com/r/3edceb992aa254
