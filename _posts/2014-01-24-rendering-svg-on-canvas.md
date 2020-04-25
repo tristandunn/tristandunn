@@ -67,7 +67,7 @@ SVG it stays incredibly clear.
 * [SVG optimizer][3], to help reduce the file size even more.
 * [SVG browser support][4], not specific to canvas usage.
 
-[1]: https://code.google.com/p/canvg/
+[1]: https://github.com/canvg/canvg
 [2]: https://css-tricks.com/using-svg/
 [3]: https://github.com/svg/svgo
 [4]: https://caniuse.com/#search=svg
