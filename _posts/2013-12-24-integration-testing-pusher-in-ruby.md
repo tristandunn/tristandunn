@@ -2,7 +2,7 @@
 title: "Integration Testing Pusher in Ruby"
 category: ruby
 description: "Using the pusher-fake library to integration test Pusher in Ruby without an account or Internet connection."
-archived: true
+redirect_from: /2013/12/24/integration-testing-pusher-in-ruby/
 ---
 
 Real-time websites and notifications have become more and more prominent over

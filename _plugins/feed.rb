@@ -1,13 +1,14 @@
+# frozen_string_literal: true
+
 module Jekyll
   module Filters
     module Feed
+      # Determine the time for the most recently updated post.
+      #
+      # @param [Array] posts The posts to check.
+      # @return [DateTime]
       def last_updated(posts)
-        Array(posts).map do |post|
-          created_at  = post.is_a?(Hash) ? post["date"] : post.date
-          modified_at = post["modified_at"]
-
-          time(modified_at || created_at)
-        end.max
+        Array(posts).map { |post| time(post["modified_at"] || post.date) }.max
       end
     end
   end

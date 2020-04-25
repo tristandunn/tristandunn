@@ -1,4 +1,18 @@
+# frozen_string_literal: true
+
 class Integer
+  # Return the integer with the ordinal appended.
+  #
+  # @return [String] The ordinalized integer.
+  def ordinalize
+    "#{self}#{ordinal}"
+  end
+
+  private
+
+  # Determine the ordinal for the integer.
+  #
+  # @return [String] The ordinal.
   def ordinal
     return "th" if (11..13).cover?(abs % 100)
 
@@ -8,9 +22,5 @@ class Integer
     when 3 then "rd"
     else        "th"
     end
-  end
-
-  def ordinalize
-    "#{self}#{ordinal}"
   end
 end

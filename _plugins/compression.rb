@@ -1,6 +1,10 @@
+# frozen_string_literal: true
+
 require "htmlcompressor"
 
 HTML_COMPRESSOR = HtmlCompressor::Compressor.new(
+  css_compressor:            :yui,
+  compress_css:              true,
   remove_intertag_spaces:    true,
   remove_surrounding_spaces: HtmlCompressor::Compressor::BLOCK_TAGS_MIN
 )

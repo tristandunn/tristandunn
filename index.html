@@ -1,44 +1,36 @@
 ---
 ---
+<main class="homepage">
+  <h1>Hi, I'm Tristan.</h1>
 
-<main>
-  <header>
-    <h1>
-      <picture>
-        <source type="image/webp" srcset="/images/avatar.webp">
-        <source type="image/jpeg" srcset="/images/avatar.jpg">
-        <img src="/images/avatar.jpg" width="160" height="160" alt="Picture of Tristan.">
-      </picture>
+  <div>
+    <p>
+      I'm a developer, remote worker, and a hockey fan living in Louisiana.
+      I'm helping Clearbit build APIs and integrations for business data.
+    </p>
 
-      <span>Tristan Dunn</span>
-    </h1>
+    <p><a href="/about">Want to know more?</a></p>
+  </div>
 
-    <div>
-      <p>I'm making <a href="https://mademinimal.com">made minimal</a> for step-by-step guides and <a href="https://remoteworkers.community">Remote Workers Community</a> for remote workers.</p>
+  <h2>Journal</h2>
 
-      <p>I contribute to open-source and maintain a <a href="https://github.com/tristandunn/pusher-fake">fake Pusher server</a> and a <a href="https://hockey.mademinimal.com">fast NHL schedule</a>. I also built a <a href="https://github.com/tristandunn?tab=repositories&q=fadeaway">desktop client for Dribbble</a>.</p>
+  <div>
+    <p>
+      Writings about problems I've solved, fun experiments I've tried, what I'm
+      working on, or what's going in life personally and professionally.
+    </p>
 
-      <p>I work remotely at <a href="https://clearbit.com">Clearbit</a> and you can follow me on <a href="https://angel.co/tristan-dunn">AngelList</a>, <a href="https://github.com/tristandunn">GitHub</a>, <a href="https://www.producthunt.com/@tristandunn">Product Hunt</a>, and <a href="https://twitter.com/tristandunn">Twitter</a>. Or view <a href="/resume">my&#160;r&#233;sum&#233;</a>.</p>
-    </div>
-  </header>
+    <p><a href="/journal">View all entries →</a></p>
+  </div>
 
-  <h2>Articles</h2>
+  <h2>Projects</h2>
 
-  <ul itemscope itemtype="http://schema.org/Blog">
-    {% for post in site.posts %}
-      {% if post.archived %}
-        {% continue %}
-      {% endif %}
+  <div>
+    <p>
+      Current and previous projects, including a hosted job board, a community
+      for remote workers, a Dribbble client, and open-source.
+    </p>
 
-      <li class="post" itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting">
-        <a href="{{ post.url }}">
-          <time datetime="{{ post.date | date: "%FT%T%:z" }}" itemprop="datePublished">
-            {{ post.date | date_to_string }}
-          </time>
-
-          <span itemprop="name">{{ post.title | xml_escape | widow }}{% if post.part %}: Part&#160;{{ post.part }}{% endif %}</span>
-        </a>
-      </li>
-    {% endfor %}
-  </ul>
+    <p><a href="/projects">View all projects →</a></p>
+  </div>
 </main>

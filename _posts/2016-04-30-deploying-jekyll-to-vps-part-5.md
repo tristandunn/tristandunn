@@ -6,6 +6,7 @@ footer: "series/deploying-jekyll-to-vps.html"
 category: chef
 subtitle: "Part 5: Switching to HTTPS Only"
 description: "Switch the server to only respond to HTTPS requests, with support for the SPDY protocol."
+redirect_from: /2016/04/30/deploying-jekyll-to-vps-part-5/
 ---
 
 While a secure connection may not seem relevant for a static website, it affects

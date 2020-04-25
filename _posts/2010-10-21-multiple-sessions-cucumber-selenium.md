@@ -2,7 +2,7 @@
 title: "Multiple Sessions in Cucumber"
 category: ruby
 description: "Capybara additions for session manipulation to allow for testing interaction between multiple sessions in Cucumber."
-archived: true
+redirect_from: /2010/10/21/multiple-sessions-cucumber-selenium/
 ---
 
 <p class="outdated">This is now included in the <a href="https://github.com/jnicklas/capybara">Capybara</a> library.</p>
@@ -12,10 +12,6 @@ Normally to validate that a user can or can not see what another user created
 you would simply sign in as another user. However, this is not the case when you
 use WebSockets to deliver information in real-time. If you were to sign in as
 another user there would be no record of the previous events.
-
-<div>
-  {% include services.html id="digitalocean" %}
-</div>
 
 ## The Solution
 

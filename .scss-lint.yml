@@ -1,10 +1,15 @@
-scss_files: "_includes/stylesheets/**/*.scss"
+scss_files: "css/**/*.css"
+
+preprocess_command: "sed '1{/^---$/!q;};1,/^---$/d'"
 
 exclude:
-  - "_includes/stylesheets/resume.scss"
-  - "_includes/stylesheets/bourbon/**/*.scss"
+  - "css/_fonts.css"
+  - "css/_highlight.css"
 
 linters:
+  Comment:
+    enabled: false
+
   HexLength:
     enabled: true
     style: short
@@ -13,19 +18,20 @@ linters:
     enabled: true
     style: uppercase
 
+  ImportPath:
+    enabled: false
+
   LeadingZero:
     enabled: true
     style: include_zero
 
   NestingDepth:
     enabled: true
-    max_depth: 4
+    max_depth: 5
     ignore_parent_selectors: false
 
   PropertySortOrder:
     enabled: true
-    exclude:
-      - "_includes/stylesheets/reset.scss"
     order:
       - position
       - top
@@ -63,10 +69,12 @@ linters:
       - float
       - opacity
 
+  SelectorDepth:
+    enaledd: true
+    max_depth: 5
+
   SingleLinePerSelector:
     enabled: true
-    exclude:
-      - "_includes/stylesheets/reset.scss"
 
   StringQuotes:
     enabled: true

@@ -1,0 +1,21 @@
+---
+title: Journal
+layout: page
+description: "Writings about problems I've solved, fun experiments I've tried, what I'm working on, or what's going in life personally and professionally."
+---
+
+<ul itemscope itemtype="http://schema.org/Blog">
+  {% for post in site.posts %}
+    <li class="post" itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting">
+      <a href="{{ post.url }}">
+        <time datetime="{{ post.date | date: "%FT%T%:z" }}" itemprop="datePublished">
+          {{ post.date | date_to_string }}
+        </time>
+
+        <span itemprop="name">{{ post.title | xml_escape | widow }}{% if post.part %}: Part&#160;{{ post.part }}{% endif %}</span>
+
+        <p itemprop="abstract">{{ post.description | xml_escape | widow }}</p>
+      </a>
+    </li>
+  {% endfor %}
+</ul>

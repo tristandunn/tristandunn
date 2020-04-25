@@ -6,6 +6,7 @@ footer: "series/deploying-jekyll-to-vps.html"
 category: chef
 subtitle: "Part 4: Adding an Asset Pipeline"
 description: "Add and configure an asset pipeline for Jekyll and add HTTP caching for the assets."
+redirect_from: /2015/10/14/deploying-jekyll-to-vps-part-4/
 ---
 
 An asset pipeline is a key component of a web stack these days, since most

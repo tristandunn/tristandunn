@@ -2,7 +2,7 @@
 title: "Rendering SVG on Canvas"
 category: javascript
 description: "Simple example for rendering SVG on a <canvas> element with JavaScript, including simple support for retina screens."
-archived: true
+redirect_from: /2014/01/24/rendering-svg-on-canvas/
 ---
 
 I've been looking into SVG rendering on canvas and a lot of people recommend
@@ -60,10 +60,6 @@ image.src = "/path/to/image.svg";
 An added benefit with the scaling is that you can apply a multiplier for
 user-specified scaling, via zoom or mousewheel events. And since it's using
 SVG it stays incredibly clear.
-
-<div>
-  {% include services.html id="digitalocean" %}
-</div>
 
 ## Resources
 

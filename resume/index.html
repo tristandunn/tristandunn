@@ -1,102 +1,83 @@
 ---
-layout:
+title: Résumé
+layout: default
 sitemap: false
-updated_at: "November 24th, 2019"
+description: "The résumé for Tristan Dunn."
 ---
-<!DOCTYPE html>
-<html lang="en-US">
-<head>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="The résumé for Tristan Dunn.">
-
-  <title>Tristan Dunn &#8211; R&#233;sum&#233;</title>
-
-  {% capture scss %}
-    {% include stylesheets/global.scss %}
-    {% include stylesheets/article.scss %}
-    {% include stylesheets/resume.scss %}
-  {% endcapture %}
-
-  <style>{{ scss | scssify | strip_newlines | strip }}</style>
-
-  <link rel="icon" href="/favicon.ico">
-</head>
-<body>
-
-<main>
-  <h1 class="homepage"><a href="/">Tristan Dunn</a></h1>
+<main class="resume">
+  <h1 class="mb-2 text-xl text-center"><a href="/" class="text-gray-600 hover:text-gray-800 uppercase">Tristan Dunn</a></h1>
 
   <ul class="external">
+    <li><a href="mailto:hello@tristandunn.com">hello@tristandunn.com</a></li>
     <li><a href="https://twitter.com/tristandunn">@tristandunn</a></li>
     <li><a href="https://tristandunn.com">tristandunn.com</a></li>
-    <li><a href="mailto:hello@tristandunn.com">hello@tristandunn.com</a></li>
   </ul>
 
   <article>
-    <header>
+    <header class="mb-0">
       <h1>Work History</h1>
     </header>
 
-    <section>
+    <section class="relative">
       <h2>Clearbit</h2>
-      <h3>October 2017 &#8211; Now</h3>
-      <h4>Senior Software Engineer</h4>
+      <h3>Senior Software Engineer</h4>
+      <h4>October 2017 &#8211; Now</h3>
       <p>Helping to build, improve, and maintain APIs and libraries, including request logging with Athena and Kafka, writing a custom lead routing application, moving a service to Elasticsearch, and improving data quality.</p>
     </section>
 
     <section>
       <h2>PullRequest</h2>
-      <h3>June 2018 &#8211; September 2019</h3>
-      <h4>Code Review Contractor</h4>
+      <h3>Code Review Contractor</h4>
+      <h4>June 2018 &#8211; September 2019</h3>
       <p>Reviewing Node.js, React, and Ruby code to help teams on PullRequest catch bugs, improve their code, learn about new solutions, and provide reassurance on their code changes.</p>
     </section>
 
     <section>
       <h2>Envoy</h2>
-      <h3>March 2016 &#8211; September 2017</h3>
-      <h4>Engineer</h4>
+      <h3>Engineer</h4>
+      <h4>March 2016 &#8211; September 2017</h3>
       <p>Building and improving the Ruby on Rails API, using the JSON API specification, used by public and private web clients, the core iPad application product, and both the iPhone and Android&#160;applications.</p>
     </section>
 
     <section>
       <h2>ROLI</h2>
-      <h3>October 2015 &#8211; March 2016</h3>
-      <h4>Senior Web Developer</h4>
+      <h3>Senior Web Developer</h4>
+      <h4>October 2015 &#8211; March 2016</h3>
       <p>Continued work on Blend after an acquisition and existing ROLI web projects. Assisted with JavaScript and Node.js projects and helped create the Blend desktop application with React and Electron, as a part-time contractor into December&#160;2017.</p>
     </section>
 
     <section>
       <h2>Blend</h2>
-      <h3>March 2015 &#8211; October 2015</h3>
-      <h4>Software Engineer</h4>
+      <h3>Software Engineer</h4>
+      <h4>March 2015 &#8211; October 2015</h3>
       <p>Rewrote a core component using React to help improve the maintainability, added discounts to the marketplace using Stripe, added a persistent audio player to the front-end, and helped improve performance of the Node.js&#160;back-end.</p>
     </section>
 
     <section>
       <h2>Dribbble</h2>
-      <h3>March 2013 &#8211; March 2015</h3>
-      <h4>Developer</h4>
+      <h3>Developer</h4>
+      <h4>March 2013 &#8211; March 2015</h3>
       <p>As the first full-time developer I integrated Stripe payments, helped add support for team accounts, created the OAuth 2.0 API in Ruby on Rails, added real-time API statistics using Redis, documented the API, and handled developer&#160;support.</p>
     </section>
 
     <section>
       <h2>Google</h2>
-      <h3>July 2012 &#8211; November 2012</h3>
-      <h4>Software Engineer</h4>
+      <h3>Software Engineer</h4>
+      <h4>July 2012 &#8211; November 2012</h3>
       <p>Continued work on Meebo after an acquisition, including work on the Google+ team. Helped with the addition of Google+ integration into the Meebo bar, fixed bugs, and assisted with other&#160;projects.</p>
     </section>
 
     <section>
       <h2>Meebo</h2>
-      <h3>April 2011 &#8211; July 2012</h3>
-      <h4>JavaScript Engineer</h4>
+      <h3>JavaScript Engineer</h4>
+      <h4>April 2011 &#8211; July 2012</h3>
       <p>Implemented features, added interface improvements, and triaging bugs on the Meebo bar with pure JavaScript, which reached over 250 million users in a countless number of&#160;browsers.</p>
     </section>
 
     <section>
       <h2>thoughtbot</h2>
-      <h3>July 2009 &#8211; March 2011</h3>
-      <h4>Web Developer</h4>
+      <h3>Web Developer</h4>
+      <h4>July 2009 &#8211; March 2011</h3>
       <p>Developed for startups, big business, and internal products, including extracting an intensive ranking, filtering, and sorting code to an external service using Ruby on Rails, PostgreSQL, and&#160;Redis.</p>
     </section>
 
@@ -105,14 +86,14 @@ updated_at: "November 24th, 2019"
     </header>
 
     <section>
-      <h3>JavaScript</h3>
-      <h4>16 years</h4>
+      <h2>JavaScript</h3>
+      <h3>17 years</h4>
       <p>From deciphering DHTML demonstrations, to including jQuery in every project, to learning and using the core, and eventually using it full-stack with&#160;Node.js.</p>
     </section>
 
     <section>
-      <h3>Ruby / Rails</h3>
-      <h4>15 years</h4>
+      <h2>Ruby &#38; Rails</h3>
+      <h3>15 years</h4>
       <p>From the famous first Rails screencast, to countless side projects in my free time, to one of the most well known Rails consultancies, and eventually an amazing&#160;career.</p>
     </section>
 
@@ -122,40 +103,18 @@ updated_at: "November 24th, 2019"
     </header>
 
     <section>
-      <h3><a href="https://github.com/tristandunn?tab=repositories&q=fadeaway">fadeaway</a></h3>
-      <p>Desktop client for posting to Dribbble, with payments &#38; Sketch&#160;plug-in.</p>
-    </section>
-
-    <section>
-      <h3><a href="https://github.com/tristandunn/pusher-fake">pusher-fake</a></h3>
+      <h2><a href="https://github.com/tristandunn/pusher-fake">pusher-fake</a></h3>
       <p>A fake Pusher server written in Ruby for offline testing and&#160;development.</p>
     </section>
 
     <section>
-      <h3><a href="https://github.com/tristandunn/hockey">hockey</a></h3>
-      <p>A fast, minimal, and time zone aware list of upcoming NHL&#160;games updated daily.</p>
+      <h2><a href="https://github.com/tristandunn?tab=repositories&q=fadeaway">fadeaway</a></h3>
+      <p>Desktop client for posting to Dribbble, with payments &#38; Sketch&#160;plug-in.</p>
     </section>
 
-    <header>
-      <h1>Software</h1>
-      <p>I have lengthy experience with <code>git</code>, <code>memcached</code>, <code>redis</code>, and <code>vim</code>. And varying degrees of experience with <code>apache</code>, <code>chef</code>, <code>kafka</code>, <code>mysql</code>, <code>nginx</code>, <code>postgres</code>, and&#160;<code>zsh</code>.
-    </header>
-
-    <header>
-      <h1>Education</h1>
-      <p>I've been self taught in web development since 1997, but I did attend Louisiana State University from 2003-2005 majoring in Computer&#160;Science.</p>
-    </header>
-
-    <header>
-      <h1>References</h1>
-      <p>Available upon&#160;request.</p>
-    </header>
-
-    <footer>
-      <p>Last updated on <time datetime="{{ page.updated_at | date_to_xmlschema }}" itemprop="datePublished">{{ page.updated_at }}</time>.</p>
-    </footer>
+    <section>
+      <h2><a href="https://github.com/tristandunn/hockey">hockey</a></h3>
+      <p>A fast, minimal, and time zone aware list of upcoming NHL games updated each&#160;day.</p>
+    </section>
   </article>
 </main>
-
-</body>
-</html>

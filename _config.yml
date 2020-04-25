@@ -8,18 +8,30 @@ defaults:
     scope:
       type: "posts"
     values:
-      layout: "article"
+      layout: "post"
+
+description: "I'm a developer, remote worker, and a hockey fan living in Louisiana. I'm helping Clearbit build APIs and integrations for business data."
 
 exclude:
+  - .gitignore
   - Gemfile
   - Gemfile.lock
-  - config
-  - vendor
+  - Procfile.dev
+  - css/_*.css
+  - node_modules
+  - package.json
+  - postcss.config.js
+  - purgecss.config.js
+  - tailwind.config.js
+  - yarn.lock
 
-permalink: "/:year/:month/:day/:title/"
+permalink: "/journal/:title/"
 
-sass:
-    sass_dir: _includes/stylesheets
-    style: compressed
+plugins:
+  - jekyll-postcss
+  - jekyll-redirect-from
+
+redirect_from:
+  json: false
 
 url: "http://localhost:4000"

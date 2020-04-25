@@ -6,6 +6,7 @@ footer: "series/deploying-jekyll-to-vps.html"
 category: chef
 subtitle: "Part 3: Deploying Remotely to Digital Ocean"
 description: "Create a remote server, prepare Chef and Capistrano configuration, and deploy to the public with a custom domain name."
+redirect_from: /2015/05/31/deploying-jekyll-to-vps-part-3/
 ---
 
 Continuing on [part two of the series][1] we'll create a remote server, deploy
@@ -191,7 +192,7 @@ tips, comments, or questions.
 
 
 [1]:  /2015/05/05/deploying-jekyll-to-vps-part-2/
-[2]:  https://www.digitalocean.com/?refcode=a7c8d9fbaf7f
+[2]:  https://www.digitalocean.com
 [3]:  https://www.digitalocean.com/docs/droplets/how-to/create/
 [4]:  https://www.fastly.com
 [5]:  https://git-scm.com/book/en/v2/Git-on-the-Server-Generating-Your-SSH-Public-Key

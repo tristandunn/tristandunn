@@ -3,6 +3,7 @@ title: "Authenticate with the Dribbble API"
 image: "posts/2015-11-05/image@2x.png"
 category: ruby
 description: "A complete example for authenticating a user with the Dribbble API using Ruby on Rails."
+redirect_from: /2015/11/05/authenticate-with-dribbble/
 ---
 
 The [Dribbble API][1] supports user authentication with [OAuth 2.0][2], allowing
@@ -72,10 +73,6 @@ DRIBBBLE_CLIENT_SECRET="467652ff939bc8b39020e393453f79eb5efb7b550089d49ee487b62b
 There's no harm in exposing the client ID, but the secret should not be public.
 It's recommended to ignore the `.env` file in the `.gitignore` file, otherwise
 it's no better than hard coding the values.
-
-<div>
-  {% include services.html id="digitalocean" %}
-</div>
 
 ## Authenticating
 

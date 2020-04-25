@@ -1,0 +1,29 @@
+---
+layout: default
+---
+
+<main>
+  <h1 class="mb-12 text-xl text-center"><a href="/" class="text-gray-600 hover:text-gray-800 uppercase">Tristan Dunn</a></h1>
+
+  <article itemscope itemtype="http://schema.org/BlogPosting">
+    <header>
+      <div itemprop="name">
+        <h1>{{ page.title | xml_escape | widow }}</h1>
+
+        {% if page.subtitle %}
+          <h2>{{ page.subtitle | xml_escape | widow }}</h2>
+        {% endif %}
+      </div>
+
+      <meta content="{{ page.description | xml_escape }}" itemprop="description">
+    </header>
+
+    <section itemprop="articleBody">
+      {{ content }}
+    </section>
+
+    <footer>
+      <p>Published on <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date_to_string }}</time> in {{ page.category | titleize }}.{% if page.modified_at %} Updated on {{ page.modified_at | date_to_string }}.{% endif %}</p>
+    </footer>
+  </article>
+</main>

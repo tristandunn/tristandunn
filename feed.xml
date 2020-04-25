@@ -14,7 +14,7 @@ layout:
     <pubDate>{{ site.posts | last_updated | date_to_rfc822 }}</pubDate>
     <lastBuildDate>{{ site.posts | last_updated | date_to_rfc822 }}</lastBuildDate>
     <language>en-US</language>
-    <description>Developer and tolerable designer.</description>
+    <description>{{ site.description }}</description>
     {% for post in site.posts %}
     <item>
       <title>{{ post.title | xml_escape }}{% if post.subtitle %} - {{ post.subtitle | xml_escape }}{% endif %}</title>

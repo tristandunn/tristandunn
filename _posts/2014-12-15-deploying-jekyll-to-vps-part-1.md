@@ -6,6 +6,7 @@ footer: "series/deploying-jekyll-to-vps.html"
 category: chef
 subtitle: "Part 1: Setting Up a Local Vagrant Server with Chef"
 description: "A step-by-step guide to setting up a local Vagrant server, with custom and existing Chef recipes, for testing configuration and deployment."
+redirect_from: /2014/12/15/deploying-jekyll-to-vps-part-1/
 ---
 
 [Jekyll][1], a static site generator, has become a common solution for websites.
@@ -23,7 +24,7 @@ deploy this website, starting with creating a local [Vagrant][5] server.
 
 ## Vagrant
 
-<img src="/images/posts/2014-12-15/vagrant.jpg" width="128" height="128" class="pull-right" alt="Vagrant logo" srcset="/images/posts/2014-12-15/vagrant.jpg 1x, /images/posts/2014-12-15/vagrant@2x.jpg 2x" style="max-width: 128px;">
+<img src="/images/posts/2014-12-15/vagrant.jpg" width="128" height="128" class="mb-6 ml-6 float-right" alt="Vagrant logo" srcset="/images/posts/2014-12-15/vagrant.jpg 1x, /images/posts/2014-12-15/vagrant@2x.jpg 2x" style="max-width: 128px;">
 
 Vagrant allows us to <q>create and configure lightweight, reproducible, and
 portable development environments.</q> Being able to work offline or without a
@@ -80,7 +81,7 @@ To ensure we have everything configured correctly we can boot the server with
 
 ## Chef
 
-<img src="/images/posts/2014-12-15/chef.jpg" width="128" height="126" class="pull-right" alt="Chef logo" srcset="/images/posts/2014-12-15/chef.jpg 1x, /images/posts/2014-12-15/chef@2x.jpg 2x" style="max-width: 128px;">
+<img src="/images/posts/2014-12-15/chef.jpg" width="128" height="126" class="mb-6 ml-6 float-right" alt="Chef logo" srcset="/images/posts/2014-12-15/chef.jpg 1x, /images/posts/2014-12-15/chef@2x.jpg 2x" style="max-width: 128px;">
 
 Next we need to setup and configure Chef, which lets us automate and version our
 infrastructure as code. If you're not familiar with it I recommend [checking out
@@ -557,7 +558,7 @@ you have any tips, comments, or questions.
 
 [1]:  https://jekyllrb.com
 [2]:  https://pages.github.com
-[3]:  https://www.digitalocean.com/?refcode=a7c8d9fbaf7f
+[3]:  https://www.digitalocean.com
 [4]:  https://www.getchef.com
 [5]:  https://www.vagrantup.com
 [6]:  https://www.vagrantup.com/downloads.html
