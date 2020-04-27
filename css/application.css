@@ -9,7 +9,7 @@ layout:
 @import "tailwindcss/utilities";
 
 a {
-  @apply text-blue-600 font-semibold;
+  @apply font-semibold text-blue-600;
 
   &:hover {
     @apply text-blue-500;
@@ -17,7 +17,7 @@ a {
 }
 
 main {
-  @apply max-w-4xl mx-auto px-4 py-12;
+  @apply max-w-4xl px-4 py-12 mx-auto;
 
   @screen lg {
     @apply px-8;
@@ -88,7 +88,7 @@ main {
   }
 
   time {
-    @apply block text-gray-700 text-base font-normal;
+    @apply block text-base font-normal text-gray-700;
   }
 
   span {
@@ -96,7 +96,7 @@ main {
   }
 
   p {
-    @apply text-gray-800 font-normal;
+    @apply font-normal text-gray-800;
   }
 }
 
@@ -133,7 +133,7 @@ main {
     @apply mb-10 text-center;
 
     li {
-      @apply mx-2 inline-block;
+      @apply inline-block mx-2;
     }
 
     a {
@@ -155,7 +155,7 @@ article {
     }
 
     h2 {
-      @apply mt-2 text-gray-700 text-2xl font-bold tracking-tight;
+      @apply mt-2 text-2xl font-bold tracking-tight text-gray-700;
 
       @screen lg {
         @apply text-3xl;
@@ -165,7 +165,7 @@ article {
 
   section {
     h2 {
-      @apply text-2xl font-extrabold mt-10 mb-1;
+      @apply mt-10 mb-1 text-2xl font-extrabold;
 
       @screen lg {
         @apply text-3xl;
@@ -173,7 +173,7 @@ article {
     }
 
     h3 {
-      @apply text-xl font-bold mt-8 mb-1;
+      @apply mt-8 mb-1 text-xl font-bold;
 
       @screen lg {
         @apply text-2xl;
@@ -181,7 +181,7 @@ article {
     }
 
     h4 {
-      @apply font-bold mt-6 leading-relaxed;
+      @apply mt-6 font-bold leading-relaxed;
 
       @screen lg {
         @apply text-xl;
@@ -206,11 +206,11 @@ article {
 
     p {
       &.outdated {
-        @apply bg-yellow-200 p-2 border-2 border-yellow-300 rounded-lg text-center;
+        @apply p-2 text-center bg-yellow-200 border-2 border-yellow-300 rounded-lg;
       }
 
       code {
-        @apply bg-gray-200 px-2 py-1 rounded-lg text-black text-base;
+        @apply px-2 py-1 text-base text-black bg-gray-200 rounded-lg;
       }
     }
 
@@ -226,7 +226,7 @@ article {
       }
 
       figcaption {
-        @apply text-gray-700 mt-2 text-sm text-center;
+        @apply mt-2 text-sm text-center text-gray-700;
 
         code {
           @apply text-xs;
@@ -235,20 +235,20 @@ article {
     }
 
     .highlight {
-      @apply bg-gray-100 m-0 border-2 border-gray-200 rounded-lg;
+      @apply m-0 bg-gray-100 border-2 border-gray-200 rounded-lg;
 
       pre {
-        @apply m-0 p-0 overflow-x-scroll;
+        @apply p-0 m-0 overflow-x-scroll;
       }
 
       code {
-        @apply inline-block p-4 leading-normal scrolling-touch;
+        @apply inline-block p-4 scrolling-touch leading-normal;
       }
     }
   }
 
   footer {
-    @apply mt-8 text-gray-700 text-center;
+    @apply mt-8 text-center text-gray-700;
   }
 }
 
