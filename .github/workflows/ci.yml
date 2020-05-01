@@ -9,10 +9,13 @@ jobs:
     steps:
       - name: Checkout the code
         uses: actions/checkout@v1
+      - name: Determine the Ruby version
+        id: ruby-version
+        run: echo "::set-output name=version::$(cat .ruby-version)"
       - name: Install Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: 2.6.6
+          ruby-version: ${{ steps.ruby-version.outputs.version }}
       - name: Cache the Ruby dependencies
         uses: actions/cache@v1
         with:
