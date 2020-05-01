@@ -24,10 +24,14 @@ jobs:
         run: |
           bundle config path vendor/bundle
           bundle install --jobs 4 --retry 3
+      - name: Determine the Node version
+        id: node-version
+        run: |
+          echo "::set-output name=version::$(cat package.json | perl -pe '($_)=/"node":\s+"([0-9]+([.][0-9]+)+)"/')"
       - name: Install Node
         uses: actions/setup-node@v1
         with:
-          node-version: 14.0.0
+          node-version: ${{ steps.node-version.outputs.version }}
       - name: Find the Yarn cache directory
         id: yarn-cache
         run: echo "::set-output name=dir::$(yarn cache dir)"
