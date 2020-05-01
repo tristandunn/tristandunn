@@ -19,7 +19,7 @@
     {% assign description = page.description | default: site.description | xml_escape %}
 
     <meta name="description" content="{{ description }}">
-    <meta name="twitter:card" content="summary">
+    <meta name="twitter:card" content="{{ page.twitter_card | default: "summary" }}">
     <meta name="twitter:site" content="@tristandunn">
 
     <meta property="og:type" content="{% if page.date %}article{% else %}website{% endif %}">
