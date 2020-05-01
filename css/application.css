@@ -22,6 +22,22 @@ main {
   @screen lg {
     @apply px-8;
   }
+
+  + footer {
+    @apply px-4 py-10 text-center text-gray-800 bg-gray-100 border-t-2 border-gray-300;
+
+    @screen lg {
+      @apply text-lg;
+    }
+
+    div {
+      @apply max-w-3xl mx-auto leading-7;
+    }
+
+    p + p {
+      @apply mt-4;
+    }
+  }
 }
 
 .about,
