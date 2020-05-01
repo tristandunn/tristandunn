@@ -4,7 +4,16 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  {% assign title = page.title | xml_escape %}
+  {% capture title %}
+    {% if page.id %}
+      {{ page.title }}{% if page.subtitle %} - {{ page.subtitle }}{% endif %}
+    {% else %}
+      {% if page.title %}
+        {{ page.title }} -
+      {% endif %}
+      Tristan Dunn
+    {% endif %}
+  {% endcapture %}
 
   {% if page.description != false %}
     {% assign description = page.description | default: site.description | xml_escape %}
@@ -15,14 +24,14 @@
 
     <meta property="og:type" content="{% if page.date %}article{% else %}website{% endif %}">
     <meta property="og:url" content="{{ page.url | prepend: site.url }}">
-    <meta property="og:title" content="{% if title != "" %}{{ title }}{% if page.part %}: Part {{ page.part }}{% endif %}{% else %}Tristan Dunn{% endif %}">
+    <meta property="og:title" content="{{ title | strip | xml_escape }}">
     <meta property="og:description" content="{{ description }}">
     {% if page.image %}
       <meta property="og:image" content="/images/{{ page.image }}">
     {% endif %}
   {% endif %}
 
-  <title>{% if title != "" %}{{ title }} — {% endif %}Tristan Dunn</title>
+  <title>{{ title | strip | xml_escape }}</title>
 
   <link rel="stylesheet" href="/css/application.css">
 </head>
