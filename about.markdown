@@ -11,8 +11,8 @@ I've been working remotely since 2011 and presently work at [Clearbit][], where
 I help build APIs and integrations for business data. I primarily write Ruby at
 Clearbit, but also use Rails and JavaScript in personal projects.
 
-Despite growing up in a sweltering environment, I'm a hockey fan and cheer the
-Boston Bruins. I also enjoy watching Premier League soccer and curling.
+Despite growing up in a sweltering environment, I'm a hockey fan and cheer for
+the Boston Bruins. I also enjoy watching Premier League soccer and curling.
 
 You can follow me on [AngelList][], [GitHub][], [Product Hunt][], and
 [Twitter][], [e-mail me][] if you'd like to chat, or view my [résumé][].
