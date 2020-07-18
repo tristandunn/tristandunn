@@ -53,6 +53,8 @@ jobs:
           bundle exec scss-lint
           yarn lint
       - name: Build and verify the website
+        env:
+          JEKYLL_ENV: production
         run: |
           bundle exec jekyll build
           bundle exec htmlproofer ./_site --check_html true --check_opengraph true --log-level debug --url-ignore "/^https?://localhost/","/^https?://example\.local/","/r\/3edceb992aa254/","/https://dribbble\.com/account/applications/","/https://angel\.co/u/tristan-dunn/"
