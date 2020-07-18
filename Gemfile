@@ -3,20 +3,20 @@
 source "https://rubygems.org"
 
 gem "htmlcompressor", "0.4.0"
-gem "jekyll",         "4.0.0"
+gem "jekyll",         "4.1.1"
 gem "yui-compressor", "0.12.0"
 
 group :jekyll_plugins do
-  gem "jekyll-postcss", "0.2.2"
+  gem "jekyll-postcss", "0.4.0"
   gem "jekyll-redirect-from", "0.16.0"
 end
 
 group :development do
-  gem "bundler-audit",       "0.6.1",  require: false
-  gem "rack",                "2.2.2",  require: false
-  gem "rubocop",             "0.82.0", require: false
-  gem "rubocop-performance", "1.5.2",  require: false
-  gem "scss_lint",           "0.59.0", require: false
+  gem "bundler-audit",       "0.7.0.1", require: false
+  gem "rack",                "2.2.3",   require: false
+  gem "rubocop",             "0.88.0",  require: false
+  gem "rubocop-performance", "1.7.1",   require: false
+  gem "scss_lint",           "0.59.0",  require: false
 end
 
 group :test do

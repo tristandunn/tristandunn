@@ -24,7 +24,7 @@ deploy this website, starting with creating a local [Vagrant][5] server.
 
 ## Vagrant
 
-<img src="/images/posts/2014-12-15/vagrant.jpg" width="128" height="128" class="mb-6 ml-6 float-right" alt="Vagrant logo" srcset="/images/posts/2014-12-15/vagrant.jpg 1x, /images/posts/2014-12-15/vagrant@2x.jpg 2x" style="max-width: 128px;">
+<img src="/images/posts/2014-12-15/vagrant.jpg" width="128" height="128" class="float-right mb-6 ml-6" alt="Vagrant logo" srcset="/images/posts/2014-12-15/vagrant.jpg 1x, /images/posts/2014-12-15/vagrant@2x.jpg 2x" style="max-width: 128px;">
 
 Vagrant allows us to <q>create and configure lightweight, reproducible, and
 portable development environments.</q> Being able to work offline or without a
@@ -81,7 +81,7 @@ To ensure we have everything configured correctly we can boot the server with
 
 ## Chef
 
-<img src="/images/posts/2014-12-15/chef.jpg" width="128" height="126" class="mb-6 ml-6 float-right" alt="Chef logo" srcset="/images/posts/2014-12-15/chef.jpg 1x, /images/posts/2014-12-15/chef@2x.jpg 2x" style="max-width: 128px;">
+<img src="/images/posts/2014-12-15/chef.jpg" width="128" height="126" class="float-right mb-6 ml-6" alt="Chef logo" srcset="/images/posts/2014-12-15/chef.jpg 1x, /images/posts/2014-12-15/chef@2x.jpg 2x" style="max-width: 128px;">
 
 Next we need to setup and configure Chef, which lets us automate and version our
 infrastructure as code. If you're not familiar with it I recommend [checking out
@@ -563,8 +563,8 @@ you have any tips, comments, or questions.
 [5]:  https://www.vagrantup.com
 [6]:  https://www.vagrantup.com/downloads.html
 [7]:  https://www.virtualbox.org/wiki/Downloads
-[8]:  https://docs.vagrantup.com/v2/providers/index.html
-[9]:  https://docs.vagrantup.com/v2/vagrantfile/index.html
+[8]:  https://www.vagrantup.com/docs/providers
+[9]:  https://www.vagrantup.com/docs/vagrantfile
 [10]: https://www.vagrantbox.es
 [11]: https://www.getchef.com/chef/#how-chef-works
 [12]: https://docs.getchef.com/chef_solo.html
