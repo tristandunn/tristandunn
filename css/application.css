@@ -8,11 +8,25 @@ layout:
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+body {
+  @media (prefers-color-scheme: dark) {
+    @apply bg-gray-900;
+  }
+}
+
 a {
   @apply font-semibold text-blue-600;
 
+  @media (prefers-color-scheme: dark) {
+    @apply text-yellow-500;
+  }
+
   &:hover {
     @apply text-blue-500;
+
+    @media (prefers-color-scheme: dark) {
+      @apply text-yellow-600;
+    }
   }
 }
 
@@ -30,6 +44,10 @@ main {
       @apply text-lg;
     }
 
+    @media (prefers-color-scheme: dark) {
+      @apply bg-gray-800 text-gray-200 border-gray-700;
+    }
+
     div {
       @apply max-w-3xl mx-auto leading-7;
     }
@@ -45,6 +63,10 @@ main {
   h1 {
     @apply text-4xl font-extrabold tracking-tight;
 
+    @media (prefers-color-scheme: dark) {
+      @apply text-gray-100;
+    }
+
     @screen lg {
       @apply text-5xl;
     }
@@ -52,6 +74,10 @@ main {
 
   h2 {
     @apply mt-16 text-3xl font-extrabold;
+
+    @media (prefers-color-scheme: dark) {
+      @apply text-gray-200;
+    }
 
     @screen lg {
       @apply mt-20 text-4xl;
@@ -67,13 +93,25 @@ main {
 
     p {
       @apply my-2 text-gray-800;
+
+      @media (prefers-color-scheme: dark) {
+        @apply text-gray-300;
+      }
     }
   }
 }
 
-.about {
-  h1 {
-    @apply mb-2;
+.about-me,
+.journal,
+.projects {
+  h1 a {
+    @media (prefers-color-scheme: dark) {
+      @apply text-gray-500;
+
+      &:hover {
+        @apply text-gray-300;
+      }
+    }
   }
 }
 
@@ -83,6 +121,10 @@ main {
 
     @screen lg {
       @apply text-5xl;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      @apply text-gray-200;
     }
   }
 }
@@ -105,6 +147,10 @@ main {
 
   time {
     @apply block text-base font-normal text-gray-700;
+
+    @media (prefers-color-scheme: dark) {
+      @apply text-gray-500;
+    }
   }
 
   span {
@@ -113,6 +159,10 @@ main {
 
   p {
     @apply font-normal text-gray-800;
+
+    @media (prefers-color-scheme: dark) {
+      @apply text-gray-300;
+    }
   }
 }
 
@@ -120,6 +170,10 @@ main {
   header {
     p {
       @apply text-lg;
+
+      @media (prefers-color-scheme: dark) {
+        @apply text-gray-400;
+      }
     }
   }
 
@@ -139,6 +193,10 @@ main {
 
   h3 {
     @apply my-2 text-gray-700;
+
+    @media (prefers-color-scheme: dark) {
+      @apply text-gray-500;
+    }
   }
 
   h4 {
@@ -168,6 +226,10 @@ article {
       @screen lg {
         @apply text-5xl;
       }
+
+      @media (prefers-color-scheme: dark) {
+        @apply text-gray-200;
+      }
     }
 
     h2 {
@@ -176,10 +238,22 @@ article {
       @screen lg {
         @apply text-3xl;
       }
+
+      @media (prefers-color-scheme: dark) {
+        @apply text-gray-400;
+      }
     }
   }
 
   section {
+    h2,
+    h3,
+    h4 {
+      @media (prefers-color-scheme: dark) {
+        @apply text-gray-300;
+      }
+    }
+
     h2 {
       @apply mt-10 mb-1 text-2xl font-extrabold;
 
@@ -213,6 +287,10 @@ article {
         @apply text-xl;
       }
 
+      @media (prefers-color-scheme: dark) {
+        @apply text-gray-300;
+      }
+
       + p,
       + ol,
       + ul {
@@ -223,10 +301,18 @@ article {
     p {
       &.outdated {
         @apply p-2 text-center bg-yellow-200 border-2 border-yellow-300 rounded-lg;
+
+        @media (prefers-color-scheme: dark) {
+          @apply bg-gray-800 border-gray-700;
+        }
       }
 
       code {
         @apply px-2 py-1 text-base text-black bg-gray-200 rounded-lg;
+
+        @media (prefers-color-scheme: dark) {
+          @apply bg-gray-800 text-gray-400;
+        }
       }
     }
 
@@ -244,6 +330,10 @@ article {
       figcaption {
         @apply mt-2 text-sm text-center text-gray-700;
 
+        @media (prefers-color-scheme: dark) {
+          @apply text-gray-500;
+        }
+
         code {
           @apply text-xs;
         }
@@ -253,18 +343,30 @@ article {
     .highlight {
       @apply m-0 bg-gray-100 border-2 border-gray-200 rounded-lg;
 
+      @media (prefers-color-scheme: dark) {
+        @apply bg-black border-gray-800;
+      }
+
       pre {
         @apply p-0 m-0 overflow-x-scroll;
       }
 
       code {
         @apply inline-block p-4 scrolling-touch leading-normal;
+
+        @media (prefers-color-scheme: dark) {
+          filter: invert(1);
+        }
       }
     }
   }
 
   footer {
     @apply mt-8 text-center text-gray-700;
+
+    @media (prefers-color-scheme: dark) {
+      @apply text-gray-500;
+    }
   }
 }
 
