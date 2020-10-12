@@ -22,7 +22,11 @@ layout:
       <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
       <dc:creator>Tristan Dunn</dc:creator>
       <guid isPermaLink="true">{{ post.url | prepend: site.url }}</guid>
-      <description><![CDATA[{{ post.content }}]]></description>
+      <description>
+        <![CDATA[
+          {{ post.description | escape }}
+        ]]>
+      </description>
     </item>
     {% endfor %}
   </channel>
