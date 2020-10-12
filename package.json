@@ -5,15 +5,15 @@
   },
   "devDependencies": {
     "autoprefixer": "9.8.6",
-    "eslint": "7.8.1",
+    "eslint": "7.11.0",
     "postcss-clean": "1.1.0",
-    "postcss-cli": "7.1.2",
+    "postcss-cli": "8.1.0",
     "postcss-import": "12.0.1",
     "postcss-nested": "4.2.3",
-    "purgecss": "2.3.0",
-    "tailwindcss": "1.8.5"
+    "purgecss": "3.0.0",
+    "tailwindcss": "1.8.13"
   },
   "engines": {
-    "node": "14.4.0"
+    "node": "14.13.1"
   }
 }

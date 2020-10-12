@@ -1,4 +1,8 @@
-require: rubocop-performance
+require:
+  - rubocop-performance
+
+AllCops:
+  NewCops: enable
 
 Layout/EmptyLinesAroundAttributeAccessor:
   Enabled: true

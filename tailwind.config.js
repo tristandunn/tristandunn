@@ -1,6 +1,13 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
 
 module.exports = {
+  future : {
+    purgeLayersByDefault         : true,
+    removeDeprecatedGapUtilities : true // eslint-disable-line id-length
+  },
+
+  plugins : [],
+
   theme : {
     extend : {},
 
@@ -9,7 +16,5 @@ module.exports = {
     }
   },
 
-  variants : {},
-
-  plugins : []
+  variants : {}
 };
