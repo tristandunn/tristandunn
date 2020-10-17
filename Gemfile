@@ -14,7 +14,7 @@ end
 group :development do
   gem "bundler-audit",       "0.7.0.1", require: false
   gem "rack",                "2.2.3",   require: false
-  gem "rubocop",             "0.93.0",  require: false
+  gem "rubocop",             "0.93.1",  require: false
   gem "rubocop-performance", "1.8.1",   require: false
   gem "scss_lint",           "0.59.0",  require: false
 end

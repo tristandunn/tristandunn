@@ -278,9 +278,9 @@ caniuse-lite@^1.0.30001093:
   integrity sha512-fOjqRmHjRXv1H1YD6QVLb96iKqnu17TjcLSaX64TwhGYed0P1E1CCWZ9OujbbK4Z/7zax7zAzvQidzdtjx8RcA==
 
 caniuse-lite@^1.0.30001109:
-  version "1.0.30001147"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001147.tgz#84d27e5b691a8da66e16887b34c78dacf3935f00"
-  integrity sha512-CPyN875geYk46eIqPl5jlmotCr5YZC2KxIVfb4z0FrNfLxPM+MyodWD2irJGDG8vUUE1fmg3De9vt8uaC6Nf6w==
+  version "1.0.30001148"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001148.tgz#dc97c7ed918ab33bf8706ddd5e387287e015d637"
+  integrity sha512-E66qcd0KMKZHNJQt9hiLZGE3J4zuTqE1OnU53miEVtylFbwOEmeA5OsRu90noZful+XGSQOni1aT2tiqu/9yYw==
 
 chalk@^2.0.0, chalk@^2.4.1, chalk@^2.4.2:
   version "2.4.2"
@@ -1566,10 +1566,10 @@ table@^5.2.3:
     slice-ansi "^2.1.0"
     string-width "^3.0.0"
 
-tailwindcss@1.8.13:
-  version "1.8.13"
-  resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-1.8.13.tgz#ee57050a516d342bafc92cb74b4de6f92e44c189"
-  integrity sha512-z3R/6qPqfjauSR4qHhlA8I0OnfSyuotvigXISq666k+V52VSs5HV//KZ0Xe3qrZ4h5Um4OG5g+lcgjXSfURjDw==
+tailwindcss@1.9.4:
+  version "1.9.4"
+  resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-1.9.4.tgz#5ae8ff84bc8234df22ba5f2c7feafb64bb14da55"
+  integrity sha512-CVeP4J1pDluBM/AF11JPku9Cx+VwQ6MbOcnlobnWVVZnq+xku8sa+XXmYzy/GvE08qD8w+OmpSdN21ZFPoVDRg==
   dependencies:
     "@fullhuman/postcss-purgecss" "^2.1.2"
     autoprefixer "^9.4.5"
