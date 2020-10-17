@@ -2,7 +2,8 @@
 title: "Authenticate with the Dribbble API"
 image: "posts/2015-11-05/image@2x.png"
 category: ruby
-description: "A complete example for authenticating a user with the Dribbble API using Ruby on Rails."
+description: "A complete example for authenticating a user with the Dribbble API
+using Ruby on Rails."
 redirect_from: /2015/11/05/authenticate-with-dribbble/
 ---
 
@@ -11,8 +12,8 @@ applications to comment, like, and more as the authenticated user. We can also
 use it to verify a user, which is what we're going to do.
 
 Why would you want to verify a user? Maybe you're selling a product that
-requires the user to be a <q>player</q> on Dribbble. Or you want to use Dribbble
-as the authentication for your application. Basically any circumstance where you
+requires the user to be a "player" on Dribbble. Or you want to use Dribbble as
+the authentication for your application. Basically any circumstance where you
 want to know it's a specific person, possibly with a specific status.
 
 ## Creating an Application
@@ -26,8 +27,8 @@ name, description, and website URL which help users identify the application.
 The callback URL is where Dribbble will redirect the user after an authorization
 attempt, which we use to complete the authentication or handle any errors. For
 this example we're going to use `http://localhost:3000/sessions/new`, which
-refers to the <q>new</q> action for a <q>sessions</q> controller in our local
-Rails application.
+refers to the "new" action for a "sessions" controller in our local Rails
+application.
 
 ## Preparing Rails
 
@@ -106,7 +107,7 @@ end
 {: caption="The initial `app/models/token.rb` file."}
 
 We need a page for displaying the authorization link now, so let's add a simple
-<q>Pages</q> controller.
+"Pages" controller.
 
 ```ruby
 class PagesController < ApplicationController
@@ -266,9 +267,6 @@ See the [dribbble-example][9] repository for the complete source code to the
 application. Now on to the hard part, the idea. [E-mail
 me](mailto:hello@tristandunn.com) if you make an application, or if you have any
 comments or questions.
-
-
-
 
 [1]: https://developer.dribbble.com
 [2]: https://oauth.net/2/

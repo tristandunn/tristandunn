@@ -1,0 +1,3 @@
+rules    "MM001"
+rules    "~MD002,~MD031"
+rulesets ["lib/markdown_lint_rules.rb"]

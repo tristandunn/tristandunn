@@ -1,11 +1,13 @@
 ---
 title: "Multiple Sessions in Cucumber"
 category: ruby
-description: "Capybara additions for session manipulation to allow for testing interaction between multiple sessions in Cucumber."
+description: "Capybara additions for session manipulation to allow for testing
+interaction between multiple sessions in Cucumber."
 redirect_from: /2010/10/21/multiple-sessions-cucumber-selenium/
 ---
 
-<p class="outdated">This is now included in the <a href="https://github.com/jnicklas/capybara">Capybara</a> library.</p>
+This is now included in the [Capybara][1] library.
+{: class="outdated"}
 
 Multiple sessions are not often needed when writing Cucumber scenarios.
 Normally to validate that a user can or can not see what another user created
@@ -15,9 +17,9 @@ another user there would be no record of the previous events.
 
 ## The Solution
 
-While searching for a solution I found "Cucumber Testing for Multiple Users"
-by [Bernard Potocki][1]. He shows how to achieve multiple sessions with Cucumber and
-Selenium, but I wanted to make it easier.
+While searching for a solution I found "Cucumber Testing for Multiple Users" by
+[Bernard Potocki][2]. He shows how to achieve multiple sessions with Cucumber
+and Selenium, but I wanted to make it easier.
 
 Drop the following into `cucumber/support/sessions.rb`.
 
@@ -83,8 +85,9 @@ It's very comforting knowing that I can test interactions between two users
 now. And while I have not tried it yet, you can potentially test interactions
 between a group of users.
 
-I have created a basic example, [cucumber-websocket-example][2], which
+I have created a basic example, [cucumber-websocket-example][3], which
 demonstrates the above code.
 
-[1]: https://twitter.com/_imanel
-[2]: https://github.com/tristandunn/cucumber-websocket-example/
+[1]: https://github.com/jnicklas/capybara
+[2]: https://twitter.com/_imanel
+[3]: https://github.com/tristandunn/cucumber-websocket-example/

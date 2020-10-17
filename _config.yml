@@ -19,6 +19,7 @@ exclude:
   - Procfile.dev
   - config.ru
   - css/_*.css
+  - lib
   - node_modules
   - package.json
   - postcss.config.js

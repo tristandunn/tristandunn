@@ -5,7 +5,8 @@ image: "posts/2015-05-31/image@2x.png"
 footer: "series/deploying-jekyll-to-vps.html"
 category: chef
 subtitle: "Part 3: Deploying Remotely to Digital Ocean"
-description: "Create a remote server, prepare Chef and Capistrano configuration, and deploy to the public with a custom domain name."
+description: "Create a remote server, prepare Chef and Capistrano configuration,
+and deploy to the public with a custom domain name."
 redirect_from: /2015/05/31/deploying-jekyll-to-vps-part-3/
 ---
 
@@ -63,12 +64,12 @@ key, you can [follow this quick guide][5].
 The server will take a minute or so to boot. After you can verify it's running
 by SSHing into it. The IP address for the server is on the detail page you see.
 If you're using the SSH option it will prompt you to verify authenticity of the
-host since it's your first time connecting, which you can do by entering
-<q>yes</q> when prompted. If you're using the password option you'll need to
-provide the password e-mailed to you.
+host since it's your first time connecting, which you can do by entering "yes"
+when prompted. If you're using the password option you'll need to provide the
+password e-mailed to you.
 
 ```
-$ ssh root@IP_ADDRESS
+ssh root@IP_ADDRESS
 ```
 {: caption="SSHing into the remote server."}
 
@@ -127,17 +128,17 @@ First we need to bootstrap Chef on the new server. Replace `example` with your
 SSH host created above.
 
 ```
-$ bundle exec knife solo bootstrap example
+bundle exec knife solo bootstrap example
 ```
 {: caption="Bootstrapping the remote server with Chef."}
 
-If everything went as planned you should see the <q>404 Not Found</q> error when
-you visit the server IP address. And now we can deploy the Jekyll website to the
+If everything went as planned you should see the "404 Not Found" error when you
+visit the server IP address. And now we can deploy the Jekyll website to the
 remote server. If you named your Capistrano configuration file different than
 `remote` then replace it below.
 
 ```
-$ cap remote deploy
+cap remote deploy
 ```
 {: caption="Deploying to the remote server."}
 
@@ -155,12 +156,12 @@ First we need to [add a domain][8] to DNSimple, and register or transfer the
 domain if necessary. If you already have a domain created elsewhere you'll just
 need to update the nameservers to [point to DNSimple][9].
 
-Once added we need to add the DNS records. Select <q>DNS</q> from the left menu,
-then <q>Manage Records</q> under the <q>Custom Records</q> section. We're going
-to add two A records. Select the <q>Add Record</q> dropdown, then the <q>A</q>
-option. For the first record leave the name blank, enter the server IP address
-for the address, and choose a <abbr title="Time To Live">TTL</abbr> value. For
-the second provide the same values, but use `www` as the name.
+Once added we need to add the DNS records. Select "DNS" from the left menu, then
+"Manage Records" under the "Custom Records" section. We're going to add two A
+records. Select the "Add Record" dropdown, then the "A" option. For the first
+record leave the name blank, enter the server IP address for the address, and
+choose a TTL value. For the second provide the same values, but use `www` as the
+name.
 
 Depending on how fast your DNS updates, which could take hours, you should see
 the deployed website on the domain name. You could also try using different DNS
@@ -179,21 +180,20 @@ In the [next part][15] we'll add an asset pipeline and improve configuration for
 serving the assets. [E-mail me](mailto:hello@tristandunn.com) if you have any
 tips, comments, or questions.
 
-
-
-
-[1]:  /2015/05/05/deploying-jekyll-to-vps-part-2/
-[2]:  https://www.digitalocean.com
-[3]:  https://www.digitalocean.com/docs/droplets/how-to/create/
-[4]:  https://www.fastly.com
-[5]:  https://git-scm.com/book/en/v2/Git-on-the-Server-Generating-Your-SSH-Public-Key
-[6]:  https://dnsimple.com/r/3edceb992aa254
-[7]:  https://cloud.digitalocean.com/domains
-[8]:  https://dnsimple.com/tlds
-[9]:  https://support.dnsimple.com/articles/dnsimple-nameservers/
+[1]: /2015/05/05/deploying-jekyll-to-vps-part-2/
+[2]: https://www.digitalocean.com
+[3]: https://www.digitalocean.com/docs/droplets/how-to/create/
+[4]: https://www.fastly.com
+[5]: https://git-scm.com/book/en/v2/Git-on-the-Server-Generating-Your-SSH-Public-Key
+[6]: https://dnsimple.com/r/3edceb992aa254
+[7]: https://cloud.digitalocean.com/domains
+[8]: https://dnsimple.com/tlds
+[9]: https://support.dnsimple.com/articles/dnsimple-nameservers/
 [10]: https://developers.google.com/speed/public-dns/docs/using
 [11]: https://github.com/tristandunn/jekyll-vps-server
 [12]: https://github.com/tristandunn/jekyll-vps-server/compare/part-2...part-3
 [13]: https://github.com/tristandunn/jekyll-vps-website
 [14]: https://github.com/tristandunn/jekyll-vps-website/compare/part-2...part-3
 [15]: /2015/10/14/deploying-jekyll-to-vps-part-4/
+
+*[TTL]: Time To Live

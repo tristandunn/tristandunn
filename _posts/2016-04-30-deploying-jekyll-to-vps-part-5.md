@@ -5,7 +5,8 @@ image: "posts/2016-04-30/image@2x.png"
 footer: "series/deploying-jekyll-to-vps.html"
 category: chef
 subtitle: "Part 5: Switching to HTTPS Only"
-description: "Switch the server to only respond to HTTPS requests, with support for the SPDY protocol."
+description: "Switch the server to only respond to HTTPS requests, with support
+for the SPDY protocol."
 redirect_from: /2016/04/30/deploying-jekyll-to-vps-part-5/
 ---
 
@@ -22,12 +23,13 @@ Vagrant server and running the following commands. Note that it can take some
 time to generate the `dhparam` file.
 
 ```sh
-$ cd /etc/ssl
-$ sudo openssl genrsa -out example.com.key 2048
-$ sudo openssl req -new -x509 -key example.com.key -out example.com.crt -days 3650 -subj /CN=example.local
+cd /etc/ssl
+sudo openssl genrsa -out example.com.key 2048
+sudo openssl req -new -x509 -key example.com.key -out example.com.crt \
+                 -days 3650 -subj /CN=example.local
 
-$ cd /etc/ssl/certs
-$ sudo openssl dhparam -out dhparam.pem 4096
+cd /etc/ssl/certs
+sudo openssl dhparam -out dhparam.pem 4096
 ```
 {: caption="Generate a self-signed certificate on the Vagrant server."}
 
@@ -272,8 +274,8 @@ certificate page.
 And while that's running, let's generate the `dhparam` on the production server.
 
 ```sh
-$ cd /etc/ssl/certs
-$ sudo openssl dhparam -out dhparam.pem 4096
+cd /etc/ssl/certs
+sudo openssl dhparam -out dhparam.pem 4096
 ```
 {: caption="Increase the key size for the Diffie Hellman key exchange."}
 
@@ -302,9 +304,6 @@ asset domain or base URL in Jekyll.
 
 [E-mail me](mailto:hello@tristandunn.com) if you have any tips, comments, or
 questions.
-
-
-
 
 [1]: https://webmasters.googleblog.com/2014/08/https-as-ranking-signal.html
 [2]: https://letsencrypt.org

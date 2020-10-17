@@ -1,7 +1,8 @@
 ---
 title: "Integration Testing Pusher in Ruby"
 category: ruby
-description: "Using the pusher-fake library to integration test Pusher in Ruby without an account or Internet connection."
+description: "Using the pusher-fake library to integration test Pusher in Ruby
+without an account or Internet connection."
 redirect_from: /2013/12/24/integration-testing-pusher-in-ruby/
 ---
 
@@ -69,14 +70,14 @@ If you want to see and run a very simple test suite using it, check out this
 [basic Cucumber example][10]. It uses the [capybara-webkit][11] driver, but it
 should work with any driver that supports JavaScript execution.
 
-[1]:  https://pusher.com
-[2]:  https://travis-ci.org
-[3]:  https://www.uservoice.com
-[4]:  https://github.com/leggetter/pusher-test-stub
-[5]:  https://github.com/vcr/vcr
-[6]:  https://github.com/tristandunn/pusher-fake
-[7]:  https://semaphoreci.com/blog/2013/06/28/testing-rails-apps-that-use-pusher.html
-[8]:  https://github.com/tristandunn/pusher-fake/blob/7eab542bb82b08df8348ee675c36048440e8bf2e/lib/pusher-fake.rb#L38-L46
-[9]:  https://github.com/tristandunn/pusher-fake/blob/master/lib/pusher-fake/support/cucumber.rb
+[1]: https://pusher.com
+[2]: https://travis-ci.org
+[3]: https://www.uservoice.com
+[4]: https://github.com/leggetter/pusher-test-stub
+[5]: https://github.com/vcr/vcr
+[6]: https://github.com/tristandunn/pusher-fake
+[7]: https://semaphoreci.com/blog/2013/06/28/testing-rails-apps-that-use-pusher.html
+[8]: https://github.com/tristandunn/pusher-fake/blob/7eab542bb82b08df8348ee675c36048440e8bf2e/lib/pusher-fake.rb#L38-L46
+[9]: https://github.com/tristandunn/pusher-fake/blob/master/lib/pusher-fake/support/cucumber.rb
 [10]: https://github.com/tristandunn/pusher-fake-example
 [11]: https://github.com/thoughtbot/capybara-webkit

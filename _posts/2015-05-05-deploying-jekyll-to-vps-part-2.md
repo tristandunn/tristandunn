@@ -5,14 +5,14 @@ image: "posts/2015-05-05/image@2x.png"
 footer: "series/deploying-jekyll-to-vps.html"
 category: chef
 subtitle: "Part 2: Security, Monitoring, and Local Deployment"
-description: "Increase server security, add service monitoring, and configure Capistrano for deploying to the local server. "
+description: "Increase server security, add service monitoring, and configure
+Capistrano for deploying to the local server. "
 redirect_from: /2015/05/05/deploying-jekyll-to-vps-part-2/
 ---
 
 Continuing on [part one of the series][1] we'll increase the server security by
-disabling password authentication for <abbr title="Secure Shell">SSH</abbr>, add
-[Monit][2] to oversee services, and deploy to the local Vagrant server with
-[Capistrano][3].
+disabling password authentication for SSH, add [Monit][2] to oversee services,
+and deploy to the local Vagrant server with [Capistrano][3].
 
 ## SSH Security
 
@@ -353,17 +353,16 @@ In the [next part][11] we'll create and deploy to a [DigitalOcean][4] server to
 have a production version available. [E-mail me](mailto:hello@tristandunn.com)
 if you have any tips, comments, or questions.
 
-
-
-
-[1]:  /2014/12/15/deploying-jekyll-to-vps-part-1/
-[2]:  https://mmonit.com/monit/
-[3]:  https://capistranorb.com
-[4]:  https://www.digitalocean.com
-[5]:  https://supermarket.chef.io/cookbooks/sshd
-[6]:  https://supermarket.chef.io/cookbooks/monit-ng
-[7]:  https://github.com/tristandunn/jekyll-vps-server
-[8]:  https://github.com/tristandunn/jekyll-vps-server/compare/part-1...part-2
-[9]:  https://github.com/tristandunn/jekyll-vps-website
+[1]: /2014/12/15/deploying-jekyll-to-vps-part-1/
+[2]: https://mmonit.com/monit/
+[3]: https://capistranorb.com
+[4]: https://www.digitalocean.com
+[5]: https://supermarket.chef.io/cookbooks/sshd
+[6]: https://supermarket.chef.io/cookbooks/monit-ng
+[7]: https://github.com/tristandunn/jekyll-vps-server
+[8]: https://github.com/tristandunn/jekyll-vps-server/compare/part-1...part-2
+[9]: https://github.com/tristandunn/jekyll-vps-website
 [10]: https://github.com/tristandunn/jekyll-vps-website/compare/part-1...part-2
 [11]: /2015/05/31/deploying-jekyll-to-vps-part-3/
+
+*[SSH]: Secure Shell

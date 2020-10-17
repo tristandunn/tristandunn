@@ -5,7 +5,8 @@ image: "posts/2014-12-15/image@2x.png"
 footer: "series/deploying-jekyll-to-vps.html"
 category: chef
 subtitle: "Part 1: Setting Up a Local Vagrant Server with Chef"
-description: "A step-by-step guide to setting up a local Vagrant server, with custom and existing Chef recipes, for testing configuration and deployment."
+description: "A step-by-step guide to setting up a local Vagrant server, with
+custom and existing Chef recipes, for testing configuration and deployment."
 redirect_from: /2014/12/15/deploying-jekyll-to-vps-part-1/
 ---
 
@@ -14,9 +15,8 @@ While [GitHub Pages][2] offers free hosting, customization is somewhat limited.
 
 Deploying to Heroku is an option for customization, but is a bit much for a
 static website. And while we can deploy to GitHub if we pre-compile, we are
-still limited to what the server can do. Whereas with a <abbr title="Virtual
-Private Server">VPS</abbr> from [DigitalOcean][3], for as little as $5 per
-month, we can customize everything.
+still limited to what the server can do. Whereas with a VPS from
+[DigitalOcean][3], for as little as $5 per month, we can customize everything.
 
 Managing a sever by hand is annoying, scary, and a hassle. Instead we can use
 [Chef][4] to manage the server. We'll be going through the process I used to
@@ -24,11 +24,14 @@ deploy this website, starting with creating a local [Vagrant][5] server.
 
 ## Vagrant
 
-<img src="/images/posts/2014-12-15/vagrant.jpg" width="128" height="128" class="float-right mb-6 ml-6" alt="Vagrant logo" srcset="/images/posts/2014-12-15/vagrant.jpg 1x, /images/posts/2014-12-15/vagrant@2x.jpg 2x" style="max-width: 128px;">
+![Vagrant logo.](/images/posts/2014-12-15/vagrant.jpg){: width="128"
+height="128" class="float-right mb-6 ml-6"
+srcset="/images/posts/2014-12-15/vagrant.jpg 1x,
+/images/posts/2014-12-15/vagrant@2x.jpg 2x" style="max-width: 128px;"}
 
-Vagrant allows us to <q>create and configure lightweight, reproducible, and
-portable development environments.</q> Being able to work offline or without a
-paid server is nice, but the ability to try changes with no harm is the biggest
+Vagrant allows us to "create and configure lightweight, reproducible, and
+portable development environments." Being able to work offline or without a paid
+server is nice, but the ability to try changes with no harm is the biggest
 advantage. And that's the main reason we're starting with it.
 
 ### Installation
@@ -78,7 +81,9 @@ To ensure we have everything configured correctly we can boot the server with
 
 ## Chef
 
-<img src="/images/posts/2014-12-15/chef.jpg" width="128" height="126" class="float-right mb-6 ml-6" alt="Chef logo" srcset="/images/posts/2014-12-15/chef.jpg 1x, /images/posts/2014-12-15/chef@2x.jpg 2x" style="max-width: 128px;">
+![Chef logo.](/images/posts/2014-12-15/chef.jpg){: width="128" height="126"
+class="float-right mb-6 ml-6" srcset="/images/posts/2014-12-15/chef.jpg 1x,
+/images/posts/2014-12-15/chef@2x.jpg 2x" style="max-width: 128px;"}
 
 Next we need to setup and configure Chef, which lets us automate and version our
 infrastructure as code. If you're not familiar with it I recommend [checking out
@@ -103,7 +108,7 @@ gem "librarian-chef"
 Next we'll initialize a directory structure for Chef with knife:
 
 ```
-$ bundle exec knife solo init .
+bundle exec knife solo init .
 ```
 {: caption="Initializing the knife-solo configuration."}
 
@@ -124,9 +129,9 @@ It will generate files and empty directories:
 
 Now we're ready to actually start configuring Chef cookbooks. A cookbook
 generally defines a single scenario for Chef, such as installing and configuring
-a piece of software. Basically <q>the meat and potatoes</q> of Chef and probably
-what we'll interact with the most. See the [Cookbook documentation][19] if you
-want to know more about them.
+a piece of software. Basically "the meat and potatoes" of Chef and probably what
+we'll interact with the most. See the [Cookbook documentation][19] if you want
+to know more about them.
 
 The primary software needed for running a Jekyll website is a web server that
 can serve static files. We'll be using [nginx][20], but Apache or practically
@@ -147,7 +152,7 @@ cookbook "nginx"
 And then install the cookbook with librarian-chef:
 
 ```
-$ bundle exec librarian-chef install
+bundle exec librarian-chef install
 ```
 {: caption="Installing the nginx cookbook."}
 
@@ -178,9 +183,9 @@ attributes.
 {: caption="Creating `nodes/vagrant.json` with attributes for compiling nginx
 from the source."}
 
-Note that I manually determined the <code>checksum</code> value by downloading
-the compressed file from the official website and using <code>shasum -a 256
-[file]</code> locally on OS X.
+Note that I manually determined the `checksum` value by downloading the
+compressed file from the official website and using `shasum -a 256 [file]`
+locally on OS X.
 
 And we'll add an SSH host for the Vagrant configuration. Vagrant provides the
 necessary configuration output by running `vagrant ssh-config --host vagrant`.
@@ -202,12 +207,12 @@ Host vagrant
 {: caption="Adding a host to `~/.ssh/config` for the Vagrant server."}
 
 Now we can run Chef on the Vagrant server to install nginx. Using the
-<q>bootstrap</q> command runs the <q>prepare</q> and <q>cook</q> commands, which
-installs Chef on the host then uploads and runs the kitchen, which is all the
-Chef configuration. In the future we only need to run the <q>cook</q> command.
+"bootstrap" command runs the "prepare" and "cook" commands, which installs Chef
+on the host then uploads and runs the kitchen, which is all the Chef
+configuration. In the future we only need to run the "cook" command.
 
 ```
-$ bundle exec knife solo bootstrap vagrant
+bundle exec knife solo bootstrap vagrant
 ```
 {: caption="Bootstrapping the Vagrant server with Chef."}
 
@@ -235,8 +240,8 @@ end
 {: lines="1 5-8 15" caption="Forwarding a port in the `Vagrantfile` for nginx."}
 
 After running `vagrant reload` we'll be able to access it locally at
-[http://localhost:8080](http://localhost:8080). It will be a <q>404 Not
-Found</q> error for now though, since we haven't configured a website yet.
+[http://localhost:8080](http://localhost:8080). It will be a "404 Not Found"
+error for now though, since we haven't configured a website yet.
 
 ### Creating a User
 
@@ -314,8 +319,9 @@ cookbook and define the user name."}
 Then we can cook the server and ensure we can SSH in as the new user.
 
 ```
-$ bundle exec knife solo cook vagrant
-$ ssh deploy@vagrant
+bundle exec knife solo cook vagrant
+
+ssh deploy@vagrant
 ```
 {: caption="Cooking the Vagrant server and verifying the user creation."}
 
@@ -406,7 +412,7 @@ custom cookbook."}
 Now we can cook the server to run the custom recipe.
 
 ```
-$ bundle exec knife solo cook vagrant
+bundle exec knife solo cook vagrant
 ```
 {: caption="Cooking the Vagrant server with the custom recipe."}
 
@@ -427,7 +433,7 @@ cookbook "rbenv"
 And we of course need to install the cookbook.
 
 ```
-$ bundle exec librarian-chef install
+bundle exec librarian-chef install
 ```
 {: caption="Installing the rbenv cookbook."}
 
@@ -514,18 +520,15 @@ including deployment of local changes. And in the following part we'll prepare
 and deploy a production version. [E-mail me](mailto:hello@tristandunn.com) if
 you have any tips, comments, or questions.
 
-
-
-
-[1]:  https://jekyllrb.com
-[2]:  https://pages.github.com
-[3]:  https://www.digitalocean.com
-[4]:  https://www.getchef.com
-[5]:  https://www.vagrantup.com
-[6]:  https://www.vagrantup.com/downloads.html
-[7]:  https://www.virtualbox.org/wiki/Downloads
-[8]:  https://www.vagrantup.com/docs/providers
-[9]:  https://www.vagrantup.com/docs/vagrantfile
+[1]: https://jekyllrb.com
+[2]: https://pages.github.com
+[3]: https://www.digitalocean.com
+[4]: https://www.getchef.com
+[5]: https://www.vagrantup.com
+[6]: https://www.vagrantup.com/downloads.html
+[7]: https://www.virtualbox.org/wiki/Downloads
+[8]: https://www.vagrantup.com/docs/providers
+[9]: https://www.vagrantup.com/docs/vagrantfile
 [10]: https://www.vagrantbox.es
 [11]: https://www.getchef.com/chef/#how-chef-works
 [12]: https://docs.getchef.com/chef_solo.html
@@ -543,3 +546,5 @@ you have any tips, comments, or questions.
 [24]: https://github.com/tristandunn/jekyll-vps-server
 [25]: https://github.com/tristandunn/jekyll-vps-server/compare/part-0...part-1
 [26]: /2015/05/05/deploying-jekyll-to-vps-part-2/
+
+*[VPS]: Virtual Private Server

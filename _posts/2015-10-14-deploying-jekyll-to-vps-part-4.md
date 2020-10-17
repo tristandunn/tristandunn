@@ -5,7 +5,8 @@ image: "posts/2015-10-14/image@2x.png"
 footer: "series/deploying-jekyll-to-vps.html"
 category: chef
 subtitle: "Part 4: Adding an Asset Pipeline"
-description: "Add and configure an asset pipeline for Jekyll and add HTTP caching for the assets."
+description: "Add and configure an asset pipeline for Jekyll and add HTTP
+caching for the assets."
 redirect_from: /2015/10/14/deploying-jekyll-to-vps-part-4/
 ---
 
@@ -170,9 +171,9 @@ set :configuration, "_config.yml,_config_production.yml"
 ## Improving HTTP Caching
 
 While the asset pipeline will help minify our CSS and JS file sizes, we can also
-add [gzip][6] compression and improve the HTTP caching for all assets.  Note
-that since any asset URL will contain a digest making it unique, we can cache
-them far into the future.
+add [gzip][6] compression and improve the HTTP caching for all assets. Note that
+since any asset URL will contain a digest making it unique, we can cache them
+far into the future.
 
 ```nginx
 server {
@@ -206,9 +207,6 @@ branch][11] being relevant.
 
 In the [next part][12] we'll switch to be HTTPS only. [E-mail
 me](mailto:hello@tristandunn.com) if you have any tips, comments, or questions.
-
-
-
 
 [1]: https://github.com/envygeeks/jekyll-assets
 [2]: https://github.com/sstephenson/sprockets
