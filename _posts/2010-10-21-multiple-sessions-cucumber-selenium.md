@@ -21,8 +21,7 @@ Selenium, but I wanted to make it easier.
 
 Drop the following into `cucumber/support/sessions.rb`.
 
-<figure>
-{% highlight ruby %}
+```ruby
 module Capybara
   module Driver
     module Sessions
@@ -48,14 +47,12 @@ module Capybara
 end
 
 World(Capybara::Driver::Sessions)
-{% endhighlight %}
-  <figcaption>Adding methods for manipulating the Capybara session.</figcaption>
-</figure>
+```
+{: caption="Adding methods for manipulating the Capybara session."}
 
 Now you can write step definitions such as:
 
-<figure>
-{% highlight ruby %}
+```ruby
 Given /^a user named "([^"]*)" is online$/ do |name|
   in_session(name) do
     Given %{I am on the homepage}
@@ -63,14 +60,12 @@ Given /^a user named "([^"]*)" is online$/ do |name|
     And   %{I submit the new user form}
   end
 end
-{% endhighlight %}
-  <figcaption>Using the new method for switching sessions temporarily.</figcaption>
-</figure>
+```
+{: caption="Using the new method for switching sessions temporarily."}
 
 Which allows for scenarios to deal with multiple sessions.
 
-<figure>
-{% highlight cucumber %}
+```cucumber
 @javascript
 Scenario: Visitor creates a user successfully with another user is online
   Given a user named "Sue" is online             # Create a new session and user.
@@ -79,9 +74,8 @@ Scenario: Visitor creates a user successfully with another user is online
   And I submit the new user form
   Then I should be on the users page
   And Sue should see "Bob has entered the room." # Switches to the "Sue" session.
-{% endhighlight %}
-  <figcaption>Writing a feature with two users interacting.</figcaption>
-</figure>
+```
+{: caption="Writing a feature with two users interacting."}
 
 ## Conclusion &#38; Example
 

@@ -21,17 +21,15 @@ allow us to test the configuration changes. We can do so by SSHing into the
 Vagrant server and running the following commands. Note that it can take some
 time to generate the `dhparam` file.
 
-<figure>
-{% highlight sh %}
+```sh
 $ cd /etc/ssl
 $ sudo openssl genrsa -out example.com.key 2048
 $ sudo openssl req -new -x509 -key example.com.key -out example.com.crt -days 3650 -subj /CN=example.local
 
 $ cd /etc/ssl/certs
 $ sudo openssl dhparam -out dhparam.pem 4096
-{% endhighlight %}
-  <figcaption>Generate a self-signed certificate on the Vagrant server.</figcaption>
-</figure>
+```
+{: caption="Generate a self-signed certificate on the Vagrant server."}
 
 On OS X we need to trust the generated certificate. To do so copy the
 `example.com.crt` file out of the Vagrant server and drag it into the "Keychain
@@ -54,8 +52,7 @@ certificate is present.
 To compile with SSL and SPDY we add the modules to the node configuration. We
 also ensure the gzip static module is still available.
 
-<figure>
-{% highlight json %}
+```json
 {
   "nginx" : {
     "install_method" : "source",
@@ -73,9 +70,8 @@ also ensure the gzip static module is still available.
     "default_site_enabled" : false
   }
 }
-{% endhighlight %}
-  <figcaption>Customize the modules in the JSON for nodes.</figcaption>
-</figure>
+```
+{: lines="8-12" caption="Customize the modules in the JSON for nodes."}
 
 Now we can run `bundle exec knife solo cook vagrant` to recompile nginx with the
 modules.
@@ -90,8 +86,7 @@ To learn more about what each directive does, check out the [documentation for
 ngx_http_ssl_module][3]. We could also generate this with the [configuration
 generator from Mozilla][4], which also supports generation for other servers.
 
-<figure>
-{% highlight nginx %}
+```nginx
 # Redirect HTTP requests to the HTTPS endpoint.
 server {
   listen 80;
@@ -152,15 +147,14 @@ server {
     add_header Cache-Control "public, max-age=315360000";
   }
 }
-{% endhighlight %}
-  <figcaption>Create an SSL template at <code>site-cookbooks/server/templates/default/example.ssl.nginx</code>.</figcaption>
-</figure>
+```
+{: caption="Create an SSL template at
+`site-cookbooks/server/templates/default/example.ssl.nginx`."}
 
 We can add a small condition to our default server recipe to use the new SSL
 configuration when the certificate is present.
 
-<figure>
-{% highlight ruby %}
+```ruby
 include_recipe "nginx::default"
 
 directory "/var/www" do
@@ -184,9 +178,9 @@ end
 nginx_site "example" do
   enable true
 end
-{% endhighlight %}
-  <figcaption>Update the Ruby default recipe to conditionally enable the SSL configuration.</figcaption>
-</figure>
+```
+{: lines="11-16" caption="Update the Ruby default recipe to conditionally enable
+the SSL configuration."}
 
 We can run `bundle exec knife solo cook` to update the configuration, but note
 that this will break access to the server until we update Vagrant to handle the
@@ -200,22 +194,19 @@ we're also going to improve the handling to better match the production version.
 First we need to install the `vagrant-triggers` plug-in to allow us to run
 commands for any Vagrant events.
 
-<figure>
-{% highlight sh %}
+```sh
 # If you're using Homebrew you'll probably need this variable.
 $ export NOKOGIRI_USE_SYSTEM_LIBRARIES=1
 
 $ vagrant plugin install vagrant-triggers
-{% endhighlight %}
-  <figcaption>Install the <code>vagrant-triggers</code> plug-in.</figcaption>
-</figure>
+```
+{: caption="Install the `vagrant-triggers` plug-in."}
 
 Now we can run arbitrary commands when starting or stopping the Vagrant
 instance, so we'll use `pfctl` to map the ports to the standard `80` and `443`
 ports. We're also adding a new forwarded port for HTTPS.
 
-<figure>
-{% highlight ruby %}
+```ruby
 Vagrant.configure(2) do |config|
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://atlas.hashicorp.com/search.
@@ -252,9 +243,9 @@ Vagrant.configure(2) do |config|
     EOC
   end
 end
-{% endhighlight %}
-  <figcaption>Add triggers to forward ports <code>80</code> and <code>443</code> locally.</figcaption>
-</figure>
+```
+{: lines="8 17-35" caption="Add triggers to forward ports `80` and `443`
+locally."}
 
 Note that we'll have to enter our password now, since we need `sudo` to run the
 commands. After running `vagrant reload` to forward the ports we can access the
@@ -280,13 +271,11 @@ certificate page.
 
 And while that's running, let's generate the `dhparam` on the production server.
 
-<figure>
-{% highlight sh %}
+```sh
 $ cd /etc/ssl/certs
 $ sudo openssl dhparam -out dhparam.pem 4096
-{% endhighlight %}
-  <figcaption>Increase the key size for the Diffie Hellman key exchange.</figcaption>
-</figure>
+```
+{: caption="Increase the key size for the Diffie Hellman key exchange."}
 
 ### Install the Certificate
 

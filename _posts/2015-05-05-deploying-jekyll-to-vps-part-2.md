@@ -30,22 +30,19 @@ To disable password authentication we can add the [sshd cookbook][5] and
 customize SSH options in the node file. We just need to add it to our `Cheffile`
 and install it with `bundle exec librarian-chef install`.
 
-<figure>
-{% highlight ruby %}
+```ruby
 site "http://community.opscode.com/api/v1"
 
 cookbook "nginx"
 cookbook "rbenv"
 cookbook "sshd"
-{% endhighlight %}
-  <figcaption>Adding the sshd cookbook dependency the <code>Cheffile</code>.</figcaption>
-</figure>
+```
+{: lines="5" caption="Adding the sshd cookbook dependency the `Cheffile`."}
 
 Now we can add the recipe to the run list and disable password authentication.
 *Note that I'm excluding the other settings from the previous articles.*
 
-<figure>
-{% highlight json %}
+```json
 {
   "run_list" : [
     "recipe[user]",
@@ -60,9 +57,9 @@ Now we can add the recipe to the run list and disable password authentication.
     }
   }
 }
-{% endhighlight %}
-  <figcaption>Adding attributes to <code>nodes/vagrant.json</code> for the sshd recipe and settings.</figcaption>
-</figure>
+```
+{: lines="6 9-13" caption="Adding attributes to `nodes/vagrant.json` for the
+sshd recipe and settings."}
 
 And we can run the new recipe with the standard `bundle exec knife solo cook
 vagrant` process.
@@ -82,33 +79,28 @@ We can of course use an existing cookbook, the [monit-ng cookbook][6], to add
 some basic checks. To start add it to the `Cheffile` and install it with `bundle
 exec librarian-chef install`.
 
-<figure>
-{% highlight ruby %}
+```ruby
 site "http://community.opscode.com/api/v1"
 
 cookbook "monit-ng"
 cookbook "nginx"
 cookbook "rbenv"
 cookbook "sshd"
-{% endhighlight %}
-  <figcaption>Adding the monit-ng cookbook dependency the <code>Cheffile</code>.</figcaption>
-</figure>
+```
+{: lines="3" caption="Adding the monit-ng cookbook dependency the `Cheffile`."}
 
 First we need to define our custom cookbook name and dependency.
 
-<figure>
-{% highlight ruby %}
+```ruby
 name    "monit"
 depends "monit-ng"
-{% endhighlight %}
-  <figcaption>Creating the <code>site-cookbooks/monit/metadata.rb</code> file.</figcaption>
-</figure>
+```
+{: caption="Creating the `site-cookbooks/monit/metadata.rb` file."}
 
 And the default recipe will define basic process ID checks for the `nginx` and
 `sshd` services.
 
-<figure>
-{% highlight ruby %}
+```ruby
 include_recipe "monit-ng::default"
 
 monit_check "nginx" do
@@ -122,15 +114,14 @@ monit_check "sshd" do
   start    "/etc/init.d/ssh start"
   check_id "/var/run/sshd.pid"
 end
-{% endhighlight %}
-  <figcaption>Defining checks in the <code>site-cookbooks/monit/recipes/default.rb</code> file.</figcaption>
-</figure>
+```
+{: caption="Defining checks in the `site-cookbooks/monit/recipes/default.rb`
+file."}
 
 And we need to add our new recipe to the run list. We're running it last to
 ensure the processes we're monitoring are available.
 
-<figure>
-{% highlight json %}
+```json
 {
   "run_list" : [
     "recipe[user]",
@@ -140,9 +131,8 @@ ensure the processes we're monitoring are available.
     "recipe[monit]"
   ]
 }
-{% endhighlight %}
-  <figcaption>Adding monit recipe to <code>nodes/vagrant.json</code>.</figcaption>
-</figure>
+```
+{: lines="7" caption="Adding monit recipe to `nodes/vagrant.json`."}
 
 After running the recurring `bundle exec knife solo cook vagrant` command to
 install, we can double check that it's monitoring properly. Just SSH into the
@@ -162,8 +152,7 @@ environment. At the time of writing Jekyll requires a JS environment for the
 CoffeeScript dependency, but it will no longer be a required dependency in the
 future.
 
-<figure>
-{% highlight ruby %}
+```ruby
 gem "jekyll",       "2.5.3"
 gem "therubyracer", "0.12.2"
 
@@ -172,9 +161,8 @@ group :development do
   gem "capistrano-bundler", "1.1.4"
   gem "capistrano-rbenv",   "2.0.3"
 end
-{% endhighlight %}
-  <figcaption>Adding Capistrano dependencies <code>Gemfile</code>.</figcaption>
-</figure>
+```
+{: caption="Adding Capistrano dependencies `Gemfile`."}
 
 After running `bundle install` we can generate the Capistrano structure,
 including our local stage, with `bundle exec cap install STAGES=local`.
@@ -182,22 +170,19 @@ including our local stage, with `bundle exec cap install STAGES=local`.
 Our other dependencies aren't included by default, so we'll require them in the
 `Capfile`.
 
-<figure>
-{% highlight ruby %}
+```ruby
 require "capistrano/setup"
 require "capistrano/deploy"
 
-require "capistrano/bundler"
+require "capistrano/bundle"
 require "capistrano/rbenv"
-{% endhighlight %}
-  <figcaption>Setting up the base <code>Capfile</code> for Capistrano.</figcaption>
-</figure>
+```
+{: caption="Setting up the base `Capfile` for Capistrano."}
 
 We should also exclude some files and folders from the Jekyll output to prevent
 them from being publicly accessible in the future.
 
-<figure>
-{% highlight yaml %}
+```yaml
 # ...
 
 exclude:
@@ -205,16 +190,14 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - config
-{% endhighlight %}
-  <figcaption>Adding exclusions to the <code>_config.yml</code> for Jekyll.</figcaption>
-</figure>
+```
+{: caption="Adding exclusions to the `_config.yml` for Jekyll."}
 
 Now we can customize the `config/deploy.rb` file with our custom settings and
 actions for building and deploying the website. It's a decent chunk of code, so
 I explain each section in comments.
 
-<figure>
-{% highlight ruby %}
+```ruby
 # Lock the Capistrano version to ensure we're running the version we expect.
 lock "3.4.0"
 
@@ -262,9 +245,9 @@ end
 
 # Don't log revisions.
 Rake::Task["deploy:log_revision"].clear_actions
-{% endhighlight %}
-  <figcaption>Adding the core settings, actions, and customization in <code>config/deploy.rb</code>.</figcaption>
-</figure>
+```
+{: caption="Adding the core settings, actions, and customization in
+`config/deploy.rb`."}
 
 Instead of having to commit to a branch, push to a remote, and then deploy a
 branch on a local server we're just going to package and upload the directory
@@ -272,8 +255,7 @@ content to the local server. It allows you to test changes in a "production"
 environment much faster. To do so we need to define a custom strategy. It's a
 rather large class so I've commented the code heavily.
 
-<figure>
-{% highlight ruby %}
+```ruby
 module FileStrategy
   # Pretend we don't have a repository cache.
   def test
@@ -329,15 +311,14 @@ module FileStrategy
     "tmp/#{fetch(:application)}.tar.gz"
   end
 end
-{% endhighlight %}
-  <figcaption>Creating a custom deployment strategy in <code>config/deploy/local/file_strategy.rb</code>.</figcaption>
-</figure>
+```
+{: caption="Creating a custom deployment strategy in
+`config/deploy/local/file_strategy.rb`."}
 
 Lastly we'll update our local stage to define the server, use the file strategy
 for deployment, and optionally include custom Jekyll configuration.
 
-<figure>
-{% highlight ruby %}
+```ruby
 # Require our custom deployment strategy.
 require "./config/deploy/local/file_strategy"
 
@@ -351,9 +332,9 @@ set :git_strategy, FileStrategy
 # Optionally define custom configuration files, where the staging version will
 # overwrite the global version.
 # set :configuration, "_config.yml,_config_staging.yml"
-{% endhighlight %}
-  <figcaption>Defining the host, deployment strategy, and custom configuration in <code>config/deploy/local.rb</code>.</figcaption>
-</figure>
+```
+{: caption="Defining the host, deployment strategy, and custom configuration in
+`config/deploy/local.rb`."}
 
 We should now be able to deploy by running `cap local deploy`. It will take a
 minute the first time as it needs to install dependencies. After the website

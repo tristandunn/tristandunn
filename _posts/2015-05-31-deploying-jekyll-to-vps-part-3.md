@@ -67,12 +67,10 @@ host since it's your first time connecting, which you can do by entering
 <q>yes</q> when prompted. If you're using the password option you'll need to
 provide the password e-mailed to you.
 
-<figure>
-{% highlight text %}
+```
 $ ssh root@IP_ADDRESS
-{% endhighlight %}
-  <figcaption>SSHing into the remote server.</figcaption>
-</figure>
+```
+{: caption="SSHing into the remote server."}
 
 ## Configuring Chef
 
@@ -81,14 +79,12 @@ Vagrant version. You can name it whatever you would like. The username will be
 `root` and the hostname is the IP address of your server. Note that you can use
 a domain name instead of an IP address once you configure the DNS.
 
-<figure>
-{% highlight ruby %}
+```ruby
 Host example        # Name.
   User root         # Username.
   Hostname 1.2.3.4  # Your droplet IP address.
-{% endhighlight %}
-  <figcaption>Adding a host to <code>~/.ssh/config</code> for the remote server.</figcaption>
-</figure>
+```
+{: caption="Adding a host to `~/.ssh/config` for the remote server."}
 
 As for actual Chef configuration, all we need to do is duplicate the
 `nodes/vagrant.json` file and name it the same as your SSH host. So if we
@@ -106,8 +102,7 @@ branch we would like to deploy in a `config/deploy/remote.rb` file. You can name
 the file whatever you would like, I just prefer seeing `local` and `remote`
 within the command when deploying to keep it clear.
 
-<figure>
-{% highlight ruby %}
+```ruby
 # Define a web server, where "example" is the name our new SSH host and
 # "deploy" is our server user created via Chef.
 server "example", user: "deploy", roles: %w(web)
@@ -122,33 +117,29 @@ set :branch, ENV["BRANCH"] || "master"
 # Optionally define custom configuration files, where the production version
 # will overwrite the global version.
 # set :configuration, "_config.yml,_config_production.yml"
-{% endhighlight %}
-  <figcaption>Defining the host, branch name, and custom configuration in <code>config/deploy/remote.rb</code>.</figcaption>
-</figure>
+```
+{: caption="Defining the host, branch name, and custom configuration in
+`config/deploy/remote.rb`."}
 
 ## Deploying to DigitalOcean
 
 First we need to bootstrap Chef on the new server. Replace `example` with your
 SSH host created above.
 
-<figure>
-{% highlight text %}
+```
 $ bundle exec knife solo bootstrap example
-{% endhighlight %}
-  <figcaption>Bootstrapping the remote server with Chef.</figcaption>
-</figure>
+```
+{: caption="Bootstrapping the remote server with Chef."}
 
 If everything went as planned you should see the <q>404 Not Found</q> error when
 you visit the server IP address. And now we can deploy the Jekyll website to the
 remote server. If you named your Capistrano configuration file different than
 `remote` then replace it below.
 
-<figure>
-{% highlight text %}
+```
 $ cap remote deploy
-{% endhighlight %}
-  <figcaption>Deploying to the remote server.</figcaption>
-</figure>
+```
+{: caption="Deploying to the remote server."}
 
 Once complete you should see your website when you visit the server IP address
 now. If you receive any errors ensure you changed the Capistrano variables

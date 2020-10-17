@@ -43,16 +43,14 @@ OAuth 2.0 client we'll be using for authentication. And the [dotenv-rails][5]
 dependency that allows us to set environment variables for the client ID and
 secret, instead of hard coding them into the Rails application.
 
-<figure>
-{% highlight ruby %}
+```ruby
 gem "oauth2"
 
 group :development do
   gem "dotenv-rails"
 end
-{% endhighlight %}
-  <figcaption>Adding the dependencies to the <code>Gemfile</code>.</figcaption>
-</figure>
+```
+{: caption="Adding the dependencies to the `Gemfile`."}
 
 Don't forget to run `bundle` to install them.
 
@@ -62,13 +60,11 @@ To configure the environment variables we'll create a `.env` file in the root
 directory of the Rails application. Your client ID and secret on your
 application page, which is available under [your applications][6] on Dribbble.
 
-<figure>
-{% highlight bash %}
+```bash
 DRIBBBLE_CLIENT_ID="aa47c7086a79cbd534bc677159f9e813a63ddc1c1e2f3fbf04fdf8d616cda375"
 DRIBBBLE_CLIENT_SECRET="467652ff939bc8b39020e393453f79eb5efb7b550089d49ee487b62be4d82db8"
-{% endhighlight %}
-  <figcaption>Adding the client ID and secret to the <code>.env</code> file.</figcaption>
-</figure>
+```
+{: caption="Adding the client ID and secret to the `.env` file."}
 
 There's no harm in exposing the client ID, but the secret should not be public.
 It's recommended to ignore the `.env` file in the `.gitignore` file, otherwise
@@ -88,8 +84,7 @@ authorization URL. It's a decent amount of code to start with, but it's
 predominately configuration options. Note that we're requesting the default
 `public` scope, but you can [choose from others][7] depending on your needs.
 
-<figure>
-{% highlight ruby %}
+```ruby
 class Token
   # Settings for the OAuth client.
   CLIENT_ID      = ENV["DRIBBBLE_CLIENT_ID"].freeze
@@ -107,43 +102,36 @@ class Token
     client.auth_code.authorize_url(scope: CLIENT_SCOPE)
   end
 end
-{% endhighlight %}
-  <figcaption>The initial <code>app/models/token.rb</code> file.</figcaption>
-</figure>
+```
+{: caption="The initial `app/models/token.rb` file."}
 
 We need a page for displaying the authorization link now, so let's add a simple
 <q>Pages</q> controller.
 
-<figure>
-{% highlight ruby %}
+```ruby
 class PagesController < ApplicationController
   def index
   end
 end
-{% endhighlight %}
-  <figcaption>A minimal <code>app/controllers/pages_controller.rb</code> file.</figcaption>
-</figure>
+```
+{: caption="A minimal `app/controllers/pages_controller.rb` file."}
 
 And we of course need to set up a route for it, which we'll just have it be the
 root.
 
-<figure>
-{% highlight ruby %}
+```ruby
 Rails.application.routes.draw do
   root to: "pages#index"
 end
-{% endhighlight %}
-  <figcaption>Adding a root route to the <code>config/routes.rb</code> file.</figcaption>
-</figure>
+```
+{: caption="Adding a root route to the `config/routes.rb` file."}
 
 Lastly we need a view to display the link.
 
-<figure>
-{% highlight erb %}
+```erb
 <%= link_to "Connect with Dribbble", Token.authorize_url %>
-{% endhighlight %}
-  <figcaption>Super minimal <code>app/views/pages/index.html.erb</code> file.</figcaption>
-</figure>
+```
+{: caption="Super minimal `app/views/pages/index.html.erb` file."}
 
 ### Creating a Token
 
@@ -154,8 +142,7 @@ token, which allows us to perform API requests on behalf of the user.
 To start we'll add a `create_from_code` method to our `Token` class. We will
 also extract the client creation to a separate method for reuse.
 
-<figure>
-{% highlight ruby %}
+```ruby
 class Token
   # Settings for the OAuth client.
   CLIENT_ID      = ENV["DRIBBBLE_CLIENT_ID"].freeze
@@ -182,15 +169,14 @@ class Token
     client.auth_code.authorize_url(scope: CLIENT_SCOPE)
   end
 end
-{% endhighlight %}
-  <figcaption>Adding a <code>create_from_code</code> method to the <code>app/models/token.rb</code> file.</figcaption>
-</figure>
+```
+{: lines="1 12-26" caption="Adding a `create_from_code` method to the
+`app/models/token.rb` file."}
 
 Next we can create our `SessionsController` and use the new method for creating
 an access token that we'll store in the user's session.
 
-<figure>
-{% highlight ruby %}
+```ruby
 class SessionsController < ApplicationController
   def new
     # Create an access token from the provided code.
@@ -200,24 +186,21 @@ class SessionsController < ApplicationController
     redirect_to root_path
   end
 end
-{% endhighlight %}
-  <figcaption>Creating the <code>app/controllers/sessions_controller.rb</code> file.</figcaption>
-</figure>
+```
+{: caption="Creating the `app/controllers/sessions_controller.rb` file."}
 
 Now we can add a route for the new action. Remember that this is the action that
 Dribbble redirects to, so make sure it matches in your application settings if
 you're using a different name.
 
-<figure>
-{% highlight ruby %}
+```ruby
 Rails.application.routes.draw do
   resources :sessions, only: [:new]
 
   root to: "pages#index"
 end
-{% endhighlight %}
-  <figcaption>Adding sessions route to the <code>config/routes.rb</code> file.</figcaption>
-</figure>
+```
+{: caption="Adding sessions route to the `config/routes.rb` file."}
 
 ### Using the Token
 
@@ -225,8 +208,7 @@ We can now use the access token to make API requests on behalf of the user.
 Let's make a basic `User` class that fetches the attributes for the authorized
 user, which we'll use to display a message to them.
 
-<figure>
-{% highlight ruby %}
+```ruby
 class User
   # Create an OAuth2::AccessToken from the provided access token and our client.
   def initialize(access_token)
@@ -239,14 +221,12 @@ class User
     @attributes ||= @token.get("/v1/user").parsed.with_indifferent_access
   end
 end
-{% endhighlight %}
-  <figcaption>Creating the <code>app/models/user.rb</code> file.</figcaption>
-</figure>
+```
+{: caption="Creating the `app/models/user.rb` file."}
 
 We'll create a user in our root controller when a token is present.
 
-<figure>
-{% highlight ruby %}
+```ruby
 class PagesController < ApplicationController
   def index
     if session[:token].present?
@@ -254,22 +234,19 @@ class PagesController < ApplicationController
     end
   end
 end
-{% endhighlight %}
-  <figcaption>Adding user creation to the <code>app/controllers/pages_controller.rb</code> file.</figcaption>
-</figure>
+```
+{: caption="Adding user creation to the `app/controllers/pages_controller.rb` file."}
 
 Which we can conditionally use in the view to greet the user.
 
-<figure>
-{% highlight erb %}
+```erb
 <% if @user.present? %>
   Welcome, <%= @user.attributes[:name] %>!
 <% else %>
   <%= link_to "Connect with Dribbble", Token.authorize_url %>
 <% end %>
-{% endhighlight %}
-  <figcaption>Conditional <code>app/views/pages/index.html.erb</code> file.</figcaption>
-</figure>
+```
+{: caption="Conditional `app/views/pages/index.html.erb` file."}
 
 ## Summary
 
@@ -289,7 +266,6 @@ See the [dribbble-example][9] repository for the complete source code to the
 application. Now on to the hard part, the idea. [E-mail
 me](mailto:hello@tristandunn.com) if you make an application, or if you have any
 comments or questions.
-
 
 
 

@@ -26,8 +26,7 @@ of the popular [sprockets][2] library resulting in a rock solid foundation.
 First we'll need to add the `jekyll-assets` dependency to our `Gemfile` to
 begin.
 
-<figure>
-{% highlight ruby %}
+```ruby
 source "https://rubygems.org"
 
 gem "jekyll",        "2.5.3"
@@ -39,19 +38,17 @@ group :development do
   gem "capistrano-bundler", "1.1.4"
   gem "capistrano-rbenv",   "2.0.3"
 end
-{% endhighlight %}
-  <figcaption>Adding a <code>jekyll-assets</code> dependency to our existing <code>Gemfile</code>.</figcaption>
-</figure>
+```
+{: lines="4" caption="Adding a `jekyll-assets` dependency to our existing
+`Gemfile`."}
 
 And then we just need to load it as a Jekyll plug-in by creating a simple
 `_plugins/assets.rb` file.
 
-<figure>
-{% highlight ruby %}
+```ruby
 require "jekyll-assets"
-{% endhighlight %}
-  <figcaption>Require the library as a plug-in in the <code>_plugins/assets.rb</code> file.</figcaption>
-</figure>
+```
+{: caption="Require the library as a plug-in in the `_plugins/assets.rb` file."}
 
 ### Configuration
 
@@ -62,8 +59,7 @@ cache the compiled files to save us time.
 First let's add the `bourbon` library for Sass mixins and the `uglifier`
 dependency for JavaScript compression to our `Gemfile`.
 
-<figure>
-{% highlight ruby %}
+```ruby
 source "https://rubygems.org"
 
 gem "bourbon",       "4.2.5"
@@ -77,35 +73,31 @@ group :development do
   gem "capistrano-bundler", "1.1.4"
   gem "capistrano-rbenv",   "2.0.3"
 end
-{% endhighlight %}
-  <figcaption>Adding a <code>jekyll-assets</code> dependency to our existing <code>Gemfile</code>.</figcaption>
-</figure>
+```
+{: lines="3 7" caption="Adding a `bourbon` and `uglifier` dependencies to our
+existing `Gemfile`."}
 
 We need to require `jekyll-assets/bourbon` to enable Bourbon. Note that there is
 mention of removing this in a future version of `jekyll-assets`.
 
-<figure>
-{% highlight ruby %}
+```ruby
 require "jekyll-assets"
 require "jekyll-assets/bourbon"
-{% endhighlight %}
-  <figcaption>Adding Bourbon to the <code>_plugins/assets.rb</code> file.</figcaption>
-</figure>
+```
+{: caption="Adding Bourbon to the `_plugins/assets.rb` file."}
 
 Now we can add our asset configuration to our Jekyll `_config.yml` file to
 enable caching and compression.
 
-<figure>
-{% highlight yaml %}
+```yaml
 assets:
   cache: true
   js_compressor: uglifier
   css_compressor: sass
 
 # ...
-{% endhighlight %}
-  <figcaption>Adding asset configuration to the <code>_config.yml</code> file.</figcaption>
-</figure>
+```
+{: caption="Adding asset configuration to the `_config.yml` file."}
 
 If you do cache the assets you will want to add `.jekyll-assets-cache` to your
 `.gitignore` file.
@@ -117,13 +109,13 @@ provides a great explanation of the tags and filters available to us. But for a
 quick explanation, let's say we have the following asset files.
 
 * `_assets/images/logo.png` — Our website logo.
-* `_assets/javascripts/newsletter.js` — Custom JavaScript for our newsletter form.
+* `_assets/javascripts/newsletter.js` — Custom JavaScript for our newsletter
+  form.
 * `_assets/stylesheets/application.scss` — The global CSS for our site.
 
 We can render tags for them in a template with the new Liquid tags.
 
-<figure>
-{% highlight liquid %}
+```liquid
 ---
 title: Assets Example
 permalink: /assets-example/
@@ -139,11 +131,12 @@ permalink: /assets-example/
 </header>
 
 {{ "{% javascript newsletter " }}%}
+
 </body>
 </html>
-{% endhighlight %}
-  <figcaption>A short example Liquid template with asset tags in an <code>assets-example.md</code> file.</figcaption>
-</figure>
+```
+{: caption="A short example Liquid template with asset tags in an
+`assets-example.md` file."}
 
 ### Relative URLs
 
@@ -152,31 +145,27 @@ be certain cases when an absolute URL is neccessary. We can change the base URL
 for assets in the Jekyll configuration. And this is useful if you're using a
 separate domain or CDN for your assets.
 
-<figure>
-{% highlight yaml %}
+```yaml
 assets:
   baseurl: "http://example.com/assets/"
 
 # ...
-{% endhighlight %}
-  <figcaption>Adding an asset base URL to the Jekyll configuration.</figcaption>
-</figure>
+```
+{: caption="Adding an asset base URL to the Jekyll configuration."}
 
 While this is an easy change, we don't want to try loading our local assets from
 our production server. The handy `configuration` setting we added in the [second
 part of the series][5] allows us to add the setting to `_config_production.yml`
 and use it when deploying remotely.
 
-<figure>
-{% highlight ruby %}
+```ruby
 # ...
 
 # Define a custom configuration file, where the production version will
 # overwrite the global version.
 set :configuration, "_config.yml,_config_production.yml"
-{% endhighlight %}
-  <figcaption>Defining custom configuration in <code>config/deploy/remote.rb</code>.</figcaption>
-</figure>
+```
+{: caption="Defining custom configuration in `config/deploy/remote.rb`."}
 
 ## Improving HTTP Caching
 
@@ -185,8 +174,7 @@ add [gzip][6] compression and improve the HTTP caching for all assets.  Note
 that since any asset URL will contain a digest making it unique, we can cache
 them far into the future.
 
-<figure>
-{% highlight nginx %}
+```nginx
 server {
   root /var/www/example.com/current/_site;
 
@@ -201,9 +189,9 @@ server {
     add_header Cache-Control "public, max-age=315360000";
   }
 }
-{% endhighlight %}
-  <figcaption>Improving asset caching in the <code>site-cookbooks/server/templates/default/example.nginx</code> file.</figcaption>
-</figure>
+```
+{: lines="4-13" caption="Improving asset caching in the
+`site-cookbooks/server/templates/default/example.nginx` file."}
 
 For any further performance, the Google [PageSpeed Tools][7] can be helpful.
 

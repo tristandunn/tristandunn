@@ -10,8 +10,7 @@ using [canvg][1]. I'm not trying to dynamically generate the SVG, manipulate it
 in any special way, or use any advanced SVG features. So, as far as I can tell
 for basic rendering in modern browsers you can just render the SVG as an image.
 
-<figure>
-{% highlight javascript %}
+```javascript
 var image   = new Image();
 var canvas  = document.querySelector("canvas");
 var context = canvas.getContext("2d");
@@ -20,9 +19,8 @@ image.onload = function() {
   context.drawImage(image, 0, 0);
 };
 image.src = "/path/to/image.svg";
-{% endhighlight %}
-  <figcaption>Drawing an SVG image to a &#60;canvas&#62; element.</figcaption>
-</figure>
+```
+{: caption="Drawing an SVG image to a &#60;canvas&#62; element."}
 
 You should probably prefetch or inline the SVG assets, but that's beyond the
 scope here.
@@ -32,8 +30,7 @@ scope here.
 If you're on a retina screen the first thing you'll notice is that it's blurry.
 Luckily it's an easy fix with three simple steps.
 
-<figure>
-{% highlight javascript %}
+```javascript
 var image   = new Image();
 var ratio   = window.devicePixelRatio || 1;
 var canvas  = document.querySelector("canvas");
@@ -53,9 +50,8 @@ image.onload = function() {
   context.drawImage(image, 0, 0);
 };
 image.src = "/path/to/image.svg";
-{% endhighlight %}
-  <figcaption>Scaling the &#60;canvas&#62; element to handle retina screens.</figcaption>
-</figure>
+```
+{: caption="Scaling the &#60;canvas&#62; element to handle retina screens."}
 
 An added benefit with the scaling is that you can apply a multiplier for
 user-specified scaling, via zoom or mousewheel events. And since it's using

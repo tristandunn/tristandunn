@@ -26,6 +26,11 @@ exclude:
   - tailwind.config.js
   - yarn.lock
 
+kramdown:
+  syntax_highlighter: "rouge"
+  syntax_highlighter_opts:
+    formatter: "Highlighter"
+
 permalink: "/journal/:title/"
 
 plugins:

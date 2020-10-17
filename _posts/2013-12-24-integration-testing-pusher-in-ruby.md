@@ -26,42 +26,36 @@ your production code as little as possible.
 
 First you'll need to require the dependency in the test environment.
 
-<figure>
-{% highlight ruby %}
+```ruby
 group :test do
   gem "pusher-fake"
 end
-{% endhighlight %}
-  <figcaption>Adding the library as a test dependency in the Gemfile.</figcaption>
-</figure>
+```
+{: caption="Adding the library as a test dependency in the Gemfile."}
 
 ### JavaScript
 
 Next you'll need to use some custom JavaScript for creating a Pusher instance,
 which [sets the appropriate options][8], such as the API key, host, and port.
 
-<figure>
-{% highlight erb %}
+```erb
 <% if defined?(PusherFake) %>
   var instance = <%= PusherFake.javascript %>;
 <% else %>
   var instance = new Pusher(...);
 <% end %>
-{% endhighlight %}
-  <figcaption>Connecting with library generated JavaScript when testing.</figcaption>
-</figure>
+```
+{: caption="Connecting with library generated JavaScript when testing."}
 
 ### Server
 
 And finally if you're using Cucumber you can easily start up the properly
 configured servers by including [a helper file][9].
 
-<figure>
-{% highlight ruby %}
+```ruby
 require "pusher-fake/support/cucumber"
-{% endhighlight %}
-  <figcaption>Initializing the fake server for Cucumber.</figcaption>
-</figure>
+```
+{: caption="Initializing the fake server for Cucumber."}
 
 If you're not using Cucumber, see [the helper file][9] on how to do it manually.
 

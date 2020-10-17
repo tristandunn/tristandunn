@@ -35,24 +35,20 @@ While you can add aliases directly to your "run commands" file, such as
 file. Let's load an `.aliases` file from your home directory in the shell with a
 condition to ensure the file exists before sourcing it.
 
-<figure>
-{% highlight sh %}
+```sh
 if [ -e "$HOME/.aliases" ]; then
   source "$HOME/.aliases"
 fi
-{% endhighlight %}
-  <figcaption>Loading a separate file where aliases will live.</figcaption>
-</figure>
+```
+{: caption="Loading a separate file where aliases will live."}
 
 A quick and easy win for your first alias would be shortening `git`, which is
 probably one of your top commands each day.
 
-<figure>
-{% highlight sh %}
+```sh
 alias g="git"
-{% endhighlight %}
-  <figcaption>Assigning an alias for the <code>git</code> command.</figcaption>
-</figure>
+```
+{: caption="Assigning an alias for the `git` command."}
 
 I know saving two characters may not seem like much, but it adds up. Go ahead
 and try to think about the number of times you've typed `git` this year alone.
@@ -67,13 +63,12 @@ to 4 characters, including hitting return to run both commands.
 You define `git`-specific aliases in `~/.gitconfig` under an `alias` section.
 Let's add the `a` alias we mentioned.
 
-<figure>
-{% highlight ini %}
+```ini
 [alias]
   a = !git add -A && git status
-{% endhighlight %}
-  <figcaption>Adding a <code>git</code> alias to add all files and display the status in <code>~/.gitconfig</code>.</figcaption>
-</figure>
+```
+{: caption="Adding a `git` alias to add all files and display the status in
+`~/.gitconfig`."}
 
 Typically an alias expands as an argument to `git`, but if you prefix the
 alias command with a bang (`!`) it runs the command in the shell. This allows
@@ -83,8 +78,7 @@ or script.
 If you need ideas for other helpful aliases, here's my current collection with
 descriptions and examples for each.
 
-<figure>
-{% highlight ini %}
+```ini
 [alias]
   # Add all files and display the status. (`g a`)
   a = !git add -A && git status
@@ -109,9 +103,8 @@ descriptions and examples for each.
 
   # Rebase the current branch from an up-to-date origin/master. (`g up`)
   up = !git fetch origin && git rebase origin/master
-{% endhighlight %}
-  <figcaption>A collection of personal <code>git</code> aliases in <code>~/.gitconfig</code>.</figcaption>
-</figure>
+```
+{: caption="A collection of personal `git` aliases in `~/.gitconfig`."}
 
 ## Summary
 

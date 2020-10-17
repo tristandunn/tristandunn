@@ -359,6 +359,12 @@ article {
         }
       }
     }
+
+    .highlight-lines .line:not(.highlight-line) {
+      span {
+        @apply text-gray-600;
+      }
+    }
   }
 
   footer {
