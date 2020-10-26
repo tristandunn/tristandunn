@@ -21,6 +21,9 @@ module Kramdown
           # Merge the inline Kramdown attributes into the lexer options.
           options = options.merge(call_options[:ial] || {})
 
+          # Set the language in the lexer options.
+          options[:language] = language
+
           formatter = formatter_class(options).new(options)
           formatter.format(lexer.lex(code))
         end

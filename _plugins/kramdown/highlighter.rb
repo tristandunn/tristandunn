@@ -80,7 +80,7 @@ class Highlighter < Rouge::Formatters::HTMLLinewise
   # @param tokens [Array] The tokens to highlight.
   # @return [void]
   def stream(tokens, &_block)
-    yield %(<figure><figure class="#{container_class_names}"><pre><code>)
+    yield stream_header
 
     token_lines(tokens).with_index do |line, index|
       yield %(<div class="#{line_class_names(index + 1)}">)
@@ -93,6 +93,23 @@ class Highlighter < Rouge::Formatters::HTMLLinewise
       yield %(</div>)
     end
 
-    yield %(</code></pre></figure>#{caption}</figure>)
+    yield stream_footer
+  end
+
+  private
+
+  # Return the footer for the highlighter stream.
+  #
+  # @return [string]
+  def stream_footer
+    %(</code></pre></figure>#{caption}</figure>)
+  end
+
+  # Return the header for the highlighter stream.
+  #
+  # @return [string]
+  def stream_header
+    %(<figure><figure class="#{container_class_names}" data-language="#{options[:language]}">) +
+      %(<pre><code>)
   end
 end

@@ -28,7 +28,6 @@ deploy this website, starting with creating a local [Vagrant][5] server.
 height="128" class="float-right mb-6 ml-6"
 srcset="/images/posts/2014-12-15/vagrant.jpg 1x,
 /images/posts/2014-12-15/vagrant@2x.jpg 2x" style="max-width: 128px;"}
-
 Vagrant allows us to "create and configure lightweight, reproducible, and
 portable development environments." Being able to work offline or without a paid
 server is nice, but the ability to try changes with no harm is the biggest
@@ -84,7 +83,6 @@ To ensure we have everything configured correctly we can boot the server with
 ![Chef logo.](/images/posts/2014-12-15/chef.jpg){: width="128" height="126"
 class="float-right mb-6 ml-6" srcset="/images/posts/2014-12-15/chef.jpg 1x,
 /images/posts/2014-12-15/chef@2x.jpg 2x" style="max-width: 128px;"}
-
 Next we need to setup and configure Chef, which lets us automate and version our
 infrastructure as code. If you're not familiar with it I recommend [checking out
 the website][11]. We'll be using [chef-solo][12], which is easier to use and set
