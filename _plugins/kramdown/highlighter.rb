@@ -102,14 +102,24 @@ class Highlighter < Rouge::Formatters::HTMLLinewise
   #
   # @return [string]
   def stream_footer
-    %(</code></pre></figure>#{caption}</figure>)
+    %(
+            </code>
+          </pre>
+        </figure>
+        #{caption}
+      </figure>
+    )
   end
 
   # Return the header for the highlighter stream.
   #
   # @return [string]
   def stream_header
-    %(<figure><figure class="#{container_class_names}" data-language="#{options[:language]}">) +
-      %(<pre><code>)
+    %(
+      <figure>
+        <figure class="#{container_class_names}" data-language="#{options[:language]}">
+          <pre>
+            <code>
+    )
   end
 end
