@@ -344,6 +344,14 @@ article {
       }
     }
 
+    blockquote {
+      @apply pseudo-full-bleed my-8;
+
+      p {
+        @apply text-gray-800 font-serif text-2xl italic;
+      }
+    }
+
     ul {
       @apply leading-loose list-disc;
     }
