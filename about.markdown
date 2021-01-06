@@ -3,19 +3,20 @@ title: "About Me"
 layout: page
 ---
 
-I'm a Louisiana native, living in Baton Rouge with my wife, Heather, and [Lil
-Sebastian][]. We enjoy traveling when we can, with [Kauai, HI][] being one of
-our favorite places to visit.
+I'm from Louisiana but currently living in Boston with my wife, Heather, and
+[Lil Sebastian][]. We enjoy traveling when we can, with [Kauai, HI][] being one
+of our favorite places to visit.
 
 I've been working remotely since 2011 and presently work at [Clearbit][], where
 I help build APIs and integrations for business data. I primarily write Ruby at
 Clearbit, but also use Rails and JavaScript in personal projects.
 
-Despite growing up in a sweltering environment, I'm a hockey fan and cheer for
-the Boston Bruins. I also enjoy watching Premier League soccer and curling.
+Despite growing up in a sweltering environment, I'm a huge hockey fan and cheer
+for the Boston Bruins. I also enjoy watching Premier League soccer and curling.
 
 You can follow me on [AngelList][], [GitHub][], [Product Hunt][], and
-[Twitter][], [e-mail me][] if you'd like to chat, or view my [résumé][].
+[Twitter][]. You can also [e-mail me][] if you'd like to chat, or view my
+[résumé][].
 
 [AngelList]: https://angel.co/u/tristan-dunn
 [Clearbit]: https://clearbit.com
