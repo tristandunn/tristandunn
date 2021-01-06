@@ -88,7 +88,7 @@ main {
     }
 
     @screen lg {
-      @apply text-5xl;
+      @apply text-5xl leading-tight;
     }
   }
 
@@ -100,7 +100,7 @@ main {
     }
 
     @screen lg {
-      @apply mt-20 text-4xl;
+      @apply mt-20 text-4xl leading-tight;
     }
   }
 
@@ -108,7 +108,7 @@ main {
     @apply leading-relaxed;
 
     @screen lg {
-      @apply text-xl;
+      @apply text-xl leading-relaxed;
     }
 
     p {
@@ -312,7 +312,7 @@ article {
       @apply leading-relaxed;
 
       @screen lg {
-        @apply text-xl;
+        @apply text-xl leading-relaxed;
       }
 
       @media (prefers-color-scheme: dark) {
@@ -348,7 +348,7 @@ article {
       @apply pseudo-full-bleed my-8;
 
       p {
-        @apply text-gray-800 font-serif text-2xl italic;
+        @apply text-gray-800 font-serif text-2xl leading-relaxed italic;
       }
     }
 
@@ -381,7 +381,7 @@ article {
     }
 
     .highlight {
-      @apply m-0 bg-gray-100 border-2 border-gray-200 rounded-lg;
+      @apply m-0 bg-gray-50 border-2 border-gray-200 rounded-lg;
 
       @media (prefers-color-scheme: dark) {
         @apply bg-black border-gray-800;
@@ -392,7 +392,7 @@ article {
       }
 
       code {
-        @apply inline-block p-6 scrolling-touch leading-normal;
+        @apply inline-block p-6 leading-normal;
 
         @media (prefers-color-scheme: dark) {
           filter: invert(1);
