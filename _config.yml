@@ -30,7 +30,7 @@ exclude:
 kramdown:
   syntax_highlighter: "rouge"
   syntax_highlighter_opts:
-    formatter: "Highlighter"
+    formatter: "CustomHighlighter"
 
 permalink: "/journal/:title/"
 
