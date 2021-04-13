@@ -10,7 +10,7 @@ defaults:
     values:
       layout: "post"
 
-description: "I'm a developer, remote worker, and a hockey fan living in Boston. I'm helping Clearbit build APIs and integrations for business data."
+description: "I'm a developer, remote worker, and a hockey fan living in Boston."
 
 exclude:
   - .gitignore

@@ -7,8 +7,8 @@ I'm from Louisiana but currently living in Boston with my wife, Heather, and
 [Lil Sebastian][]. We enjoy traveling when we can, with [Kauai, HI][] being one
 of our favorite places to visit.
 
-I've been working remotely since 2011 and presently work at [Clearbit][], where
-I help build APIs and integrations for business data. I primarily write Ruby at
+I've been working remotely since 2011 and last worked at [Clearbit][], where I
+help build APIs and integrations for business data. I primarily wrote Ruby at
 Clearbit, but also use Rails and JavaScript in personal projects.
 
 Despite growing up in a sweltering environment, I'm a huge hockey fan and cheer
