@@ -9,9 +9,9 @@ permalink: /journal/jekyll-with-tailwindcss-jit-mode/
 It's been possible to use TailwindCSS in Jekyll via [jekyll-postcss][] for a
 while, but it can be incredibly slow to generate, especially when working
 locally. In April 2021 TailwindCSS released a new JIT (just-in-time) engine that
-drastically speeds up generation. There are currently a few issues in
+drastically speeds up generation. There are currently a couple of issues in
 `jekyll-postcss` that prevents JIT mode from being enabled, but fortunately
-there are two simple workarounds we can use.
+there are simple fixes we can implement.
 
 > Tailwind CSS v2.1 introduces a new just-in-time compiler for Tailwind CSS that
 > generates your styles on-demand as you author your templates instead of
@@ -32,10 +32,9 @@ In the issue [ENT8R](https://github.com/ENT8R) provides [a comment][] explaining
 that TailwindCSS is expecting a value to be a file path but is receiving
 `stdin`. Since `stdin` is not actually a path it throws an error.
 
-The simple fix you can implement now until it's fixed in the library is to
-create an `stdin` file in the root directory for the Jekyll project. It doesn't
-need to contain anything, it just needs to exist. And don't forget to exclude
-the file in the Jekyll configuration.
+You can fix it by creating an `stdin` file in the root directory of the Jekyll
+project. It doesn't need to contain anything, it just needs to exist. And don't
+forget to exclude the file in the Jekyll configuration.
 
 ## Forcing the CSS to Update
 
@@ -71,9 +70,9 @@ you're successfully using JIT mode in Jekyll!
 
 ## The Future
 
-Today I opened [a pull request][] for `jekyll-postcss` to fix the issues
-mentioned here, so hopefully these quick fixes won't be needed in the near
-future.
+Today I opened [a pull request][] for `jekyll-postcss` to fix the `stdin` issue
+and add a `cache` option to make it easier to disable the caching. Hopefully
+these quick fixes won't be needed in the near future.
 
 [jekyll-postcss]: https://github.com/mhanberg/jekyll-postcss
 [jekyll-postcss#22]: https://github.com/mhanberg/jekyll-postcss/issues/22
