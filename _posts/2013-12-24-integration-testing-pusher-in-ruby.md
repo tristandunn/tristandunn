@@ -78,6 +78,6 @@ should work with any driver that supports JavaScript execution.
 [6]: https://github.com/tristandunn/pusher-fake
 [7]: https://semaphoreci.com/blog/2013/06/28/testing-rails-apps-that-use-pusher.html
 [8]: https://github.com/tristandunn/pusher-fake/blob/7eab542bb82b08df8348ee675c36048440e8bf2e/lib/pusher-fake.rb#L38-L46
-[9]: https://github.com/tristandunn/pusher-fake/blob/master/lib/pusher-fake/support/cucumber.rb
+[9]: https://github.com/tristandunn/pusher-fake/blob/main/lib/pusher-fake/support/cucumber.rb
 [10]: https://github.com/tristandunn/pusher-fake-example
 [11]: https://github.com/thoughtbot/capybara-webkit

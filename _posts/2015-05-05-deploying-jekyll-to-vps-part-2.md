@@ -17,8 +17,8 @@ and deploy to the local Vagrant server with [Capistrano][3].
 ## SSH Security
 
 It's generally recommended that you disable password authentication for SSH to
-help prevent common brute force attacks. You could also whitelist IP addresses,
-but key authentication is reasonable enough for us.
+help prevent common brute force attacks. You could also add IP addresses to an
+allowlist, but key authentication is reasonable enough for us.
 
 We already created and authorized a `deploy` user in the previous article. If
 you're already deploying remotely and using [DigitalOcean][4] you should have

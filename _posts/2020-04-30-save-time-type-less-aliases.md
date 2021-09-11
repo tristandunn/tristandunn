@@ -7,6 +7,7 @@ subtitle: "Part 1: Using Aliases for Common Tasks"
 description: "Use aliases for common tasks to save time by typing less."
 permalink: /journal/save-time-type-less-part-1-aliases/
 twitter_card: summary_large_image
+modified_at: 2021-09-11
 ---
 
 I started using `vim` in 2009, and after the initial hurdle of figuring out how
@@ -89,10 +90,19 @@ descriptions and examples for each.
   # Amend the last commit message. (`g ca`)
   ca = commit --amend
 
+  # Clear the terminal and display the unstaged differences.
+  d = !clear && git diff
+
+  # Clear the terminal and display the staged differences.
+  dc = !clear && git diff --cached
+
+  # Determine the default branch name.
+  default-branch-name = !git remote show origin | awk '/HEAD branch/ {print $NF}'
+
   # Pull updates. (`g pl`)
   pl = pull
 
-  # Push updates. (`g ps origin master`)
+  # Push updates. (`g ps origin main`)
   ps = push
 
   # Pull and rebase the current branch. (`g plre`)
@@ -101,8 +111,8 @@ descriptions and examples for each.
   # Display the status. (`g st`)
   st = status
 
-  # Rebase the current branch from an up-to-date origin/master. (`g up`)
-  up = !git fetch origin && git rebase origin/master
+  # Rebase the current branch from an up-to-date origin/main. (`g up`)
+  up = !git fetch origin && git rebase origin/`git default-branch-name`
 ```
 {: caption="A collection of personal `git` aliases in `~/.gitconfig`."}
 
