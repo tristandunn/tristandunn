@@ -4,7 +4,11 @@ image: "posts/2021-09-10/image@2x.png"
 category: jekyll
 description: "How to use TailwindCSS in JIT mode with a Jekyll website."
 permalink: /journal/jekyll-with-tailwindcss-jit-mode/
+modified_at: 2021-09-11
 ---
+
+These fixes are now included in the [jekyll-postcss][] library.
+{: class="outdated"}
 
 It's been possible to use TailwindCSS in Jekyll via [jekyll-postcss][] for a
 while, but it can be incredibly slow to generate, especially when working
@@ -70,12 +74,16 @@ you're successfully using JIT mode in Jekyll!
 
 ## The Future
 
-Today I opened [a pull request][] for `jekyll-postcss` to fix the `stdin` issue
-and add a `cache` option to make it easier to disable the caching. Hopefully
-these quick fixes won't be needed in the near future.
+~~Today I opened [a pull request][] for `jekyll-postcss` to fix the `stdin`
+issue and add a `cache` option to make it easier to disable the caching.
+Hopefully these quick fixes won't be needed in the near future.~~
+
+Thanks to [Mitchell Hanberg][] for merging and releasing the fixes in less than
+24 hours.
 
 [jekyll-postcss]: https://github.com/mhanberg/jekyll-postcss
 [jekyll-postcss#22]: https://github.com/mhanberg/jekyll-postcss/issues/22
 [a comment]: https://github.com/mhanberg/jekyll-postcss/issues/22#issuecomment-903290240
 [standard input]: https://en.wikipedia.org/wiki/Standard_streams
 [a pull request]: https://github.com/mhanberg/jekyll-postcss/pull/32
+[Mitchell Hanberg]: https://github.com/mhanberg

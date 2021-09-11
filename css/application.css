@@ -328,7 +328,7 @@ article {
 
     p {
       &.outdated {
-        @apply p-2 text-center bg-yellow-200 border-2 border-yellow-300 rounded-lg;
+        @apply p-2 text-center bg-yellow-100 border-2 border-yellow-200 rounded-lg;
 
         @media (prefers-color-scheme: dark) {
           @apply bg-gray-800 border-gray-700;
