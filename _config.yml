@@ -23,7 +23,7 @@ exclude:
   - node_modules
   - package.json
   - postcss.config.js
-  - purgecss.config.js
+  - README.markdown
   - tailwind.config.js
   - yarn.lock
 
