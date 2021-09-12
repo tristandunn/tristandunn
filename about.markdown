@@ -7,9 +7,9 @@ I'm from Louisiana but currently living in Boston with my wife, Heather, and
 [Lil Sebastian][]. We enjoy traveling when we can, with [Kauai, HI][] being one
 of our favorite places to visit.
 
-I've been working remotely since 2011 and last worked at [Clearbit][], where I
-helped build APIs and integrations for business data. I primarily wrote Ruby at
-Clearbit, but also use Rails and JavaScript in personal projects.
+I've been working remotely since 2011 and currently work at [ezCater][], where I
+help design and build platform APIs using GraphQL. I primarily use Ruby on Rails
+at ezCater, but also use JavaScript in personal projects.
 
 Despite growing up in a sweltering environment, I'm a huge hockey fan and cheer
 for the Boston Bruins. I also enjoy watching Premier League soccer and curling.
@@ -19,7 +19,7 @@ You can follow me on [AngelList][], [GitHub][], [Product Hunt][], and
 [résumé][].
 
 [AngelList]: https://angel.co/u/tristan-dunn
-[Clearbit]: https://clearbit.com
+[ezCater]: https://ezcater.com
 [GitHub]: https://github.com/tristandunn
 [e-mail me]: mailto:hello@tristandunn.com
 [Kauai, HI]: https://www.instagram.com/p/BZNJtlClo_K/
