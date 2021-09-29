@@ -98,7 +98,7 @@ incredibly easy to use and should be much easier to maintain than a full React
 application. I'm excited to see how Turbo is implemented over the next year.
 
 [Action Cable]: https://guides.rubyonrails.org/action_cable_overview.html
-[Hotwire]: https://hotwire.dev
-[remove event]: https://turbo.hotwire.dev/reference/streams#remove
-[stream events]: https://turbo.hotwire.dev/reference/streams
+[Hotwire]: https://hotwired.dev
+[remove event]: https://turbo.hotwired.dev/reference/streams#remove
+[stream events]: https://turbo.hotwired.dev/reference/streams
 [turbo-rails]: https://github.com/hotwired/turbo-rails
