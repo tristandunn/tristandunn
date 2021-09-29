@@ -26,7 +26,7 @@ module Jekyll
           end
         end
 
-        document.to_s
+        document.to_html(save_with: 0)
       end
     end
   end

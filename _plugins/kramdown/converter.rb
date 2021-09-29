@@ -13,17 +13,15 @@ module Kramdown
       # @param element [Kramdown::Element] The element to convert.
       # @return [String] The code block with highlighted code.
       def convert_codeblock(element, _indent)
-        block = highlight_code(
+        highlight_code(
           element.value,
           extract_code_language!(element.attr),
           :block,
           element.options
         )
-
-        "#{block}\n"
       end
 
-      # Conver a code span to HTML.
+      # Convert a code span to HTML.
       #
       # @param element [Kramdown::Element] The element to convert.
       # @return [String] The code span.
