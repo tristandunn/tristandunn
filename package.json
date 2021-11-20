@@ -4,12 +4,12 @@
     "lint": "eslint *.js"
   },
   "devDependencies": {
-    "autoprefixer": "10.3.6",
-    "cssnano": "5.0.8",
-    "eslint": "7.32.0",
-    "postcss-cli": "9.0.1",
+    "autoprefixer": "10.4.0",
+    "cssnano": "5.0.11",
+    "eslint": "8.2.0",
+    "postcss-cli": "9.0.2",
     "postcss-import": "14.0.2",
     "postcss-nested": "5.0.6",
-    "tailwindcss": "2.2.16"
+    "tailwindcss": "2.2.19"
   }
 }
