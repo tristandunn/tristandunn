@@ -6,6 +6,7 @@ module Rouge
   module Formatters
     class CustomHighlighter < HTMLLinewise
       SPACE                 = " "
+      BLANK_LINE            = [[Rouge::Token::Tokens::Text, "\n"].freeze].freeze
       CLASS_FORMAT          = "line line-%<line>i"
       HIGHLIGHT_CLASS       = "highlight"
       RANGE_SEPARATOR       = "-"
@@ -85,6 +86,8 @@ module Rouge
 
         token_lines(tokens).with_index(1) do |line, index|
           yield %(<div class="#{line_class_names(index)}">)
+
+          line = BLANK_LINE if line.empty?
 
           formatter.stream(line, &block)
 
