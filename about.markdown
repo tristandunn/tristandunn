@@ -14,9 +14,8 @@ at ezCater, but also use JavaScript in personal projects.
 Despite growing up in a sweltering environment, I'm a huge hockey fan and cheer
 for the Boston Bruins. I also enjoy watching Premier League soccer and curling.
 
-You can follow me on [AngelList][], [GitHub][], [Product Hunt][], and
-[Twitter][]. You can also [e-mail me][] if you'd like to chat, or view my
-[résumé][].
+You can [e-mail me][] if you'd like to chat, or view my [résumé][]. You can also
+follow me on [AngelList][], [GitHub][], [Product Hunt][], and [Twitter][].
 
 [AngelList]: https://angel.co/u/tristan-dunn
 [ezCater]: https://ezcater.com
