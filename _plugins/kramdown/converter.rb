@@ -5,7 +5,7 @@ require "kramdown/converter/html"
 module Kramdown
   module Converter
     class Html
-      WIDOW_MATCHER   = /(.*)\s(.*)\z/m.freeze
+      WIDOW_MATCHER   = /(.*)\s(.*)\z/m
       WIDOW_SEPARATOR = "&#160;"
 
       # Convert a code block to HTML with highlighted code.

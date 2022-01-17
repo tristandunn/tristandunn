@@ -10,7 +10,7 @@ module Rouge
       CLASS_FORMAT          = "line line-%<line>i"
       HIGHLIGHT_CLASS       = "highlight"
       RANGE_SEPARATOR       = "-"
-      PARAGRAPH_MATCHER     = %r{</?p>}.freeze
+      PARAGRAPH_MATCHER     = %r{</?p>}
       HIGHLIGHT_LINE_CLASS  = "highlight-line"
       HIGHLIGHT_LINES_CLASS = "highlight-lines"
 

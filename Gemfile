@@ -17,7 +17,7 @@ group :development do
   gem "mdl",                 "0.11.0",  require: false
   gem "rack",                "2.2.3",   require: false
   gem "rubocop",             "1.24.1",  require: false
-  gem "rubocop-performance", "1.13.1",  require: false
+  gem "rubocop-performance", "1.13.2",  require: false
   gem "scss_lint",           "0.59.0",  require: false
 end
 

@@ -58,7 +58,7 @@ GEM
     kramdown-parser-gfm (1.1.0)
       kramdown (~> 2.0)
     liquid (4.0.3)
-    listen (3.7.0)
+    listen (3.7.1)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
     mdl (0.11.0)
@@ -74,7 +74,7 @@ GEM
       tomlrb
     mixlib-shellout (3.2.5)
       chef-utils
-    nokogiri (1.13.0)
+    nokogiri (1.13.1)
       mini_portile2 (~> 2.7.0)
       racc (~> 1.4)
     parallel (1.21.0)
@@ -103,7 +103,7 @@ GEM
       unicode-display_width (>= 1.4.0, < 3.0)
     rubocop-ast (1.15.1)
       parser (>= 3.0.1.1)
-    rubocop-performance (1.13.1)
+    rubocop-performance (1.13.2)
       rubocop (>= 1.7.0, < 2.0)
       rubocop-ast (>= 0.4.0)
     ruby-progressbar (1.11.0)
@@ -141,10 +141,10 @@ DEPENDENCIES
   mdl (= 0.11.0)
   rack (= 2.2.3)
   rubocop (= 1.24.1)
-  rubocop-performance (= 1.13.1)
+  rubocop-performance (= 1.13.2)
   scss_lint (= 0.59.0)
   webrick (= 1.7.0)
   yui-compressor (= 0.12.0)
 
 BUNDLED WITH
-   2.3.4
+   2.3.5
