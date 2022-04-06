@@ -29,6 +29,9 @@ Lint/RaiseException:
 Lint/StructNewOverride:
   Enabled: true
 
+Naming/BlockForwarding:
+  EnforcedStyle: explicit
+
 Performance/AncestorsInclude:
   Enabled: true
 
@@ -83,6 +86,9 @@ Style/HashAsLastArrayItem:
 
 Style/HashLikeCase:
   Enabled: true
+
+Style/HashSyntax:
+  EnforcedShorthandSyntax: never
 
 Style/HashTransformKeys:
   Enabled: true
