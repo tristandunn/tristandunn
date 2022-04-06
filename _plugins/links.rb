@@ -20,7 +20,7 @@ module Jekyll
           next unless href.start_with?("http")
 
           ATTRIBUTES.each do |attribute, value|
-            next if attribute.casecmp("ref").zero? || EXCLUDED_URLS.any? { |url| href.include?(url) }
+            next if link.get_attribute(attribute) || EXCLUDED_URLS.any? { |url| href.include?(url) }
 
             link.set_attribute(attribute, value)
           end
