@@ -4,6 +4,7 @@ image: "posts/2021-01-01/image@2x.png"
 category: rails
 description: "How to easily switch a user between Turbo streams without writing JavaScript."
 permalink: /journal/switching-streams-turbo-rails/
+modified_at: 2022-04-24
 ---
 
 Basecamp recently announced [Hotwire][] and it seemed like a perfect replacement
@@ -60,22 +61,14 @@ So now that we know if we remove the element the subscription is unsubscribed,
 how do we remove the stream element?
 
 As mentioned before, the Turbo stream has a [remove event][] that can remove any
-DOM identifier, not necessarily specific to Turbo connected elements.
-Unfortunately, the `turbo_stream_from` helper doesn't currently include an ID or
-parameter to specify one. Luckily it's pretty easy to modify ourselves by adding
-our own version to a helper.
+DOM identifier, not necessarily specific to Turbo connected elements. We can
+set an ID attribute for the stream to allow us to identify it.
 
-```ruby
-  def turbo_stream_from(*streamables)
-    tag.turbo_cable_stream_source(
-      id:                   dom_id(*streamables),
-      channel:              "Turbo::StreamsChannel",
-      "signed-stream-name": Turbo::StreamsChannel.signed_stream_name(*streamables)
-    )
-  end
+```erb
+<div id="streams">
+  <%= turbo_stream_from current_character.room, id: dom_id(current_character.room) %>
+</div>
 ```
-{: lines="3" caption="Customized version of the `turbo_stream_from` helper to
-add ID support."}
 
 With the stream identified we can remove and add streams as needed, which works
 perfectly for us when a character is moving between two rooms.
@@ -83,7 +76,7 @@ perfectly for us when a character is moving between two rooms.
 ```erb
 <%= turbo_stream.remove previous_room %>
 <%= turbo_stream.append("streams") do %>
-  <%= turbo_stream_from current_room %>
+  <%= turbo_stream_from current_room, id: dom_id(current_room) %>
 <% end %>
 ```
 {: caption="Removing and adding streams for the character moving between two
