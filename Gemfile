@@ -13,11 +13,11 @@ group :jekyll_plugins do
 end
 
 group :development do
-  gem "bundler-audit",       "0.9.0.1", require: false
+  gem "bundler-audit",       "0.9.1",   require: false
   gem "mdl",                 "0.11.0",  require: false
-  gem "rack",                "2.2.3",   require: false
-  gem "rubocop",             "1.29.1",  require: false
-  gem "rubocop-performance", "1.13.3",  require: false
+  gem "rack",                "2.2.3.1", require: false
+  gem "rubocop",             "1.30.0",  require: false
+  gem "rubocop-performance", "1.14.0",  require: false
   gem "scss_lint",           "0.59.0",  require: false
 end
 
