@@ -186,7 +186,7 @@ tips, comments, or questions.
 [4]: https://www.fastly.com
 [5]: https://git-scm.com/book/en/v2/Git-on-the-Server-Generating-Your-SSH-Public-Key
 [6]: https://dnsimple.com/r/3edceb992aa254
-[7]: https://cloud.digitalocean.com/domains
+[7]: https://docs.digitalocean.com/products/networking/dns/
 [8]: https://dnsimple.com/tlds
 [9]: https://support.dnsimple.com/articles/dnsimple-nameservers/
 [10]: https://developers.google.com/speed/public-dns/docs/using
