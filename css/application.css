@@ -363,7 +363,7 @@ article {
 
       position: relative;
 
-      &[data-language]::before {
+      [data-language]::before {
         @apply absolute top-0 right-0 bg-gray-200 text-gray-600 px-4 py-2 rounded-tr-lg rounded-bl-lg font-medium;
 
         content: attr(data-language);
