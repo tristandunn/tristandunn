@@ -46,7 +46,7 @@ A `Vagrantfile` describes and configures the machine, which uses Ruby and is
 a standard Ubuntu 12.04 LTS 64-bit box. Other operating systems are available on
 [vagrantbox.es][10].
 
-```
+```sh
 $ vagrant init hashicorp/precise64
 
 A `Vagrantfile` has been placed in this directory. You are now
@@ -105,8 +105,8 @@ gem "librarian-chef"
 
 Next we'll initialize a directory structure for Chef with knife:
 
-```
-bundle exec knife solo init .
+```sh
+$ bundle exec knife solo init .
 ```
 {: caption="Initializing the knife-solo configuration."}
 
@@ -149,8 +149,8 @@ cookbook "nginx"
 
 And then install the cookbook with librarian-chef:
 
-```
-bundle exec librarian-chef install
+```sh
+$ bundle exec librarian-chef install
 ```
 {: caption="Installing the nginx cookbook."}
 
@@ -209,8 +209,8 @@ Now we can run Chef on the Vagrant server to install nginx. Using the
 on the host then uploads and runs the kitchen, which is all the Chef
 configuration. In the future we only need to run the "cook" command.
 
-```
-bundle exec knife solo bootstrap vagrant
+```sh
+$ bundle exec knife solo bootstrap vagrant
 ```
 {: caption="Bootstrapping the Vagrant server with Chef."}
 
@@ -283,7 +283,7 @@ end
 
 After we can create the required template with our public key.
 
-```
+```text
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAAB+wDO2LDfv/dgoerOQYw7C44Gf39lqLGYK9xGfHm1m8V7vZKTz4kG4BxEapT2YbHz/JFaVvU9A6dscdpLiIwdEoWaaM/uMt8XBbdu6UwmSfhIrVs8BWo+wFHxixmy2GxOnUkEf8ATmX0K9VXzgB+5PL6aXsu2zOZlEnkujZG00j9GGohyFApwxJFVRMrShDtDG0R74AT2DdnuqvCIYsn6rGG8MJTWYQpQBrrI5MBP/358QzVX7f1LHmj4RdQZMB3ji9K7YUyYNx49NO3Q6TH3amodY7noxFTXbNbONt6nXVTJN6vxHqnh7YOf3hyjP/pmzjM4o5z/A15c4qA1sNNNwhHOgnlI3uxOMWv+Q0kz7o6hM5pwxy4JBJRqzOqv50xCyL4aMsoKc0enbblOgrSfclSf4g1v0Fro8pkUU6tBcZ5SzEXmg56jSN+YYn2YVQB7029CruxDlZsMcBTByahd1K0ZQUnFrvxCaqgIFrDBZG+TAL5PxvBu1L/+ZMpVlfd25vbpIoZW9J4QJXzWsWPy/IFCAtweIMRiBCUv+kumkTm6/gV2I2nuwCpn3gMG9u+Zjkgifz8MNG+R2aE/o8yneMs2ubL0O+3dkP39CznlX8tVF7Ut0VYK6tQH9KtKArCIedtZvmf5TQ2rDHnAfbLDSR0oAtWdECZwxg/c9Q==
 ```
 {: caption="Adding our public key to the
@@ -316,10 +316,9 @@ cookbook and define the user name."}
 
 Then we can cook the server and ensure we can SSH in as the new user.
 
-```
-bundle exec knife solo cook vagrant
-
-ssh deploy@vagrant
+```sh
+$ bundle exec knife solo cook vagrant
+$ ssh deploy@vagrant
 ```
 {: caption="Cooking the Vagrant server and verifying the user creation."}
 
@@ -409,8 +408,8 @@ custom cookbook."}
 
 Now we can cook the server to run the custom recipe.
 
-```
-bundle exec knife solo cook vagrant
+```sh
+$ bundle exec knife solo cook vagrant
 ```
 {: caption="Cooking the Vagrant server with the custom recipe."}
 
@@ -430,15 +429,15 @@ cookbook "rbenv"
 
 And we of course need to install the cookbook.
 
-```
-bundle exec librarian-chef install
+```sh
+$ bundle exec librarian-chef install
 ```
 {: caption="Installing the rbenv cookbook."}
 
 Now we can start creating our custom cookbook, which will just depend on the
 `rbenv` cookbook.
 
-```
+```ruby
 name    "ruby"
 depends "rbenv"
 ```
@@ -500,7 +499,7 @@ Ruby recipe and version."}
 Now we can cook the server and ensure it's installed. Note that compiling Ruby
 will take a few minutes.
 
-```
+```sh
 $ bundle exec knife solo cook vagrant
 $ ssh vagrant -C "/opt/rbenv/shims/ruby -v"
 ruby 2.1.5p273 (2014-11-13 revision 48405) [x86_64-linux]

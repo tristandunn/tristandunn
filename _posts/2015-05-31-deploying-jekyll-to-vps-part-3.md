@@ -68,8 +68,8 @@ host since it's your first time connecting, which you can do by entering "yes"
 when prompted. If you're using the password option you'll need to provide the
 password e-mailed to you.
 
-```
-ssh root@IP_ADDRESS
+```sh
+$ ssh root@IP_ADDRESS
 ```
 {: caption="SSHing into the remote server."}
 
@@ -80,7 +80,7 @@ Vagrant version. You can name it whatever you would like. The username will be
 `root` and the hostname is the IP address of your server. Note that you can use
 a domain name instead of an IP address once you configure the DNS.
 
-```ruby
+```ssh
 Host example        # Name.
   User root         # Username.
   Hostname 1.2.3.4  # Your droplet IP address.
@@ -127,8 +127,8 @@ set :branch, ENV["BRANCH"] || "main"
 First we need to bootstrap Chef on the new server. Replace `example` with your
 SSH host created above.
 
-```
-bundle exec knife solo bootstrap example
+```sh
+$ bundle exec knife solo bootstrap example
 ```
 {: caption="Bootstrapping the remote server with Chef."}
 
@@ -137,8 +137,8 @@ visit the server IP address. And now we can deploy the Jekyll website to the
 remote server. If you named your Capistrano configuration file different than
 `remote` then replace it below.
 
-```
-cap remote deploy
+```sh
+$ cap remote deploy
 ```
 {: caption="Deploying to the remote server."}
 

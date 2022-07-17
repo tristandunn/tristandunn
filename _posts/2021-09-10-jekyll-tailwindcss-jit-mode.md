@@ -26,7 +26,7 @@ there are simple fixes we can implement.
 The first issue is the PostCSS generation fails to run at all due to the
 following error, first reported in the [jekyll-postcss#22][] issue:
 
-```
+```text
 PostCSS Error!
 
 Error: ENOENT: no such file or directory, stat 'stdin'

@@ -23,13 +23,13 @@ Vagrant server and running the following commands. Note that it can take some
 time to generate the `dhparam` file.
 
 ```sh
-cd /etc/ssl
-sudo openssl genrsa -out example.com.key 2048
-sudo openssl req -new -x509 -key example.com.key -out example.com.crt \
+$ cd /etc/ssl
+$ sudo openssl genrsa -out example.com.key 2048
+$ sudo openssl req -new -x509 -key example.com.key -out example.com.crt \
                  -days 3650 -subj /CN=example.local
 
-cd /etc/ssl/certs
-sudo openssl dhparam -out dhparam.pem 4096
+$ cd /etc/ssl/certs
+$ sudo openssl dhparam -out dhparam.pem 4096
 ```
 {: caption="Generate a self-signed certificate on the Vagrant server."}
 
