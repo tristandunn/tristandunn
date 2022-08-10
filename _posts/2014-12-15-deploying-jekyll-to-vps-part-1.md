@@ -527,7 +527,7 @@ you have any tips, comments, or questions.
 [8]: https://www.vagrantup.com/docs/providers
 [9]: https://www.vagrantup.com/docs/vagrantfile
 [10]: https://www.vagrantbox.es
-[11]: https://www.getchef.com/chef/#how-chef-works
+[11]: https://www.getchef.com/chef/
 [12]: https://docs.getchef.com/chef_solo.html
 [13]: https://matschaffer.github.io/knife-solo/
 [14]: https://github.com/applicationsonline/librarian-chef

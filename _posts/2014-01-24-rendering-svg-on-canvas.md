@@ -67,4 +67,4 @@ SVG it stays incredibly clear.
 [1]: https://github.com/canvg/canvg
 [2]: https://css-tricks.com/using-svg/
 [3]: https://github.com/svg/svgo
-[4]: https://caniuse.com/#search=svg
+[4]: https://caniuse.com/?search=svg

@@ -310,6 +310,6 @@ questions.
 [3]: https://nginx.org/en/docs/http/ngx_http_ssl_module.html
 [4]: https://mozilla.github.io/server-side-tls/ssl-config-generator/
 [5]: https://dnsimple.com/r/3edceb992aa254
-[6]: https://support.dnsimple.com/articles/ssl-certificate-hostname/#securing-the-root-domain
+[6]: https://support.dnsimple.com/articles/ssl-certificate-names/#root-domain
 [7]: https://github.com/tristandunn/jekyll-vps-server
 [8]: https://github.com/tristandunn/jekyll-vps-server/compare/part-4...part-5
