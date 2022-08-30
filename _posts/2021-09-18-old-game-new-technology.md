@@ -1,5 +1,4 @@
 ---
-draft: true
 title: "Old Game, New Technology"
 image: "posts/2021-09-18/image@2x.png"
 category: miroha
