@@ -4,7 +4,6 @@ source "https://rubygems.org"
 
 gem "htmlcompressor", "0.4.0"
 gem "jekyll",         "4.2.2"
-gem "webrick",        "1.7.0"
 gem "yui-compressor", "0.12.0"
 
 group :jekyll_plugins do
@@ -18,6 +17,7 @@ group :development do
   gem "rubocop",             "1.36.0", require: false
   gem "rubocop-performance", "1.15.0", require: false
   gem "scss_lint",           "0.59.0", require: false
+  gem "webrick",             "1.7.0",  require: false
 end
 
 group :test do
