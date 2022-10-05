@@ -326,22 +326,26 @@ article {
       + ul {
         @apply mt-4;
       }
-    }
-
-    p {
-      &.outdated {
-        @apply p-2 text-center bg-yellow-100 border-2 border-yellow-200 rounded-lg;
-
-        @media (prefers-color-scheme: dark) {
-          @apply bg-gray-800 border-gray-700;
-        }
-      }
 
       code {
         @apply px-2 py-1 text-base text-black bg-gray-200 rounded-lg;
 
         @media (prefers-color-scheme: dark) {
           @apply bg-gray-800 text-gray-400;
+        }
+      }
+    }
+
+    p {
+      &.note {
+        @apply p-4 text-base bg-blue-50 leading-relaxed rounded-md;
+      }
+
+      &.outdated {
+        @apply p-2 text-center bg-yellow-100 border-2 border-yellow-200 rounded-lg;
+
+        @media (prefers-color-scheme: dark) {
+          @apply bg-gray-800 border-gray-700;
         }
       }
     }
@@ -404,7 +408,7 @@ article {
 
     .highlight-lines .line:not(.highlight-line) {
       span {
-        @apply text-gray-600;
+        @apply text-gray-600 font-normal;
       }
     }
   }
