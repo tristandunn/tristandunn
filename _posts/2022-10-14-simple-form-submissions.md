@@ -5,7 +5,6 @@ category: netlify
 subtitle: "Accept form submissions for free, even on static websites."
 description: "How to accept basic form submissions for free."
 permalink: /journal/simple-form-submissions/
-twitter_card: summary_large_image
 ---
 
 Form submission websites are abundant, but can be overkill for most situations,
