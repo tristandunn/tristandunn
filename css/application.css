@@ -339,6 +339,10 @@ article {
     p {
       &.note {
         @apply p-4 text-base bg-blue-50 leading-relaxed rounded-md;
+
+        @media (prefers-color-scheme: dark) {
+          @apply bg-gray-800;
+        }
       }
 
       &.outdated {
