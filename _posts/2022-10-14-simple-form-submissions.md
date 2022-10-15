@@ -1,6 +1,6 @@
 ---
 title: "Simple Form Submissions"
-image: "posts/2022-10-05/image@2x.png"
+image: "posts/2022-10-14/image@2x.png"
 category: netlify
 subtitle: "Accept form submissions for free, even on static websites."
 description: "How to accept basic form submissions for free."
