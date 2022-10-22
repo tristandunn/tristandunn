@@ -3,7 +3,7 @@
 source "https://rubygems.org"
 
 gem "htmlcompressor", "0.4.0"
-gem "jekyll",         "4.2.2"
+gem "jekyll",         "4.3.0"
 gem "yui-compressor", "0.12.0"
 
 group :jekyll_plugins do
@@ -13,13 +13,12 @@ end
 
 group :development do
   gem "bundler-audit",       "0.9.1",  require: false
-  gem "mdl",                 "0.11.0", require: false
-  gem "rubocop",             "1.36.0", require: false
+  gem "mdl",                 "0.12.0", require: false
+  gem "rubocop",             "1.37.0", require: false
   gem "rubocop-performance", "1.15.0", require: false
   gem "scss_lint",           "0.59.0", require: false
-  gem "webrick",             "1.7.0",  require: false
 end
 
 group :test do
-  gem "html-proofer", "4.4.1"
+  gem "html-proofer", "5.0.0"
 end
