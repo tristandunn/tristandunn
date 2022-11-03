@@ -1,11 +1,12 @@
 {
   "private": true,
   "scripts": {
-    "lint": "eslint *.js"
+    "lint": "eslint *.js",
+    "outdated": "yarn upgrade-interactive"
   },
   "dependencies": {
-    "autoprefixer": "10.4.12",
-    "cssnano": "5.1.13",
+    "autoprefixer": "10.4.13",
+    "cssnano": "5.1.14",
     "postcss": "8.4.18",
     "postcss-cli": "10.0.0",
     "postcss-import": "15.0.0",
@@ -14,5 +15,6 @@
   },
   "devDependencies": {
     "eslint": "8.26.0"
-  }
+  },
+  "packageManager": "yarn@3.2.4"
 }
