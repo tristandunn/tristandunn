@@ -15,7 +15,7 @@ Despite growing up in a sweltering environment, I'm a huge hockey fan and cheer
 for the Boston Bruins. I also enjoy watching Premier League soccer and curling.
 
 You can [e-mail me][] if you'd like to chat, or view my [résumé][]. You can also
-follow me on [AngelList][], [GitHub][], [Product Hunt][], and [Twitter][].
+follow me on [AngelList][], [GitHub][], and [Product Hunt][].
 
 [AngelList]: https://angel.co/u/tristan-dunn
 [ezCater]: https://ezcater.com
@@ -25,4 +25,3 @@ follow me on [AngelList][], [GitHub][], [Product Hunt][], and [Twitter][].
 [Lil Sebastian]: https://instagram.com/lilsebastipoo
 [Product Hunt]: https://www.producthunt.com/@tristandunn
 [résumé]: /resume/
-[Twitter]: https://twitter.com/tristandunn

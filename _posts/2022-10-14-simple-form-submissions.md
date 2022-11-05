@@ -263,7 +263,7 @@ submissions.
 ### Your Ideas
 
 Let me know what ideas you come up with or how you're using Netlify and GitHub
-together, with static websites or otherwise, on [Twitter][] or [e-mail me][].
+together, with static websites or otherwise, [e-mail me][].
 
 [Base64]: https://en.wikipedia.org/wiki/Base64
 [CAPTCHA]: https://en.wikipedia.org/wiki/CAPTCHA
@@ -272,7 +272,6 @@ together, with static websites or otherwise, on [Twitter][] or [e-mail me][].
 [Netlify CLI]: https://docs.netlify.com/cli/get-started/
 [Netlify Function]: https://docs.netlify.com/functions/overview/
 [Netlify]: https://netlify.com
-[Twitter]: https://twitter.com/tristandunn
 [e-mail me]: mailto:hello@tristandunn.com
 [environment variables in Netlify]: https://docs.netlify.com/environment-variables/overview/
 [fetch]: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
