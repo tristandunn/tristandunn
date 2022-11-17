@@ -400,9 +400,9 @@ __metadata:
   linkType: hard
 
 "caniuse-lite@npm:^1.0.0, caniuse-lite@npm:^1.0.30001400, caniuse-lite@npm:^1.0.30001426":
-  version: 1.0.30001429
-  resolution: "caniuse-lite@npm:1.0.30001429"
-  checksum: d1658080248ef5ef0f5157423b2766026e6aa45642ce3b2cc74859b6a54e39881dd902397a2368324ed30ed0cd40250f11a4a4f3773453cd57b88db5e5e5c76a
+  version: 1.0.30001431
+  resolution: "caniuse-lite@npm:1.0.30001431"
+  checksum: bc8ab55cd194e240152946b54bfaff7456180cc018674fc7ed134f4f502192405f6643f422feaa0a5e7cc02b5bac564cfac7771ac6d29f5d129482fcfe335ba1
   languageName: node
   linkType: hard
 
@@ -865,9 +865,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:8.26.0":
-  version: 8.26.0
-  resolution: "eslint@npm:8.26.0"
+"eslint@npm:8.27.0":
+  version: 8.27.0
+  resolution: "eslint@npm:8.27.0"
   dependencies:
     "@eslint/eslintrc": ^1.3.3
     "@humanwhocodes/config-array": ^0.11.6
@@ -910,18 +910,18 @@ __metadata:
     text-table: ^0.2.0
   bin:
     eslint: bin/eslint.js
-  checksum: a2aced939ea060f77d10dcfced5cfeb940f63f383fd7ab1decadea64170ab552582e1c5909db1db641d4283178c9bc569f19b0f8900e00314a5f783e4b3f759d
+  checksum: 153b022d309e1b647a73b1bb0fa98912add699b06e279084155f23c6f2b5fc5abd05411fc1ba81608a24bbfaf044ca079544c16fffa6fc987b8f676c9960a2c4
   languageName: node
   linkType: hard
 
 "espree@npm:^9.4.0":
-  version: 9.4.0
-  resolution: "espree@npm:9.4.0"
+  version: 9.4.1
+  resolution: "espree@npm:9.4.1"
   dependencies:
     acorn: ^8.8.0
     acorn-jsx: ^5.3.2
     eslint-visitor-keys: ^3.3.0
-  checksum: 2e3020dde67892d2ba3632413b44d0dc31d92c29ce72267d7ec24216a562f0a6494d3696e2fa39a3ec8c0e0088d773947ab2925fbb716801a11eb8dd313ac89c
+  checksum: 4d266b0cf81c7dfe69e542c7df0f246e78d29f5b04dda36e514eb4c7af117ee6cfbd3280e560571ed82ff6c9c3f0003c05b82583fc7a94006db7497c4fe4270e
   languageName: node
   linkType: hard
 
@@ -2357,14 +2357,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:8.4.18, postcss@npm:^8.4.17":
-  version: 8.4.18
-  resolution: "postcss@npm:8.4.18"
+"postcss@npm:8.4.19, postcss@npm:^8.4.18":
+  version: 8.4.19
+  resolution: "postcss@npm:8.4.19"
   dependencies:
     nanoid: ^3.3.4
     picocolors: ^1.0.0
     source-map-js: ^1.0.2
-  checksum: 9349fd99849b2e3d2e134ff949b7770ecb12375f352723ce2bcc06167eba3850ea7844c1b191a85cd915d6a396b4e8ee9a5267e6cc5d8d003d0cbc7a97555d39
+  checksum: 62782723a385f92b7525f66d29614624de7c5643855423db3a5efd9287e677650300192749adddbbb6734cea9b1d5f5fd4f6ea00ca3f9a95dbbb88f835f5ca64
   languageName: node
   linkType: hard
 
@@ -2527,12 +2527,12 @@ __metadata:
   dependencies:
     autoprefixer: 10.4.13
     cssnano: 5.1.14
-    eslint: 8.26.0
-    postcss: 8.4.18
+    eslint: 8.27.0
+    postcss: 8.4.19
     postcss-cli: 10.0.0
     postcss-import: 15.0.0
     postcss-nested: 6.0.0
-    tailwindcss: 3.2.1
+    tailwindcss: 3.2.4
   languageName: unknown
   linkType: soft
 
@@ -2746,9 +2746,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tailwindcss@npm:3.2.1":
-  version: 3.2.1
-  resolution: "tailwindcss@npm:3.2.1"
+"tailwindcss@npm:3.2.4":
+  version: 3.2.4
+  resolution: "tailwindcss@npm:3.2.4"
   dependencies:
     arg: ^5.0.2
     chokidar: ^3.5.3
@@ -2764,7 +2764,7 @@ __metadata:
     normalize-path: ^3.0.0
     object-hash: ^3.0.0
     picocolors: ^1.0.0
-    postcss: ^8.4.17
+    postcss: ^8.4.18
     postcss-import: ^14.1.0
     postcss-js: ^4.0.0
     postcss-load-config: ^3.1.4
@@ -2778,7 +2778,7 @@ __metadata:
   bin:
     tailwind: lib/cli.js
     tailwindcss: lib/cli.js
-  checksum: 8479f6e469b3ac3146fec5bf4b5ec411f24f481087d9db9a9e16bd5169cfe5f6af082b8fe656bbb8829faa8805765104843f549b08b4ba34e972d0743d0c7e94
+  checksum: ec187d180c722ec4f57537f2216c7b21269b525f12aaf353cea464d939c3e6286a1221eb3e1206e45d1f015f296171309ad4d9952899b0245cd07d9500a9401f
   languageName: node
   linkType: hard
 
@@ -2970,7 +2970,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"yargs-parser@npm:^21.0.0":
+"yargs-parser@npm:^21.1.1":
   version: 21.1.1
   resolution: "yargs-parser@npm:21.1.1"
   checksum: ed2d96a616a9e3e1cc7d204c62ecc61f7aaab633dcbfab2c6df50f7f87b393993fe6640d017759fe112d0cb1e0119f2b4150a87305cc873fd90831c6a58ccf1c
@@ -2978,8 +2978,8 @@ __metadata:
   linkType: hard
 
 "yargs@npm:^17.0.0":
-  version: 17.6.1
-  resolution: "yargs@npm:17.6.1"
+  version: 17.6.2
+  resolution: "yargs@npm:17.6.2"
   dependencies:
     cliui: ^8.0.1
     escalade: ^3.1.1
@@ -2987,8 +2987,8 @@ __metadata:
     require-directory: ^2.1.1
     string-width: ^4.2.3
     y18n: ^5.0.5
-    yargs-parser: ^21.0.0
-  checksum: 8b88285c7826461156dd76aa749562421d73077af6aee014117a99621e665d9c5ed8ff4734bd46545104101d960e0f0df98fb9f9dd18e5f9a00df3ff46dd4cf1
+    yargs-parser: ^21.1.1
+  checksum: 47da1b0d854fa16d45a3ded57b716b013b2179022352a5f7467409da5a04a1eef5b3b3d97a2dfc13e8bbe5f2ffc0afe3bc6a4a72f8254e60f5a4bd7947138643
   languageName: node
   linkType: hard
 
