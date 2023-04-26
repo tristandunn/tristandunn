@@ -41,7 +41,7 @@ GEM
       zeitwerk (~> 2.5)
     htmlcompressor (0.4.0)
     http_parser.rb (0.8.0)
-    i18n (1.12.0)
+    i18n (1.13.0)
       concurrent-ruby (~> 1.0)
     io-event (1.1.7)
     jekyll (4.3.2)
@@ -93,7 +93,7 @@ GEM
       mini_portile2 (~> 2.8.0)
       racc (~> 1.4)
     parallel (1.23.0)
-    parser (3.2.2.0)
+    parser (3.2.2.1)
       ast (~> 2.4.1)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
@@ -133,7 +133,7 @@ GEM
     safe_yaml (1.0.5)
     sass (3.7.4)
       sass-listen (~> 4.0.0)
-    sass-embedded (1.62.0)
+    sass-embedded (1.62.1)
       google-protobuf (~> 3.21)
       rake (>= 10.0.0)
     sass-listen (4.0.0)
@@ -172,4 +172,4 @@ DEPENDENCIES
   yui-compressor (= 0.12.0)
 
 BUNDLED WITH
-   2.4.6
+   2.4.10
