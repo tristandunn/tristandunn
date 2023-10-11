@@ -13,12 +13,12 @@ end
 
 group :development do
   gem "bundler-audit",       "0.9.1",  require: false
-  gem "mdl",                 "0.12.0", require: false
-  gem "rubocop",             "1.54.1", require: false
-  gem "rubocop-performance", "1.18.0", require: false
+  gem "mdl",                 "0.13.0", require: false
+  gem "rubocop",             "1.56.4", require: false
+  gem "rubocop-performance", "1.19.1", require: false
   gem "scss_lint",           "0.60.0", require: false
 end
 
 group :test do
-  gem "html-proofer", "5.0.7"
+  gem "html-proofer", "5.0.8"
 end
