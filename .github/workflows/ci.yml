@@ -8,7 +8,7 @@ jobs:
 
     steps:
       - name: Checkout the code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
       - name: Determine the Ruby version
         id: ruby-version
         run: echo "RUBY_VERSION=$(cat .ruby-version)" >> $GITHUB_ENV
@@ -21,7 +21,7 @@ jobs:
         id: node-version
         run: echo "NODE_VERSION=$(cat package.json | perl -pe '($_)=/"node":\s+"([0-9]+([.][0-9]+)+)"/')" >> $GITHUB_ENV
       - name: Install Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
           cache: "yarn"
