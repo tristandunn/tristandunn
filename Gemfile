@@ -7,6 +7,7 @@ gem "bigdecimal",     "3.1.6"
 gem "csv",            "3.2.8"
 gem "htmlcompressor", "0.4.0"
 gem "jekyll",         "4.3.3"
+gem "rake",           "13.1.0"
 gem "yui-compressor", "0.12.0"
 
 group :jekyll_plugins do
