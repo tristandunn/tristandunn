@@ -6,6 +6,7 @@ subtitle: "Deploying a Rails application to DigitalOcean."
 description: "Deploying a Rails application to DigitalOcean with Dokku."
 permalink: /journal/deploy-rails-with-dokku/
 twitter_card: summary_large_image
+modified_at: 2024-02-02
 ---
 
 When Heroku [first announced the end of free plans][] I knew I'd need to figure
@@ -48,8 +49,8 @@ Install Dokku on the Droplet by following the [official installation
 instructions][], which will take around 5-10 minutes to complete.
 
 ```sh
-wget https://raw.githubusercontent.com/dokku/dokku/v0.28.1/bootstrap.sh
-sudo DOKKU_TAG=v0.28.1 bash bootstrap.sh
+wget https://raw.githubusercontent.com/dokku/dokku/v0.33.3/bootstrap.sh
+sudo DOKKU_TAG=v0.33.3 bash bootstrap.sh
 rm bootstrap.sh
 ```
 
@@ -210,7 +211,7 @@ To use the Let's Encrypt plug-in, you first need to set an e-mail address for
 requested certificates with.
 
 ```sh
-dokku config:set --no-restart DOKKU_LETSENCRYPT_EMAIL=valid.email@example.com
+dokku letsencrypt:set miroha email valid.email@example.com
 ```
 
 With the e-mail set, we can enable the plug-in and add the automatic renewal
@@ -255,7 +256,24 @@ dokku run bundle exec rake db:migrate db:seed
 If you don't see any error during the push or database migration, you should see
 the application live at the domain you added. Congratulations!
 
-## Automatic Deployment with GitHub Actions
+## Bonus Improvements
+
+### Enable YJIT
+
+The new Ruby JIT compiler, YJIT, offers [substantial speed improvements][] over
+the default compiler. The Ruby buildpack has built-in support, so we can enable
+it by adding a `RUBY_YJIT_ENABLE` environment variable.
+
+```sh
+dokku config:set RUBY_YJIT_ENABLE="1"
+```
+{: caption="Enabling YJIT by default."}
+
+You may want to run `dokku ps:rebuild` to ensure the change is picked up. Now
+your application should have up to [a 17% speedup][] and use less memory.
+Perhaps one of the easiest performance changes ever.
+
+### Automatic Deployment with GitHub Actions
 
 If you're looking to automatically deploy when you merge on GitHub, check out
 [the official GitHub Action][] with the [simple example][] being the easiest
@@ -267,6 +285,7 @@ enabling [force push][] and adding a post-deploy script to reset the database.
 [Dokku]: https://dokku.com
 [Herokuish]: https://github.com/gliderlabs/herokuish
 [Miroha]: https://github.com/tristandunn/miroha
+[a 17% speedup]: https://railsatscale.com/2023-12-04-ruby-3-3-s-yjit-faster-while-using-less-memory/
 [creating a swap file]: https://dokku.com/docs/getting-started/advanced-installation/#vms-with-less-than-1-gb-of-memory
 [dokku-letsencrypt]: https://github.com/dokku/dokku-letsencrypt
 [first announced the end of free plans]: https://blog.heroku.com/next-chapter
@@ -276,6 +295,7 @@ enabling [force push][] and adding a post-deploy script to reset the database.
 [running remote commands with SSH]: https://dokku.com/docs/deployment/remote-commands/
 [simple example]: https://github.com/dokku/github-action/blob/master/example-workflows/simple.yml
 [since announced low-cost plans]: https://blog.heroku.com/new-low-cost-plans
+[substantial speed improvements]: https://speed.yjit.org
 [the official GitHub Action]: https://github.com/dokku/github-action
 [the official Redis documentation]: https://redis.io/commands/
 [the official client]: https://github.com/dokku/homebrew-repo
