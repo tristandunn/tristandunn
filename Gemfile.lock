@@ -20,9 +20,10 @@ GEM
       concurrent-ruby
     colorator (1.1.0)
     concurrent-ruby (1.2.3)
-    console (1.23.3)
+    console (1.23.4)
       fiber-annotation
       fiber-local
+      json
     csv (3.2.8)
     em-websocket (0.5.3)
       eventmachine (>= 0.12.9)
@@ -49,7 +50,7 @@ GEM
     http_parser.rb (0.8.0)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
-    io-event (1.4.2)
+    io-event (1.4.3)
     jekyll (4.3.3)
       addressable (~> 2.4)
       colorator (~> 1.0)
@@ -95,9 +96,9 @@ GEM
       tomlrb
     mixlib-shellout (3.2.7)
       chef-utils
-    nokogiri (1.16.0-arm64-darwin)
+    nokogiri (1.16.2-arm64-darwin)
       racc (~> 1.4)
-    nokogiri (1.16.0-x86_64-linux)
+    nokogiri (1.16.2-x86_64-linux)
       racc (~> 1.4)
     parallel (1.24.0)
     parser (3.3.0.5)
@@ -163,7 +164,7 @@ GEM
     webrick (1.8.1)
     yell (2.2.2)
     yui-compressor (0.12.0)
-    zeitwerk (2.6.12)
+    zeitwerk (2.6.13)
 
 PLATFORMS
   arm64-darwin-23
