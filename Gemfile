@@ -3,11 +3,11 @@
 source "https://rubygems.org"
 
 gem "base64",         "0.2.0"
-gem "bigdecimal",     "3.1.6"
-gem "csv",            "3.2.8"
+gem "bigdecimal",     "3.1.7"
+gem "csv",            "3.3.0"
 gem "htmlcompressor", "0.4.0"
 gem "jekyll",         "4.3.3"
-gem "rake",           "13.1.0"
+gem "rake",           "13.2.1"
 gem "yui-compressor", "0.12.0"
 
 group :jekyll_plugins do
@@ -18,8 +18,9 @@ end
 group :development do
   gem "bundler-audit",       "0.9.1",  require: false
   gem "mdl",                 "0.13.0", require: false
-  gem "rubocop",             "1.60.2", require: false
-  gem "rubocop-performance", "1.20.2", require: false
+  gem "rubocop",             "1.63.2", require: false
+  gem "rubocop-performance", "1.21.0", require: false
+  gem "rubocop-rake",        "0.6.0", require: false
   gem "scss_lint",           "0.60.0", require: false
 end
 
