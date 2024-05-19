@@ -3,7 +3,7 @@
 source "https://rubygems.org"
 
 gem "base64",         "0.2.0"
-gem "bigdecimal",     "3.1.7"
+gem "bigdecimal",     "3.1.8"
 gem "csv",            "3.3.0"
 gem "htmlcompressor", "0.4.0"
 gem "jekyll",         "4.3.3"
@@ -18,12 +18,12 @@ end
 group :development do
   gem "bundler-audit",       "0.9.1",  require: false
   gem "mdl",                 "0.13.0", require: false
-  gem "rubocop",             "1.63.2", require: false
+  gem "rubocop",             "1.63.5", require: false
   gem "rubocop-performance", "1.21.0", require: false
   gem "rubocop-rake",        "0.6.0", require: false
   gem "scss_lint",           "0.60.0", require: false
 end
 
 group :test do
-  gem "html-proofer", "5.0.8"
+  gem "html-proofer", "5.0.9"
 end
