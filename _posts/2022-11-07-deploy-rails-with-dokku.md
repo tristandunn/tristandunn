@@ -6,7 +6,7 @@ subtitle: "Deploying a Rails application to DigitalOcean."
 description: "Deploying a Rails application to DigitalOcean with Dokku."
 permalink: /journal/deploy-rails-with-dokku/
 twitter_card: summary_large_image
-modified_at: 2024-02-02
+modified_at: 2024-09-02
 ---
 
 When Heroku [first announced the end of free plans][] I knew I'd need to figure
@@ -73,6 +73,11 @@ For the rest of this article I'm going to be setting up an instance of
 [Miroha][], a personal project of mine and the first project I migrated to use
 Dokku. If you're setting up a project of your own, be sure to update the naming
 for each command.
+
+**Warning:** Miroha [switched to using Docker][] for deployment to prepare for
+using [Kamal][] in production. If you'd like follow along using it, you need to
+[clone this commit][].
+{: class="warning"}
 
 First on the server we'll create the application.
 
@@ -280,12 +285,21 @@ If you're looking to automatically deploy when you merge on GitHub, check out
 place to get started. If you have a staging branch, you may want to consider
 enabling [force push][] and adding a post-deploy script to reset the database.
 
+### Switching to Docker
+
+If you'd prefer to switch from buildpacks to Docker, you'll need to clear the
+buildpacks and the ports in the application. See the [Dockerfile Deployment][]
+documentation for more information.
+
 [ActionDispatch::SSL documentation]: https://api.rubyonrails.org/classes/ActionDispatch/SSL.html
 [DigitalOcean]: https://m.do.co/c/a7c8d9fbaf7f
+[Dockerfile Deployment]: https://dokku.com/docs/deployment/builders/dockerfiles/
 [Dokku]: https://dokku.com
 [Herokuish]: https://github.com/gliderlabs/herokuish
+[Kamal]: https://kamal-deploy.org
 [Miroha]: https://github.com/tristandunn/miroha
 [a 17% speedup]: https://railsatscale.com/2023-12-04-ruby-3-3-s-yjit-faster-while-using-less-memory/
+[clone this commit]: https://github.com/tristandunn/miroha/commit/d4885e70d0b3fca16ee0415369da79545b29aa22
 [creating a swap file]: https://dokku.com/docs/getting-started/advanced-installation/#vms-with-less-than-1-gb-of-memory
 [dokku-letsencrypt]: https://github.com/dokku/dokku-letsencrypt
 [first announced the end of free plans]: https://blog.heroku.com/next-chapter
@@ -296,6 +310,7 @@ enabling [force push][] and adding a post-deploy script to reset the database.
 [simple example]: https://github.com/dokku/github-action/blob/master/example-workflows/simple.yml
 [since announced low-cost plans]: https://blog.heroku.com/new-low-cost-plans
 [substantial speed improvements]: https://speed.yjit.org
+[switched to using Docker]: https://github.com/tristandunn/miroha/commit/e645310484741079ea4d8d3fbe4735b0033fe79c
 [the official GitHub Action]: https://github.com/dokku/github-action
 [the official Redis documentation]: https://redis.io/commands/
 [the official client]: https://github.com/dokku/homebrew-repo

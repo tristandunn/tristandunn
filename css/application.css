@@ -337,8 +337,13 @@ article {
     }
 
     p {
+      &.note,
+      &.warning {
+        @apply p-4 text-base leading-relaxed rounded-md;
+      }
+
       &.note {
-        @apply p-4 text-base bg-blue-50 leading-relaxed rounded-md;
+        @apply bg-blue-50;
 
         @media (prefers-color-scheme: dark) {
           @apply bg-gray-800;
@@ -350,6 +355,14 @@ article {
 
         @media (prefers-color-scheme: dark) {
           @apply bg-gray-800 border-gray-700;
+        }
+      }
+
+      &.warning {
+        @apply bg-yellow-100;
+
+        @media (prefers-color-scheme: dark) {
+          @apply bg-gray-700;
         }
       }
     }
