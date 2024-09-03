@@ -288,8 +288,14 @@ enabling [force push][] and adding a post-deploy script to reset the database.
 ### Switching to Docker
 
 If you'd prefer to switch from buildpacks to Docker, you'll need to clear the
-buildpacks and the ports in the application. See the [Dockerfile Deployment][]
-documentation for more information.
+buildpacks and the ports in the application. And if you're using a
+`RAILS_MASTER_KEY` you'll need to add it as a build argument.
+
+```sh
+dokku docker-options:add build "--build-arg RAILS_MASTER_KEY"
+```
+
+See the [Dockerfile Deployment][] documentation for more information.
 
 [ActionDispatch::SSL documentation]: https://api.rubyonrails.org/classes/ActionDispatch/SSL.html
 [DigitalOcean]: https://m.do.co/c/a7c8d9fbaf7f
