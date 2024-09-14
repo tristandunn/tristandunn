@@ -308,11 +308,11 @@ See the [Dockerfile Deployment][] documentation for more information.
 [creating a swap file]: https://dokku.com/docs/getting-started/advanced-installation/#vms-with-less-than-1-gb-of-memory
 [dokku-letsencrypt]: https://github.com/dokku/dokku-letsencrypt
 [first announced the end of free plans]: https://blog.heroku.com/next-chapter
-[force push]: https://github.com/dokku/github-action/blob/master/example-workflows/force-push.yml
+[force push]: https://github.com/dokku/github-action/blob/master/example-workflows/force-push.yaml
 [official installation instructions]: https://dokku.com/docs/getting-started/installation/#installing-the-latest-stable-version
 [redis.conf]: https://github.com/redis/redis/blob/unstable/redis.conf
 [running remote commands with SSH]: https://dokku.com/docs/deployment/remote-commands/
-[simple example]: https://github.com/dokku/github-action/blob/master/example-workflows/simple.yml
+[simple example]: https://github.com/dokku/github-action/blob/master/example-workflows/simple.yaml
 [since announced low-cost plans]: https://blog.heroku.com/new-low-cost-plans
 [substantial speed improvements]: https://speed.yjit.org
 [switched to using Docker]: https://github.com/tristandunn/miroha/commit/e645310484741079ea4d8d3fbe4735b0033fe79c
