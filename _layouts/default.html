@@ -32,7 +32,7 @@
   <title>{{ title | strip | xml_escape }}</title>
 
   <link rel="me" href="https://mastodon.social/@tristandunn">
-  <link rel="stylesheet" href="/css/application.css">
+  <link rel="stylesheet" href="{% if page.css %}{{ page.css }}{% else %}/css/application.css{% endif %}">
 </head>
 <html>
 <body>
