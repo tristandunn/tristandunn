@@ -6,7 +6,6 @@ category: tips
 subtitle: "Part 1: Using Aliases for Common Tasks"
 description: "Use aliases for common tasks to save time by typing less."
 permalink: /journal/save-time-type-less-part-1-aliases/
-twitter_card: summary_large_image
 modified_at: 2021-09-11
 ---
 

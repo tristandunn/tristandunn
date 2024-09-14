@@ -5,7 +5,6 @@ category: rails
 subtitle: "Deploying a Rails application to DigitalOcean."
 description: "Deploying a Rails application to DigitalOcean with Dokku."
 permalink: /journal/deploy-rails-with-dokku/
-twitter_card: summary_large_image
 modified_at: 2024-09-02
 ---
 

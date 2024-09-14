@@ -5,7 +5,6 @@ category: miroha
 subtitle: "Building my 24 year old game for the modern web."
 description: "Building my 24 year old game for the modern web."
 permalink: /journal/old-game-new-technology/
-twitter_card: summary_large_image
 ---
 
 I was first attracted to web development in 1997 to build a skateboarding
