@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en-US" class="font-sans antialiased text-gray-900">
+<head>
+  <meta charset="utf-8">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="theme-color" content="#FFF">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
+  <title>Connections Helper</title>
+
+  <style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: ui-sans-serif, system-ui, sans-serif;
+    touch-action: pan-y;
+  }
+
+  input {
+    margin-top: 128px;
+  }
+
+  #application {
+    position: absolute;
+    top: 12%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    max-width: 512px;
+  }
+
+  #board {
+    width: 100%;
+    max-height: 512px;
+    height: 100vw;
+    text-align: center;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+
+  #board div {
+    background: #EFEFE7;
+    width: 23%;
+    height: 23%;
+    margin: 1%;
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    cursor: default;
+  }
+
+  #board span {
+    text-align: center;
+  }
+
+  #options {
+    margin-top: 16px;
+    text-align: center;
+    display: none;
+  }
+
+  #options button {
+    background: #FFF;
+    color: #000;
+    margin: 0 12px 0 0;
+    padding: 12px 16px;
+    border: 1px solid #000;
+    border-radius: 32px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  </style>
+</head>
+<body>
+
+<div id="application">
+  <div id="board">
+    <input type="file" accept="image/*">
+    <span id="status"></span>
+  </div>
+
+  <div id="options">
+    <button id="shuffle">Shuffle</button>
+    <button id="deselect-all">Deselect All</button>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/tesseract.js@5/dist/tesseract.min.js"></script>
+<script>
+const colors = ["rgb(244, 224, 127)", "rgb(166, 194, 103)", "rgb(181, 195, 235)", "rgb(178, 131, 193)"],
+  element = document.querySelector("input"),
+  scheduler = Tesseract.createScheduler();
+
+element.addEventListener("change", (event) => {
+  const file = event.target.files[0];
+
+  if (!file) {
+    return;
+  }
+
+  element.remove();
+
+  const indicator = document.querySelector("#status");
+  indicator.innerText = "Loading image...";
+
+  const image = new Image();
+
+  image.addEventListener("load", async function() {
+    indicator.innerText = "Finding squares...";
+
+    const canvas = document.createElement("canvas"),
+      context = canvas.getContext("2d");
+
+    canvas.width = image.width;
+    canvas.height = image.height;
+
+    context.drawImage(image, 0, 0, image.width, image.height);
+
+    let done = false;
+    let found = false;
+    let start;
+    let stop;
+    let gap;
+
+    for (let x = 0; x < image.width; x++) {
+      if (done) break;
+
+      if (found) {
+        const data = context.getImageData(x, start[1], 1, 1).data;
+
+        if (data[0] != 239 && data[1] != 239 && data != 230) {
+          stop = [x, start[1]];
+          found = false;
+        }
+        continue;
+      }
+
+      for (let y = 0; y < image.width; y++) {
+        const data = context.getImageData(x, y, 1, 1).data;
+
+        if (data[0] == 239 && data[1] == 239 && data[2] == 230) {
+          if (start) {
+            gap = [x, y];
+            done = true;
+          } else {
+            start = [x, y];
+            found = true;
+          }
+
+          break;
+        }
+      }
+    }
+
+    let swidth = stop[0] - start[0];
+    let gwidth = gap[0] - stop[0];
+    let rectangles = [];
+
+    for (let x = 0; x < 4; x++) {
+      for (let y = 0; y < 4; y++) {
+        rectangles.push({
+          left: start[0] + (swidth * x) + (gwidth * x),
+          top:  start[1] + (swidth * y) + (gwidth * y),
+          width: swidth,
+          height: swidth
+        });
+      }
+    }
+
+    indicator.innerText = "Reading words...";
+
+    const size = Math.round((image.width * 0.90) / 4.0),
+      worker1 = await Tesseract.createWorker("eng"),
+      worker2 = await Tesseract.createWorker("eng");
+
+    scheduler.addWorker(worker1);
+    scheduler.addWorker(worker2);
+
+    /*
+    for (let x = 0; x < 4; x++) {
+      for (let y = 0; y < 4; y++) {
+        rectangles.push({
+          left:  Math.round(image.width  * 0.02248062016) + (size * x) + (Math.round(image.width * 0.01860465116) * x),
+          top:   Math.round(image.height * 0.186695279)   + (size * y) + (Math.round(image.width * 0.01860465116) * y),
+          width:  size,
+          height: size
+        });
+      }
+    }
+    */
+
+    const board = document.querySelector("#board"),
+      results = await Promise.all(rectangles.map((rectangle) => (
+        scheduler.addJob("recognize", file, { rectangle })
+      )));
+
+    results.map((result) => {
+      const item = document.createElement("div");
+
+      item.innerText = result.data.text;
+      item.addEventListener("click", function(event) {
+        this.style.backgroundColor = colors[colors.indexOf(this.style.backgroundColor) + 1] || "";
+      }.bind(item));
+
+      board.appendChild(item);
+    });
+
+    await scheduler.terminate();
+
+    indicator.remove();
+
+    document.querySelector("#options").style.display = "block";
+  });
+
+  image.src = URL.createObjectURL(file);
+
+  document.querySelector("#deselect-all").addEventListener("click", (event) => {
+    event.preventDefault();
+
+    document.querySelectorAll("#board div").forEach((element) => {
+      element.style.backgroundColor = "";
+    });
+  });
+
+  document.querySelector("#shuffle").addEventListener("click", (event) => {
+    event.preventDefault();
+
+    const elements = board.children,
+      fragment = document.createDocumentFragment();
+
+    while (elements.length) {
+      fragment.appendChild(elements[Math.floor(Math.random() * elements.length)]);
+    }
+
+    board.appendChild(fragment);
+  });
+});
+</script>
+
+</body>
+</html>
