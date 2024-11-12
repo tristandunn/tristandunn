@@ -205,7 +205,11 @@ main {
     @apply mt-5 mb-10;
 
     p {
-      @apply mt-2;
+      @apply mt-1;
+
+      + h3 {
+        @apply mt-6;
+      }
     }
   }
 
